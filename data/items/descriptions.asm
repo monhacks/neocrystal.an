@@ -44,12 +44,12 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw TeruSama3Desc
+	dw CutPermitDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw TeruSama4Desc
+	dw FlyPermitDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
@@ -89,7 +89,7 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw TeruSama6Desc
+	dw PushPermitDesc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -99,7 +99,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw TeruSama7Desc
+	dw FlashPermitDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -119,7 +119,7 @@ ItemDescriptions:
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusBandDesc
-	dw TeruSama8Desc
+	dw FallsPermitDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -134,8 +134,8 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw TeruSama9Desc
-	dw TeruSama10Desc
+	dw SwirlPermitDesc
+	dw BreakPermitDesc
 	dw TeruSama11Desc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
@@ -431,8 +431,9 @@ DireHitDesc:
 	db   "Ups critical hit"
 	next "ratio. (1 BTL)@"
 
-TeruSama3Desc:
-	db   "?@"
+CutPermitDesc:
+	db   "Permits Cutting"
+	next "with #MON.@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -450,8 +451,9 @@ XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
 
-TeruSama4Desc:
-	db   "?@"
+FlyPermitDesc:
+	db   "Permits Flying"
+	next "on #MON.@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -606,8 +608,9 @@ SilverPowderDesc:
 BluApricornDesc:
 	db   "A blue APRICORN.@"
 
-TeruSama6Desc:
-	db   "?@"
+PushPermitDesc:
+	db   "Permits Pushing"
+	next "with #MON.@"
 
 AmuletCoinDesc:
 	db   "Doubles monetary"
@@ -642,8 +645,9 @@ BlkApricornDesc:
 	db   "A black APRICORN."
 	next "@"
 
-TeruSama7Desc:
-	db   "?@"
+FlashPermitDesc:
+	db   "Permits lighting"
+	next "caves with #MON.@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
@@ -721,8 +725,9 @@ FocusBandDesc:
 	db   "May prevent faint-"
 	next "ing. (HOLD)@"
 
-TeruSama8Desc:
-	db   "?@"
+FallsPermitDesc:
+	db   "Permits riding"
+	next "falls with #MON.@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"
@@ -779,11 +784,13 @@ PassDesc:
 	db   "A ticket for the"
 	next "MAGNET TRAIN.@"
 
-TeruSama9Desc:
-	db   "?@"
+SwirlPermitDesc:
+	db   "Permits calming"
+	next "swirls with #MON.@"
 
-TeruSama10Desc:
-	db   "?@"
+BreakPermitDesc:
+	db   "Permits breaking"
+	next "with #MON.@"
 
 TeruSama11Desc:
 	db   "?@"
