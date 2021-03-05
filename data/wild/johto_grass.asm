@@ -279,52 +279,52 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 15, RATTATA
 	db 14, ZUBAT
-	db 15, RATTATA
-	db 15, RATICATE
-	db 15, RATICATE
+	db 15, SLUGMA
+	db 15, SLUGMA
+	db 15, SLUGMA
 	; day
 	db 13, RATTATA
 	db 14, KOFFING
 	db 15, RATTATA
 	db 14, ZUBAT
-	db 15, RATTATA
-	db 15, RATICATE
-	db 15, RATICATE
+	db 15, SLUGMA
+	db 15, SLUGMA
+	db 15, SLUGMA
 	; nite
 	db 13, RATTATA
 	db 14, KOFFING
-	db 15, RATTATA
+	db 15, MISDREAVUS
 	db 14, ZUBAT
-	db 15, RATTATA
-	db 15, RATICATE
-	db 15, RATICATE
+	db 15, SLUGMA
+	db 15, SLUGMA
+	db 15, SLUGMA
 
 	map_id BURNED_TOWER_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, RATTATA
 	db 14, KOFFING
-	db 16, KOFFING
+	db 16, SLUGMA
 	db 15, ZUBAT
 	db 12, KOFFING
-	db 16, KOFFING
-	db 16, WEEZING
+	db 16, MAGBY
+	db 16, MAGBY
 	; day
 	db 14, RATTATA
 	db 14, KOFFING
-	db 16, KOFFING
+	db 16, SLUGMA
 	db 15, ZUBAT
 	db 12, KOFFING
-	db 16, KOFFING
-	db 16, WEEZING
+	db 16, MAGBY
+	db 16, MAGBY
 	; nite
 	db 14, RATTATA
 	db 14, KOFFING
-	db 16, KOFFING
+	db 16, SLUGMA
 	db 15, ZUBAT
 	db 12, KOFFING
 	db 16, KOFFING
-	db 16, WEEZING
+	db 16, KOFFING
 
 	map_id NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -333,25 +333,25 @@ JohtoGrassWildMons:
 	db 12, NIDORAN_F
 	db 14, LEDYBA
 	db 13, PIDGEY
-	db 10, CATERPIE
-	db 10, WEEDLE
-	db 10, WEEDLE
+	db 10, PICHU
+	db 10, PICHU
+	db 10, PICHU
 	; day
 	db 12, NIDORAN_F
 	db 12, NIDORAN_M
 	db 14, SUNKERN
 	db 13, PIDGEY
-	db 10, CATERPIE
-	db 10, WEEDLE
-	db 10, WEEDLE
+	db 10, PICHU
+	db 10, PICHU
+	db 10, PICHU
 	; nite
 	db 12, PSYDUCK
 	db 13, HOOTHOOT
 	db 14, SPINARAK
-	db 15, HOOTHOOT
+	db 15, MURKROW
 	db 10, VENONAT
-	db 12, VENONAT
-	db 12, VENONAT
+	db 12, CLEFFA
+	db 12, CLEFFA
 
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -549,7 +549,7 @@ JohtoGrassWildMons:
 	db 5, WEEDLE
 	db 7, METAPOD
 	db 7, KAKUNA
-	db 7, PIDGEY
+	db 7, PICHU
 	db 6, PARAS
 	db 6, PARAS
 	; day
@@ -557,7 +557,7 @@ JohtoGrassWildMons:
 	db 5, WEEDLE
 	db 7, METAPOD
 	db 7, KAKUNA
-	db 7, PIDGEY
+	db 7, PICHU
 	db 6, PARAS
 	db 6, PARAS
 	; nite
@@ -1332,7 +1332,7 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, PIDGEY
 	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 12, IGGLYPUFF
 	db 10, DITTO
 	db 10, DITTO
 	; day
@@ -1340,15 +1340,15 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, PIDGEY
 	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 12, IGGLYPUFF
 	db 10, DITTO
 	db 10, DITTO
 	; nite
 	db 12, DROWZEE
 	db 11, RATTATA
 	db 12, HOOTHOOT
-	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 10, HOUNDOUR
+	db 12, HOUNDOUR
 	db 10, DITTO
 	db 10, DITTO
 
@@ -1374,8 +1374,8 @@ JohtoGrassWildMons:
 	db 12, DROWZEE
 	db 14, HOOTHOOT
 	db 13, PSYDUCK
-	db 10, ABRA
-	db 12, JIGGLYPUFF
+	db 10, HOUNDOUR
+	db 12, HOUNDOUR
 	db 10, DITTO
 	db 12, YANMA
 
@@ -1428,8 +1428,8 @@ JohtoGrassWildMons:
 	db 13, SPINARAK
 	db 14, STANTLER
 	db 15, HOOTHOOT
-	db 16, STANTLER
-	db 15, NOCTOWL
+	db 16, MURKROW
+	db 15, MURKROW
 	db 15, ARIADOS
 	db 15, ARIADOS
 
@@ -1456,7 +1456,7 @@ JohtoGrassWildMons:
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
-	db 16, MEOWTH
+	db 16, HOUNDOUR
 	db 16, MEOWTH
 	db 16, MEOWTH
 
@@ -1490,34 +1490,34 @@ JohtoGrassWildMons:
 	map_id ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 13, EKANS
+	db 13, MANKEY
 	db 14, SPEAROW
 	db 15, RATTATA
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, FEAROW
-	db 16, FEAROW
+	db 16, MAREEP
+	db 15, MAREEP
+	db 16, FLAFFY
+	db 16, FLAFFY
 	; day
-	db 13, EKANS
+	db 13, MANKEY
 	db 14, SPEAROW
 	db 15, RATTATA
-	db 16, RATICATE
-	db 15, ARBOK
-	db 16, FEAROW
-	db 16, FEAROW
+	db 16, MAREEP
+	db 15, MAREEP
+	db 16, FLAFFY
+	db 16, FLAFFY
 	; nite
-	db 13, RATTATA
+	db 13, MANKEY
 	db 14, ZUBAT
 	db 15, RATICATE
-	db 16, GOLBAT
+	db 16, MISDREAVUS
 	db 15, MARILL
-	db 16, GOLBAT
-	db 16, GOLBAT
+	db 16, FLAFFY
+	db 16, FLAFFY
 
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SENTRET
+	db 15, GIRAFARIG
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
 	db 15, FURRET
@@ -1525,7 +1525,7 @@ JohtoGrassWildMons:
 	db 17, FURRET
 	db 17, FURRET
 	; day
-	db 15, SENTRET
+	db 15, GIRAFARIG
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
 	db 15, FURRET
@@ -1535,11 +1535,11 @@ JohtoGrassWildMons:
 	; nite
 	db 15, VENONAT
 	db 16, NOCTOWL
-	db 16, RATICATE
-	db 17, VENONAT
-	db 17, RATICATE
-	db 17, VENOMOTH
-	db 17, VENOMOTH
+	db 16, GIRAFARIG
+	db 17, MISDREAVUS
+	db 17, GIRAFARIG
+	db 17, MISDREAVUS
+	db 17, MISDREAVUS
 
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1583,7 +1583,7 @@ JohtoGrassWildMons:
 	db 23, GRAVELER
 	db 24, GLIGAR
 	db 25, DONPHAN
-	db 30, DONPHAN
+	db 30, LARVITAR
 	db 27, SKARMORY
 	db 27, SKARMORY
 	; nite
@@ -1592,8 +1592,8 @@ JohtoGrassWildMons:
 	db 24, GLIGAR
 	db 25, GRAVELER
 	db 27, GRAVELER
-	db 27, GRAVELER
-	db 27, GRAVELER
+	db 20, LARVITAR
+	db 20, LARVITAR
 
 	map_id ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
