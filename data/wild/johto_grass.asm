@@ -1332,7 +1332,7 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, PIDGEY
 	db 10, ABRA
-	db 12, IGGLYPUFF
+	db 12, IGGLYBUFF
 	db 10, DITTO
 	db 10, DITTO
 	; day
@@ -1340,7 +1340,7 @@ JohtoGrassWildMons:
 	db 11, RATTATA
 	db 12, PIDGEY
 	db 10, ABRA
-	db 12, IGGLYPUFF
+	db 12, IGGLYBUFF
 	db 10, DITTO
 	db 10, DITTO
 	; nite
@@ -1495,24 +1495,24 @@ JohtoGrassWildMons:
 	db 15, RATTATA
 	db 16, MAREEP
 	db 15, MAREEP
-	db 16, FLAFFY
-	db 16, FLAFFY
+	db 16, FLAAFFY
+	db 16, FLAAFFY
 	; day
 	db 13, MANKEY
 	db 14, SPEAROW
 	db 15, RATTATA
 	db 16, MAREEP
 	db 15, MAREEP
-	db 16, FLAFFY
-	db 16, FLAFFY
+	db 16, FLAAFFY
+	db 16, FLAAFFY
 	; nite
 	db 13, MANKEY
 	db 14, ZUBAT
 	db 15, RATICATE
 	db 16, MISDREAVUS
 	db 15, MARILL
-	db 16, FLAFFY
-	db 16, FLAFFY
+	db 16, FLAAFFY
+	db 16, FLAAFFY
 
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1520,18 +1520,18 @@ JohtoGrassWildMons:
 	db 15, GIRAFARIG
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FLAFFY
-	db 17, FLAFFY
-	db 17, FLAFFY
-	db 17, FLAFFY
+	db 15, FLAAFFY
+	db 17, FLAAFFY
+	db 17, FLAAFFY
+	db 17, FLAAFFY
 	; day
 	db 15, GIRAFARIG
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FLAFFY
-	db 17, FLAFFY
-	db 17, FLAFFY
-	db 17, FLAFFY
+	db 15, FLAAFFY
+	db 17, FLAAFFY
+	db 17, FLAAFFY
+	db 17, FLAAFFY
 	; nite
 	db 15, VENONAT
 	db 16, NOCTOWL
