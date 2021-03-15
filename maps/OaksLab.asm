@@ -69,7 +69,7 @@ Oak:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke TOTODILE, 10
-	seevent EVENT_GOT_RIVAL_STARTER
+	setevent EVENT_GOT_RIVAL_STARTER
 	writetext OakEvolveStarter
 	waitbutton
 	closetext
