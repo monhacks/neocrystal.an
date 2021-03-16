@@ -367,7 +367,7 @@ LoadBuyMenuText:
 	ret
 
 MartAskPurchaseQuantity:
-	ld a, [wCurlItem]
+	ld a, [wCurItem]
 	cp TM01
 	jr nc, .PurchaseQuantityOfTM
 	call GetMartDialogGroup ; gets a pointer from GetMartDialogGroup.MartTextFunctionPointers
@@ -388,9 +388,9 @@ MartAskPurchaseQuantity:
 	jp c, .AlreadyHaveTM
 	farcall GetItemPrice
 	ld a, d
-	ld [wBuffer1], a
+	ld [wd1ea], a
 	ld a, e
-	ld [wBuffer2], a
+	ld [wd1eb], a
 	ld a, 1
 	ld [wItemQuantityChange], a
 	ld a, 99
@@ -403,7 +403,7 @@ MartAskPurchaseQuantity:
 	ldh a, [hProduct + 2]
 	ld [hli], a
 	ldh a, [hProduct + 3]
-	ld [h1], a
+	ld [hl], a
 	pop hl
 	ret
 
