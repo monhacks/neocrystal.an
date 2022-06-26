@@ -126,7 +126,7 @@ KantoGrassWildMons:
 	db 33, ONIX
 	db 34, GOLBAT
 	db 35, SANDSLASH
-	db 35, RHYDON
+	db 35, AZUMARILL
 	db 35, RHYDON
 	; nite
 	db 34, GOLBAT
@@ -144,7 +144,7 @@ KantoGrassWildMons:
 	db 22, RATICATE
 	db 24, GOLBAT
 	db 21, SLOWPOKE
-	db 20, RATTATA
+	db 20, KADABRA
 	db 23, SLOWPOKE
 	db 23, SLOWPOKE
 	; day
@@ -152,7 +152,7 @@ KantoGrassWildMons:
 	db 22, RATICATE
 	db 24, GOLBAT
 	db 21, SLOWPOKE
-	db 20, RATTATA
+	db 20, AZUMARILL
 	db 23, SLOWPOKE
 	db 23, SLOWPOKE
 	; nite
@@ -160,7 +160,7 @@ KantoGrassWildMons:
 	db 22, RATICATE
 	db 24, GOLBAT
 	db 21, SLOWPOKE
-	db 20, RATTATA
+	db 20, MISDREAVUS
 	db 23, SLOWPOKE
 	db 23, SLOWPOKE
 
@@ -335,7 +335,7 @@ KantoGrassWildMons:
 	db 18, RATICATE
 	db 18, JIGGLYPUFF
 	db 16, ABRA
-	db 16, ABRA
+	db 16, TYROGUE
 	; day
 	db 17, RATTATA
 	db 17, SPEAROW
@@ -351,7 +351,7 @@ KantoGrassWildMons:
 	db 18, PERSIAN
 	db 18, JIGGLYPUFF
 	db 16, ABRA
-	db 16, ABRA
+	db 16, TYROGUE
 
 	map_id ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -362,7 +362,7 @@ KantoGrassWildMons:
 	db 17, GROWLITHE
 	db 16, JIGGLYPUFF
 	db 18, KADABRA
-	db 18, KADABRA
+	db 18, TYROGUE
 	; day
 	db 17, SNUBBULL
 	db 19, PIDGEOTTO
@@ -378,7 +378,7 @@ KantoGrassWildMons:
 	db 17, HAUNTER
 	db 16, JIGGLYPUFF
 	db 18, KADABRA
-	db 18, KADABRA
+	db 18, TYROGUE
 
 	map_id ROUTE_9
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

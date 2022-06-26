@@ -131,7 +131,7 @@ JohtoWaterWildMons:
 	map_id ROUTE_34
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 15, TENTACOOL
+	db 15, MARILL
 	db 20, TENTACRUEL
 
 	map_id ROUTE_35

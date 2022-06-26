@@ -1341,7 +1341,7 @@ JohtoGrassWildMons:
 	db 12, PIDGEY
 	db 10, ABRA
 	db 12, IGGLYBUFF
-	db 10, DITTO
+	db 10, MARILL
 	db 10, DITTO
 	; nite
 	db 12, DROWZEE
@@ -1483,7 +1483,7 @@ JohtoGrassWildMons:
 	db 16, RATICATE
 	db 16, MAGNEMITE
 	db 16, NOCTOWL
-	db 18, MEOWTH
+	db 16, MARILL
 	db 18, MEOWTH
 	db 18, MEOWTH
 
@@ -1528,7 +1528,7 @@ JohtoGrassWildMons:
 	db 15, GIRAFARIG
 	db 16, PIDGEOTTO
 	db 16, FARFETCH_D
-	db 15, FLAAFFY
+	db 15, MARILL
 	db 17, FLAAFFY
 	db 17, FLAAFFY
 	db 17, FLAAFFY
