@@ -149,14 +149,13 @@ ItemEffects:
 	dw NoEffect            ; PASS
 	dw SwirlPermitEffect   ; SWIRL_PERMIT
 	dw BreakPermitEffect   ; BREAK_PERMIT
-	dw NoEffect            ; ITEM_89
+	dw NoEffect            ; MAGIC_WAND
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; SCOPE_LENS
 	dw NoEffect            ; ITEM_8D
 	dw NoEffect            ; ITEM_8E
 	dw NoEffect            ; METAL_COAT
-	dw NoEffect            ; MAGIC_WAND
 	dw NoEffect            ; DRAGON_FANG
 	dw NoEffect            ; ITEM_91
 	dw NoEffect            ; LEFTOVERS
