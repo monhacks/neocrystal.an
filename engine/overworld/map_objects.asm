@@ -523,7 +523,8 @@ StepFunction_FromMovement:
 	ret
 
 .Pointers:
-; entries correspond to SPRITEMOVEFN_* constants
+; entries correspond to SPRITEMOVEFN_* constants (see constants/map_object_constants.asm)
+	table_width 2, StepFunction_FromMovement.Pointers
 	dw MovementFunction_Null                 ; 00
 	dw MovementFunction_RandomWalkY          ; 01
 	dw MovementFunction_RandomWalkX          ; 02
@@ -552,6 +553,7 @@ StepFunction_FromMovement:
 	dw MovementFunction_SpinCounterclockwise ; 19
 	dw MovementFunction_BoulderDust          ; 1a
 	dw MovementFunction_ShakingGrass         ; 1b
+	assert_table_length NUM_SPRITEMOVEFN
 
 MovementFunction_Null:
 	ret
@@ -1085,7 +1087,8 @@ _SetRandomStepDuration:
 	ret
 
 StepTypesJumptable:
-; entries correspond to STEP_TYPE_* constants
+; entries correspond to STEP_TYPE_* constants (see constants/map_object_constants.asm)
+	table_width 2, StepTypesJumptable
 	dw StepFunction_Reset           ; 00
 	dw StepFunction_FromMovement    ; 01
 	dw StepFunction_NPCWalk         ; 02
@@ -1112,6 +1115,7 @@ StepTypesJumptable:
 	dw StepFunction_17              ; 17
 	dw StepFunction_Delete          ; 18
 	dw StepFunction_SkyfallTop      ; 19
+	assert_table_length NUM_STEP_TYPES
 
 WaitStep_InPlace:
 	ld hl, OBJECT_STEP_DURATION
@@ -2526,7 +2530,7 @@ _SetPlayerPalette:
 	ld hl, OBJECT_PALETTE
 	add hl, bc
 	ld a, [hl]
-	and $ff ^ PALETTE_MASK
+	and ~PALETTE_MASK
 	or d
 	ld [hl], a
 	ret
@@ -2742,9 +2746,9 @@ _UpdateSprites::
 .fill
 	ld a, [wVramState]
 	bit 1, a
-	ld b, LOW(wVirtualOAMEnd)
+	ld b, NUM_SPRITE_OAM_STRUCTS * SPRITEOAMSTRUCT_LENGTH
 	jr z, .ok
-	ld b, 28 * SPRITEOAMSTRUCT_LENGTH
+	ld b, (NUM_SPRITE_OAM_STRUCTS - 12) * SPRITEOAMSTRUCT_LENGTH
 .ok
 	ldh a, [hUsedSpriteIndex]
 	cp b
@@ -2801,9 +2805,9 @@ ApplyBGMapAnchorToObjects:
 	pop hl
 	ret
 
-PRIORITY_LOW  EQU $10
-PRIORITY_NORM EQU $20
-PRIORITY_HIGH EQU $30
+DEF PRIORITY_LOW  EQU $10
+DEF PRIORITY_NORM EQU $20
+DEF PRIORITY_HIGH EQU $30
 
 InitSprites:
 	call .DeterminePriorities
@@ -2891,7 +2895,7 @@ InitSprites:
 	ld hl, OBJECT_SPRITE_TILE
 	add hl, bc
 	ld a, [hl]
-	and $ff ^ (1 << 7)
+	and ~(1 << 7)
 	ldh [hCurSpriteTile], a
 	xor a
 	bit 7, [hl]

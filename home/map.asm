@@ -2023,7 +2023,7 @@ GetAnyMapPointer::
 	; find the cth map within the group
 	dec c
 	ld b, 0
-	ld a, 9
+	ld a, MAP_LENGTH
 	call AddNTimes
 	ret
 
@@ -2285,12 +2285,12 @@ LoadMapTileset::
 	push bc
 
 	ld hl, Tilesets
-	ld bc, wTilesetEnd - wTileset
+	ld bc, TILESET_LENGTH
 	ld a, [wMapTileset]
 	call AddNTimes
 
 	ld de, wTilesetBank
-	ld bc, wTilesetEnd - wTileset
+	ld bc, TILESET_LENGTH
 
 	ld a, BANK(Tilesets)
 	call FarCopyBytes

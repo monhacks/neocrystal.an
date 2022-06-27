@@ -158,7 +158,7 @@ WildFled_EnemyFled_LinkBattleCanceled:
 
 BattleTurn:
 .loop
-	call Stubbed_Function3c1bf
+	call Stubbed_Increments5_a89a
 	call CheckContestBattleOver
 	jp c, .quit
 
@@ -228,11 +228,11 @@ BattleTurn:
 .quit
 	ret
 
-Stubbed_Function3c1bf:
+Stubbed_Increments5_a89a:
 	ret
-	ld a, BANK(s5_a89b) ; MBC30 bank used by JP Crystal; inaccessible by MBC3
+	ld a, BANK(s5_a89a) ; MBC30 bank used by JP Crystal; inaccessible by MBC3
 	call OpenSRAM
-	ld hl, s5_a89b ; address of MBC30 bank
+	ld hl, s5_a89a + 1 ; address of MBC30 bank
 	inc [hl]
 	jr nz, .finish
 	dec hl
@@ -765,7 +765,7 @@ TryEnemyFlee:
 	jr nz, .Stay
 
 	ld a, [wEnemyMonStatus]
-	and 1 << FRZ | SLP
+	and 1 << FRZ | SLP_MASK
 	jr nz, .Stay
 
 	ld a, [wTempEnemyMonSpecies]
@@ -3865,7 +3865,7 @@ InitBattleMon:
 	ld bc, MON_DVS - MON_ID
 	add hl, bc
 	ld de, wBattleMonDVs
-	ld bc, MON_PKRUS - MON_DVS
+	ld bc, MON_POKERUS - MON_DVS
 	call CopyBytes
 	inc hl
 	inc hl
@@ -3885,7 +3885,7 @@ InitBattleMon:
 	ld hl, wPartyMonNicknames
 	ld a, [wCurBattleMon]
 	call SkipNames
-	ld de, wBattleMonNick
+	ld de, wBattleMonNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	ld hl, wBattleMonAttack
@@ -3951,7 +3951,7 @@ InitEnemyMon:
 	ld bc, MON_DVS - MON_ID
 	add hl, bc
 	ld de, wEnemyMonDVs
-	ld bc, MON_PKRUS - MON_DVS
+	ld bc, MON_POKERUS - MON_DVS
 	call CopyBytes
 	inc hl
 	inc hl
@@ -3965,7 +3965,7 @@ InitEnemyMon:
 	ld hl, wOTPartyMonNicknames
 	ld a, [wCurPartyMon]
 	call SkipNames
-	ld de, wEnemyMonNick
+	ld de, wEnemyMonNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	ld hl, wEnemyMonAttack
@@ -3980,9 +3980,11 @@ InitEnemyMon:
 	inc de
 	ld a, [hl]
 	ld [de], a
+	; The enemy mon's base Sp. Def isn't needed since its base
+	; Sp. Atk is also used to calculate Sp. Def stat experience.
 	ld hl, wBaseStats
 	ld de, wEnemyMonBaseStats
-	ld b, 5
+	ld b, NUM_STATS - 1
 .loop
 	ld a, [hli]
 	ld [de], a
@@ -4642,7 +4644,7 @@ CheckDanger:
 	ret
 
 PrintPlayerHUD:
-	ld de, wBattleMonNick
+	ld de, wBattleMonNickname
 	hlcoord 10, 7
 	call Battle_DummyFunction
 	call PlaceString
@@ -4660,8 +4662,8 @@ PrintPlayerHUD:
 	ld [de], a
 	ld hl, wBattleMonLevel
 	ld de, wTempMonLevel
-	ld bc, $11
-	call CopyBytes
+	ld bc, wTempMonStructEnd - wTempMonLevel
+	call CopyBytes ; battle_struct and party_struct end with the same data
 	ld a, [wCurBattleMon]
 	ld hl, wPartyMon1Species
 	call GetPartyLocation
@@ -4728,7 +4730,7 @@ DrawEnemyHUD:
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
-	ld de, wEnemyMonNick
+	ld de, wEnemyMonNickname
 	hlcoord 1, 0
 	call Battle_DummyFunction
 	call PlaceString
@@ -6364,10 +6366,11 @@ LoadEnemyMon:
 	call CopyBytes
 
 .Finish:
-; Only the first five base stats are copied..
+; Copy the first five base stats (the enemy mon's base Sp. Atk
+; is also used to calculate Sp. Def stat experience)
 	ld hl, wBaseStats
 	ld de, wEnemyMonBaseStats
-	ld b, wBaseSpecialDefense - wBaseStats
+	ld b, NUM_STATS - 1
 .loop
 	ld a, [hli]
 	ld [de], a
@@ -6392,9 +6395,9 @@ LoadEnemyMon:
 	and a
 	ret z
 
-; Update enemy nick
+; Update enemy nickname
 	ld hl, wStringBuffer1
-	ld de, wEnemyMonNick
+	ld de, wEnemyMonNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 
@@ -7034,7 +7037,7 @@ GiveExperiencePoints:
 .no_carry_stat_exp
 	push hl
 	push bc
-	ld a, MON_PKRUS
+	ld a, MON_POKERUS
 	call GetPartyParamLocation
 	ld a, [hl]
 	and a
@@ -7112,7 +7115,7 @@ GiveExperiencePoints:
 	ld [wStringBuffer2], a
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
-	call GetNick
+	call GetNickname
 	ld hl, Text_MonGainedExpPoint
 	call BattleTextbox
 	ld a, [wStringBuffer2 + 1]
@@ -7523,7 +7526,7 @@ AnimateExpBar:
 	ld c, $40
 	call .LoopBarAnimation
 	call PrintPlayerHUD
-	ld hl, wBattleMonNick
+	ld hl, wBattleMonNickname
 	ld de, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
@@ -7634,7 +7637,7 @@ SendOutMonText:
 	ld hl, GoMonText
 	jr z, .skip_to_textbox
 
-	; compute enemy helth remaining as a percentage
+	; compute enemy health remaining as a percentage
 	xor a
 	ldh [hMultiplicand + 0], a
 	ld hl, wEnemyMonHP
@@ -7709,10 +7712,10 @@ WithdrawMonText:
 .WithdrawMonText:
 	text_far _BattleMonNickCommaText
 	text_asm
-; Print text to withdraw mon
-; depending on HP the message is different
+; Depending on the HP lost since the enemy mon was sent out, the game prints a different text
 	push de
 	push bc
+	; compute enemy health lost as a percentage
 	ld hl, wEnemyMonHP + 1
 	ld de, wEnemyHPAtTimeOfPlayerSwitch + 1
 	ld b, [hl]
@@ -8448,9 +8451,6 @@ IsMobileBattle2:
 	cp LINK_MOBILE
 	ret
 
-LINK_BATTLE_RECORD_LENGTH EQUS "(sLinkBattleRecord1End - sLinkBattleRecord1)" ; 18
-NUM_LINK_BATTLE_RECORDS EQUS "((sLinkBattleStatsEnd - sLinkBattleRecord) / LINK_BATTLE_RECORD_LENGTH)" ; 5
-
 _DisplayLinkRecord:
 	ld a, BANK(sLinkBattleStats)
 	call OpenSRAM
@@ -8940,6 +8940,7 @@ InitBattleDisplay:
 	predef PlaceGraphic
 	xor a
 	ldh [hWY], a
+	vc_hook Unknown_InitBattleDisplay
 	ldh [rWY], a
 	call WaitBGMap
 	call HideSprites

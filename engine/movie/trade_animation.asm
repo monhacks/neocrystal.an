@@ -1,5 +1,5 @@
-TRADEANIM_RIGHT_ARROW EQU "▶" ; $ed
-TRADEANIM_LEFT_ARROW  EQU "▼" ; $ee
+DEF TRADEANIM_RIGHT_ARROW EQU "▶" ; $ed
+DEF TRADEANIM_LEFT_ARROW  EQU "▼" ; $ee
 
 ; TradeAnim_TubeAnimJumptable.Jumptable indexes
 	const_def
@@ -7,15 +7,15 @@ TRADEANIM_LEFT_ARROW  EQU "▼" ; $ee
 	const TRADEANIMSTATE_1 ; 1
 	const TRADEANIMSTATE_2 ; 2
 	const TRADEANIMSTATE_3 ; 3
-TRADEANIMJUMPTABLE_LENGTH EQU const_value
+DEF TRADEANIMJUMPTABLE_LENGTH EQU const_value
 
-add_tradeanim: MACRO
+MACRO add_tradeanim
 \1_TradeCmd:
 	dw \1
 ENDM
 
-tradeanim: MACRO
-	db (\1_TradeCmd - DoTradeAnimation.JumpTable) / 2
+MACRO tradeanim
+	db (\1_TradeCmd - DoTradeAnimation.Jumptable) / 2
 ENDM
 
 TradeAnimation:
@@ -168,7 +168,7 @@ RunTradeAnimScript:
 	ld a, $1
 	ldh [rVBK], a
 	ld hl, vTiles0
-	ld bc, sScratch - vTiles0
+	ld bc, VRAM_End - VRAM_Begin
 	xor a
 	call ByteFill
 	ld a, $0
@@ -176,7 +176,7 @@ RunTradeAnimScript:
 
 .NotCGB:
 	hlbgcoord 0, 0
-	ld bc, sScratch - vBGMap0
+	ld bc, VRAM_End - vBGMap0
 	ld a, " "
 	call ByteFill
 	ld hl, TradeGameBoyLZ
@@ -212,10 +212,10 @@ RunTradeAnimScript:
 	call TradeAnim_GetFrontpic
 	ld a, [wPlayerTrademonSpecies]
 	ld de, wPlayerTrademonSpeciesName
-	call TradeAnim_GetNickname
+	call TradeAnim_GetNicknamename
 	ld a, [wOTTrademonSpecies]
 	ld de, wOTTrademonSpeciesName
-	call TradeAnim_GetNickname
+	call TradeAnim_GetNicknamename
 	call TradeAnim_NormalPals
 	ret
 
@@ -237,9 +237,9 @@ DoTradeAnimation:
 	ret
 
 .DoTradeAnimCommand:
-	jumptable .JumpTable, wJumptableIndex
+	jumptable .Jumptable, wJumptableIndex
 
-.JumpTable:
+.Jumptable:
 	add_tradeanim TradeAnim_AdvanceScriptPointer ; 00
 	add_tradeanim TradeAnim_ShowGivemonData      ; 01
 	add_tradeanim TradeAnim_ShowGetmonData       ; 02
@@ -470,7 +470,7 @@ TradeAnim_TubeToPlayer8:
 	call DisableLCD
 	callfar ClearSpriteAnims
 	hlbgcoord 0, 0
-	ld bc, sScratch - vBGMap0
+	ld bc, VRAM_End - vBGMap0
 	ld a, " "
 	call ByteFill
 	xor a
@@ -817,7 +817,7 @@ TradeAnim_GetFrontpic:
 	predef GetMonFrontpic
 	ret
 
-TradeAnim_GetNickname:
+TradeAnim_GetNicknamename:
 	push de
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
@@ -1428,7 +1428,7 @@ DebugTrade: ; unreferenced
 	jr nz, .loop2
 	ret
 
-debugtrade: MACRO
+MACRO debugtrade
 ; species, ot name, ot id
 	db \1, \2
 	dw \3

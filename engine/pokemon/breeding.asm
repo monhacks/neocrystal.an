@@ -303,7 +303,7 @@ HatchEggs:
 	ld a, [wPlayerID + 1]
 	ld [hl], a
 	ld a, [wCurPartyMon]
-	ld hl, wPartyMonOT
+	ld hl, wPartyMonOTs
 	ld bc, NAME_LENGTH
 	call AddNTimes
 	ld d, h
@@ -835,7 +835,7 @@ Hatch_InitShellFragments:
 	call EggHatch_DoAnimFrame
 	ret
 
-shell_fragment: MACRO
+MACRO shell_fragment
 ; y tile, y pxl, x tile, x pxl, frameset offset, ???
 	db (\1 * 8) % $100 + \2, (\3 * 8) % $100 + \4, \5 - SPRITE_ANIM_FRAMESET_EGG_HATCH_1, \6
 ENDM
@@ -870,7 +870,7 @@ DayCareMon1:
 	bit DAYCARELADY_HAS_MON_F, a
 	jr z, DayCareMonCursor
 	call PromptButton
-	ld hl, wBreedMon2Nick
+	ld hl, wBreedMon2Nickname
 	call DayCareMonCompatibilityText
 	jp PrintText
 
@@ -883,7 +883,7 @@ DayCareMon2:
 	bit DAYCAREMAN_HAS_MON_F, a
 	jr z, DayCareMonCursor
 	call PromptButton
-	ld hl, wBreedMon1Nick
+	ld hl, wBreedMon1Nickname
 	call DayCareMonCompatibilityText
 	jp PrintText
 
