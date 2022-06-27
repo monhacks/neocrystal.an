@@ -251,8 +251,8 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
+	dw MoonBlastDescription
+	dw PlayRoughDescription
 	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
@@ -1267,3 +1267,11 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+MoonBlastDescription:
+	db   "Attacks with at"
+	next "magical beam.@"
+
+PlayRoughDescription:
+	db   "Attacks foe with"
+	next "playful demeanor.@"
