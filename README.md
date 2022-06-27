@@ -52,6 +52,8 @@ Squirtle | Gift in Kanto
 Vulpix | Route 36, 37 (Night)
 Mareep | Route 32, 42
 Flaaffy | Route 42, 43
+Marill & Azumarill | various
+Togetic | Outside Mt. Silver
 Girafarig | Route 43
 Remoraid | Route 44 (Fishing)
 Pichu | Ilex Forest, National Park (Morning)
