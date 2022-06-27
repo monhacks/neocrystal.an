@@ -189,6 +189,7 @@ ItemNames::
 	db "MUSIC MAIL@"
 	db "MIRAGE MAIL@"
 	db "TERU-SAMA@"
+	db "MAGIC_WAND@"
 	db "TM01@"
 	db "TM02@"
 	db "TM03@"
