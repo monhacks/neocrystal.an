@@ -1631,7 +1631,7 @@ JohtoGrassWildMons:
 	db 44, RAPIDASH
 	db 41, DODUO
 	db 43, DODRIO
-	db 43, DODRIO
+	db 38, TOGETIC
 	; day
 	db 41, TANGELA
 	db 42, PONYTA
