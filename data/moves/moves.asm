@@ -247,7 +247,7 @@ Moves:
 	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING,     100, 10,   0
 	move MORNING_SUN,  EFFECT_MORNING_SUN,         0, NORMAL,       100,  5,   0
 	move SYNTHESIS,    EFFECT_SYNTHESIS,           0, GRASS,        100,  5,   0
-	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, NORMAL,       100,  5,   0
+	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, FAIRY,        100,  5,   0
 	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,        1, NORMAL,       100, 15,   0
 	move CROSS_CHOP,   EFFECT_NORMAL_HIT,        100, FIGHTING,      80,  5,   0
 	move TWISTER,      EFFECT_TWISTER,            40, DRAGON,       100, 20,  20
@@ -265,3 +265,4 @@ Moves:
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0
 	move MOONBLAST,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,        100, 10,  30
 	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN,        90, FAIRY,         90, 10,  10
+  move FAIRY_WIND,   EFFECT_ALWAYS_HIT          40, FAIRY,        100, 30,   0

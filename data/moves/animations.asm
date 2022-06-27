@@ -254,7 +254,7 @@ BattleAnimations::
 	dw BattleAnim_BeatUp
 	dw BattleAnim_MoonBlast
 	dw BattleAnim_PlayRough
-	dw BattleAnim_254
+	dw BattleAnim_FairyWind
 	dw BattleAnim_SweetScent2
 ; $100
 	dw BattleAnim_ThrowPokeBall
@@ -4394,6 +4394,49 @@ BattleAnim_CrossChop:
 	anim_ret
 
 BattleAnim_Twister:
+	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
+.loop1
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_GUST, 64, 112, $0
+	anim_wait 6
+	anim_loop 9, .loop1
+.loop2
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_wait 8
+	anim_loop 8, .loop2
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_incobj 6
+	anim_incobj 7
+	anim_incobj 8
+	anim_incobj 9
+	anim_wait 64
+	anim_obj ANIM_OBJ_HIT_YFIX, 144, 64, $18
+.loop3
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_wait 8
+	anim_loop 4, .loop3
+	anim_obj ANIM_OBJ_HIT_YFIX, 128, 32, $18
+.loop4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_wait 8
+	anim_loop 4, .loop4
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_incobj 6
+	anim_incobj 7
+	anim_incobj 8
+	anim_incobj 9
+	anim_wait 32
+	anim_ret
+  
+BattleAnim_FairyWind:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 .loop1
 	anim_sound 0, 0, SFX_RAZOR_WIND

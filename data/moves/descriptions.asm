@@ -253,7 +253,7 @@ MoveDescriptions::
 	dw BeatUpDescription
 	dw MoonBlastDescription
 	dw PlayRoughDescription
-	dw MoveFEDescription
+	dw FairyWindDescription
 	dw MoveFFDescription
 	dw Move00Description
 
@@ -1273,5 +1273,9 @@ MoonBlastDescription:
 	next "magical beam.@"
 
 PlayRoughDescription:
+	db   "Attacks foe"
+	next "playfully.@"
+
+FairyWindDescription:
 	db   "Attacks foe with"
-	next "playful demeanor.@"
+	next "magical wind.@"

@@ -259,6 +259,7 @@
 	const BEAT_UP      ; fb
 	const MOONBLAST    ; fc
 	const PLAY_ROUGH   ; fd
+  const FAIRY_WIND   ; fe
 NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point
