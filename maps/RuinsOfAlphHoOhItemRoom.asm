@@ -19,7 +19,7 @@ RuinsOfAlphHoOhItemRoomRevivalHerb:
 	itemball REVIVAL_HERB
 
 RuinsOfAlphHoOhItemRoomCharcoal:
-	itemball MAGIC_WAND
+	itemball CHARCOAL
 
 RuinsOfAlphHoOhItemRoomAncientReplica:
 	jumptext RuinsOfAlphHoOhItemRoomAncientReplicaText
