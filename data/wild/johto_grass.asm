@@ -335,12 +335,8 @@ JohtoGrassWildMons:
 	db 15, ZUBAT
 	db 12, KOFFING
 	db 16, KOFFING
-<<<<<<< HEAD
 	db 16, KOFFING
-=======
-	db 16, WEEZING
 	end_grass_wildmons
->>>>>>> 39f2e3b6855b1fdf1310e40ea8c04135e9d9c2f8
 
 	def_grass_wildmons NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -366,14 +362,9 @@ JohtoGrassWildMons:
 	db 14, SPINARAK
 	db 15, MURKROW
 	db 10, VENONAT
-<<<<<<< HEAD
 	db 12, CLEFFA
 	db 12, CLEFFA
-=======
-	db 12, VENONAT
-	db 12, VENONAT
 	end_grass_wildmons
->>>>>>> 39f2e3b6855b1fdf1310e40ea8c04135e9d9c2f8
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1488,20 +1479,12 @@ JohtoGrassWildMons:
 	; nite
 	db 13, SPINARAK
 	db 14, STANTLER
-<<<<<<< HEAD
 	db 15, MURKROW
 	db 16, VULPIX
 	db 15, MURKROW
 	db 15, VULPIX
 	db 15, VULPIX
-=======
-	db 15, HOOTHOOT
-	db 16, STANTLER
-	db 15, NOCTOWL
-	db 15, ARIADOS
-	db 15, ARIADOS
 	end_grass_wildmons
->>>>>>> 39f2e3b6855b1fdf1310e40ea8c04135e9d9c2f8
 
 	def_grass_wildmons ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1583,14 +1566,9 @@ JohtoGrassWildMons:
 	db 15, RATICATE
 	db 16, MISDREAVUS
 	db 15, MARILL
-<<<<<<< HEAD
 	db 16, FLAAFFY
 	db 16, FLAAFFY
-=======
-	db 16, GOLBAT
-	db 16, GOLBAT
 	end_grass_wildmons
->>>>>>> 39f2e3b6855b1fdf1310e40ea8c04135e9d9c2f8
 
 	def_grass_wildmons ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1613,20 +1591,12 @@ JohtoGrassWildMons:
 	; nite
 	db 15, VENONAT
 	db 16, NOCTOWL
-<<<<<<< HEAD
 	db 16, GIRAFARIG
 	db 17, MISDREAVUS
 	db 17, GIRAFARIG
 	db 17, MISDREAVUS
 	db 17, MISDREAVUS
-=======
-	db 16, RATICATE
-	db 17, VENONAT
-	db 17, RATICATE
-	db 17, VENOMOTH
-	db 17, VENOMOTH
 	end_grass_wildmons
->>>>>>> 39f2e3b6855b1fdf1310e40ea8c04135e9d9c2f8
 
 	def_grass_wildmons ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1680,14 +1650,9 @@ JohtoGrassWildMons:
 	db 24, GLIGAR
 	db 25, GRAVELER
 	db 27, GRAVELER
-<<<<<<< HEAD
 	db 20, LARVITAR
 	db 20, LARVITAR
-=======
-	db 27, GRAVELER
-	db 27, GRAVELER
 	end_grass_wildmons
->>>>>>> 39f2e3b6855b1fdf1310e40ea8c04135e9d9c2f8
 
 	def_grass_wildmons ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
