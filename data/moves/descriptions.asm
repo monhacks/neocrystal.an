@@ -252,10 +252,10 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw MoonBlastDescription
+	dw PlayRoughDescription
+	dw FairyWindDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
@@ -1270,3 +1270,15 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+MoonBlastDescription:
+	db   "Attacks with at"
+	next "magical beam.@"
+
+PlayRoughDescription:
+	db   "Attacks foe"
+	next "playfully.@"
+
+FairyWindDescription:
+	db   "Attacks foe with"
+	next "magical wind.@"

@@ -142,7 +142,7 @@
 	const PASS         ; 86
 	const SWIRL_PERMIT ; 87
 	const BREAK_PERMIT ; 88
-	const ITEM_89      ; 89
+	const MAGIC_WAND   ; 89
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b
 	const SCOPE_LENS   ; 8c

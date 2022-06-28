@@ -190,7 +190,7 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MirageMailDesc
-	dw TeruSama25Desc
+	dw MagicWandDesc
 	assert_table_length NUM_ITEMS
 	dw TeruSama26Desc
 	dw TeruSama26Desc
@@ -993,8 +993,9 @@ MirageMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
 
-TeruSama25Desc:
-	db   "?@"
+MagicWandDesc:
+	db   "Powers up fairy-"
+	next "type moves. (HOLD)@"
 
 TeruSama26Desc:
 	db   "?@"
