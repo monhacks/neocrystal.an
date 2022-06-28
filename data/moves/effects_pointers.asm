@@ -105,6 +105,7 @@ MoveEffectsPointers:
 	dw FalseSwipe
 	dw HealBell
 	dw NormalHit
+	dw NormalHit
 	dw TripleKick
 	dw Thief
 	dw MeanLook
