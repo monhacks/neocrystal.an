@@ -34,10 +34,12 @@ Fixes in the [multi-player battle engine](#multi-player-battle-engine) category 
   - [Beat Up may fail to raise Substitute](#beat-up-may-fail-to-raise-substitute)
   - [Beat Up may trigger King's Rock even if it failed](#beat-up-may-trigger-kings-rock-even-if-it-failed)
   - [Present damage is incorrect in link battles](#present-damage-is-incorrect-in-link-battles)
+  - [Return and Frustration deal no damage when the user's happiness is low or high, respectively](#return-and-frustration-deal-no-damage-when-the-users-happiness-is-low-or-high-respectively)
   - [Dragon Scale, not Dragon Fang, boosts Dragon-type moves](#dragon-scale-not-dragon-fang-boosts-dragon-type-moves)
+  - [Switching out or switching against a Pokémon with max HP below 4 freezes the game](#switching-out-or-switching-against-a-pokémon-with-max-HP-below-4-freezes-the-game)
+  - [Moves that do damage and increase your stats do not increase stats after a KO](#moves-that-do-damage-and-increase-your-stats-do-not-increase-stats-after-a-ko)
   - [HP bar animation is slow for high HP](#hp-bar-animation-is-slow-for-high-hp)
   - [HP bar animation off-by-one error for low HP](#hp-bar-animation-off-by-one-error-for-low-hp)
-  - [Moves that do damage and increase your stats do not increase stats after a KO](#moves-that-do-damage-and-increase-your-stats-do-not-increase-stats-after-a-ko)
 - [Single-player battle engine](#single-player-battle-engine)
   - [A Transformed Pokémon can use Sketch and learn otherwise unobtainable moves](#a-transformed-pokémon-can-use-sketch-and-learn-otherwise-unobtainable-moves)
   - [Catching a Transformed Pokémon always catches a Ditto](#catching-a-transformed-pokémon-always-catches-a-ditto)
@@ -51,19 +53,25 @@ Fixes in the [multi-player battle engine](#multi-player-battle-engine) category 
   - [Glacier Badge may not boost Special Defense depending on the value of Special Attack](#glacier-badge-may-not-boost-special-defense-depending-on-the-value-of-special-attack)
   - ["Smart" AI encourages Mean Look if its own Pokémon is badly poisoned](#smart-ai-encourages-mean-look-if-its-own-pokémon-is-badly-poisoned)
   - ["Smart" AI discourages Conversion2 after the first turn](#smart-ai-discourages-conversion2-after-the-first-turn)
+  - ["Smart" AI does not encourage Solar Beam, Flame Wheel, or Moonlight during Sunny Day](#smart-ai-does-not-encourage-solar-beam-flame-wheel-or-moonlight-during-sunny-day)
+  - [AI does not discourage Future Sight when it's already been used](#ai-does-not-discourage-future-sight-when-its-already-been-used)
   - [AI makes a false assumption about `CheckTypeMatchup`](#ai-makes-a-false-assumption-about-checktypematchup)
   - [AI use of Full Heal or Full Restore does not cure Nightmare status](#ai-use-of-full-heal-or-full-restore-does-not-cure-nightmare-status)
   - [AI use of Full Heal does not cure confusion status](#ai-use-of-full-heal-does-not-cure-confusion-status)
   - [Wild Pokémon can always Teleport regardless of level difference](#wild-pokémon-can-always-teleport-regardless-of-level-difference)
+  - [`RIVAL2` has lower DVs than `RIVAL1`](#rival2-has-lower-dvs-than-rival1)
   - [`HELD_CATCH_CHANCE` has no effect](#held_catch_chance-has-no-effect)
   - [Credits sequence changes move selection menu behavior](#credits-sequence-changes-move-selection-menu-behavior)
-- [Overworld engine](#overworld-engine)
+- [Game engine](#game-engine)
   - [`LoadMetatiles` wraps around past 128 blocks](#loadmetatiles-wraps-around-past-128-blocks)
   - [Surfing directly across a map connection does not load the new map](#surfing-directly-across-a-map-connection-does-not-load-the-new-map)
   - [Swimming NPCs aren't limited by their movement radius](#swimming-npcs-arent-limited-by-their-movement-radius)
+  - [Pokémon deposited in the Day-Care might lose experience](#pokémon-deposited-in-the-day-care-might-lose-experience)
 - [Graphics](#graphics)
   - [In-battle “`…`” ellipsis is too high](#in-battle--ellipsis-is-too-high)
   - [Two tiles in the `port` tileset are drawn incorrectly](#two-tiles-in-the-port-tileset-are-drawn-incorrectly)
+  - [The Ruins of Alph research center's roof color at night looks wrong](#the-ruins-of-alph-research-centers-roof-color-at-night-looks-wrong)
+  - [A hatching Unown egg would not show the right letter](#a-hatching-unown-egg-would-not-show-the-right-letter)
   - [Using a Park Ball in non-Contest battles has a corrupt animation](#using-a-park-ball-in-non-contest-battles-has-a-corrupt-animation)
   - [Battle transitions fail to account for the enemy's level](#battle-transitions-fail-to-account-for-the-enemys-level)
   - [Some trainer NPCs have inconsistent overworld sprites](#some-trainer-npcs-have-inconsistent-overworld-sprites)
@@ -94,7 +102,7 @@ Fixes in the [multi-player battle engine](#multi-player-battle-engine) category 
   - [`TryObjectEvent` arbitrary code execution](#tryobjectevent-arbitrary-code-execution)
   - [`ReadObjectEvents` overflows into `wObjectMasks`](#readobjectevents-overflows-into-wobjectmasks)
   - [`ClearWRAM` only clears WRAM bank 1](#clearwram-only-clears-wram-bank-1)
-  - [`BattleAnimCmd_ClearObjs` only clears the first 6⅔ objects](#battleanimcmd_clearobjs-only-clears-the-first-6⅔-objects)
+  - [`BattleAnimCmd_ClearObjs` only clears the first 6⅔ objects](#battleanimcmd_clearobjs-only-clears-the-first-6-objects)
 
 
 ## Multi-player battle engine
@@ -175,23 +183,33 @@ Fixes in the [multi-player battle engine](#multi-player-battle-engine) category 
 
 ([Video](https://www.youtube.com/watch?v=rGqu3d3pdok&t=450))
 
-**Fix:** Edit `DittoMetalPowder` in [engine/battle/effect_commands.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/effect_commands.asm):
+**Fix:** Edit [engine/battle/effect_commands.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/effect_commands.asm):
 
 ```diff
- 	ld a, c
- 	srl a
- 	add c
- 	ld c, a
- 	ret nc
+ DittoMetalPowder:
+ 	...
 
- 	srl b
- 	ld a, b
- 	and a
- 	jr nz, .done
- 	inc b
- .done
- 	scf
- 	rr c
+-	ld a, c
+-	srl a
+-	add c
+-	ld c, a
+-	ret nc
+-
+-	srl b
+-	ld a, b
+-	and a
+-	jr nz, .done
+-	inc b
+-.done
+-	scf
+-	rr c
++	ld h, b
++	ld l, c
++	srl b
++	rr c
++	add hl, bc
++	ld b, h
++	ld c, l
 +
 +	ld a, HIGH(MAX_STAT_VALUE)
 +	cp b
@@ -206,12 +224,52 @@ Fixes in the [multi-player battle engine](#multi-player-battle-engine) category 
  	ret
 ```
 
+```diff
+ PlayerAttackDamage:
+ 	...
+
+ .done
++	push hl
++	call DittoMetalPowder
++	pop hl
+
+ 	call TruncateHL_BC
+
+ 	ld a, [wBattleMonLevel]
+ 	ld e, a
+-	call DittoMetalPowder
+
+ 	ld a, 1
+ 	and a
+ 	ret
+```
+
+```diff
+ EnemyAttackDamage:
+ 	...
+
+ .done
++	push hl
++	call DittoMetalPowder
++	pop hl
+
+ 	call TruncateHL_BC
+
+ 	ld a, [wBattleMonLevel]
+ 	ld e, a
+-	call DittoMetalPowder
+
+ 	ld a, 1
+ 	and a
+ 	ret
+```
+
 
 ### Reflect and Light Screen can make (Special) Defense wrap around above 1024
 
 This bug existed for all battles in Gold and Silver, and was only fixed for single-player battles in Crystal to preserve link compatibility.
 
-**Fix:** Edit `TruncateHL_BC` in [engine/battle/effect_commands.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/effect_commands.asm)
+**Fix:** Edit `TruncateHL_BC` in [engine/battle/effect_commands.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/effect_commands.asm):
 
 ```diff
  .finish
@@ -319,9 +377,9 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
  	set SUBSTATUS_CONFUSED, [hl]
 +	ldh a, [hBattleTurn]
 +	and a
-+	ld hl, wEnemyConfuseCount
-+	jr z, .set_confuse_count
 +	ld hl, wPlayerConfuseCount
++	jr z, .set_confuse_count
++	ld hl, wEnemyConfuseCount
 +.set_confuse_count
 +	call BattleRandom
 +	and %11
@@ -565,7 +623,7 @@ This bug affects Attract, Curse, Foresight, Mean Look, Mimic, Nightmare, Spider 
  .got_mon
  	ld a, [wCurBeatUpPartyMon]
  	ld hl, wPartyMonNicknames
- 	call GetNick
+ 	call GetNickname
  	ld a, MON_HP
  	call GetBeatupMonLocation
  	ld a, [hli]
@@ -683,7 +741,7 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
  	push de
 -.colosseum_skippush
 -
-	call BattleCommand_Stab
+ 	call BattleCommand_Stab
 -
 -	ld a, [wLinkMode]
 -	cp LINK_COLOSSEUM
@@ -691,6 +749,53 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
  	pop de
  	pop bc
 -.colosseum_skippop
+```
+
+
+### Return and Frustration deal no damage when the user's happiness is low or high, respectively
+
+This happens because the user's happiness (or 255 − happiness for Frustration) is multiplied by 10 and divided by 25, which rounds down to zero when the happiness is 0–2 (or 253–255 for Frustration).
+
+**Fix:**
+
+Edit [engine/battle/move_effects/return.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/move_effects/return.asm):
+
+```diff
+ BattleCommand_HappinessPower:
+ 	...
+ 	call Multiply
+ 	ld a, 25
+ 	ldh [hDivisor], a
+ 	ld b, 4
+ 	call Divide
+ 	ldh a, [hQuotient + 3]
++	and a
++	jr nz, .done
++	inc a
++.done
+ 	ld d, a
+ 	pop bc
+ 	ret
+```
+
+And edit [engine/battle/move_effects/frustration.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/move_effects/frustration.asm):
+
+```diff
+ BattleCommand_FrustrationPower:
+ 	...
+ 	call Multiply
+ 	ld a, 25
+ 	ldh [hDivisor], a
+ 	ld b, 4
+ 	call Divide
+ 	ldh a, [hQuotient + 3]
++	and a
++	jr nz, .done
++	inc a
++.done
+ 	ld d, a
+ 	pop bc
+ 	ret
 ```
 
 
@@ -706,6 +811,143 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
  ; DRAGON_SCALE
 -	item_attribute 2100, HELD_DRAGON_BOOST, 10, CANT_SELECT, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 +	item_attribute 2100, HELD_NONE, 0, CANT_SELECT, ITEM, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+```
+
+
+### Switching out or switching against a Pokémon with max HP below 4 freezes the game
+
+This happens because switching involves calculating a percentage of maximum enemy HP. Directly calculating *HP* × 100 / *max HP* would require a two-byte denominator, so instead the game calculates *HP* × 25 / (*max HP* / 4), since even a maximum HP of 999 divided by 4 is 249, which fits in one byte. However, if the maximum HP is below 4 this will divide by 0, which enters an infinite loop in `_Divide`.
+
+**Fix:** First, edit `SendOutMonText` in [engine/battle/core.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/core.asm):
+
+```diff
+ 	; compute enemy health remaining as a percentage
+ 	xor a
+ 	ldh [hMultiplicand + 0], a
+ 	ld hl, wEnemyMonHP
+ 	ld a, [hli]
+ 	ld [wEnemyHPAtTimeOfPlayerSwitch], a
+ 	ldh [hMultiplicand + 1], a
+ 	ld a, [hl]
+ 	ld [wEnemyHPAtTimeOfPlayerSwitch + 1], a
+ 	ldh [hMultiplicand + 2], a
+-	ld a, 25
+-	ldh [hMultiplier], a
+-	call Multiply
+ 	ld hl, wEnemyMonMaxHP
+ 	ld a, [hli]
+ 	ld b, [hl]
+-	srl a
+-	rr b
+-	srl a
+-	rr b
++	ld c, 100
++	and a
++	jr z, .shift_done
++.shift
++	rra
++	rr b
++	srl c
++	and a
++	jr nz, .shift
++.shift_done
++	ld a, c
++	ldh [hMultiplier], a
++	call Multiply
+ 	ld a, b
+ 	ld b, 4
+ 	ldh [hDivisor], a
+ 	call Divide
+```
+
+Then edit `WithdrawMonText` in the same file:
+
+```diff
+ 	; compute enemy health lost as a percentage
+ 	ld hl, wEnemyMonHP + 1
+ 	ld de, wEnemyHPAtTimeOfPlayerSwitch + 1
+ 	ld b, [hl]
+ 	dec hl
+ 	ld a, [de]
+ 	sub b
+ 	ldh [hMultiplicand + 2], a
+ 	dec de
+ 	ld b, [hl]
+ 	ld a, [de]
+ 	sbc b
+ 	ldh [hMultiplicand + 1], a
+-	ld a, 25
+-	ldh [hMultiplier], a
+-	call Multiply
+ 	ld hl, wEnemyMonMaxHP
+ 	ld a, [hli]
+ 	ld b, [hl]
+-	srl a
+-	rr b
+-	srl a
+-	rr b
++	ld c, 100
++	and a
++	jr z, .shift_done
++.shift
++	rra
++	rr b
++	srl c
++	and a
++	jr nz, .shift
++.shift_done
++	ld a, c
++	ldh [hMultiplier], a
++	call Multiply
+ 	ld a, b
+ 	ld b, 4
+ 	ldh [hDivisor], a
+ 	call Divide
+```
+
+This changes both calculations to *HP* × (100 / *N*) / (*max HP* / *N*) for the smallest necessary *N*, which will be at least 1, so it avoids dividing by zero and is also more accurate.
+
+
+### Moves that do damage and increase your stats do not increase stats after a KO
+
+`BattleCommand_CheckFaint` "ends the move effect if the opponent faints", and these moves attempt to raise the user's stats *after* `checkfaint`. Note that fixing this can lead to stats being increased at the end of battle, but will not have any negative effects.
+
+**Fix:** Edit [data/moves/effects.asm](https://github.com/pret/pokecrystal/blob/master/data/moves/effects.asm):
+
+```diff
+ DefenseUpHit:
+ 	...
+ 	criticaltext
+ 	supereffectivetext
++	defenseup
++	statupmessage
+ 	checkfaint
+ 	buildopponentrage
+-	defenseup
+-	statupmessage
+ 	endmove
+
+ AttackUpHit:
+ 	...
+ 	criticaltext
+ 	supereffectivetext
++	attackup
++	statupmessage
+ 	checkfaint
+ 	buildopponentrage
+-	attackup
+-	statupmessage
+ 	endmove
+
+ AllUpHit:
+ 	...
+ 	criticaltext
+ 	supereffectivetext
++	allstatsup
+ 	checkfaint
+ 	buildopponentrage
+-	allstatsup
+ 	endmove
 ```
 
 
@@ -763,48 +1005,6 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
  	jr c, .done
  	inc b
  	jr .loop
-```
-
-### Moves that do damage and increase your stats do not increase stats after a KO
-
-`BattleCommand_CheckFaint` "ends the move effect if the opponent faints", and these moves attempt to raise the user's stats *after* `checkfaint`. Note that fixing this can lead to stats being increased at the end of battle, but will not have any negative effects.
-
-**Fix:** Edit [data/moves/effects.asm](https://github.com/pret/pokecrystal/blob/master/data/moves/effects.asm):
-
-```diff
- DefenseUpHit:
- 	...
- 	criticaltext
- 	supereffectivetext
-+	defenseup
-+	statupmessage
- 	checkfaint
- 	buildopponentrage
--	defenseup
--	statupmessage
- 	endmove
-
- AttackUpHit:
- 	...
- 	criticaltext
- 	supereffectivetext
-+	attackup
-+	statupmessage
- 	checkfaint
- 	buildopponentrage
--	attackup
--	statupmessage
- 	endmove
-
- AllUpHit:
- 	...
- 	criticaltext
- 	supereffectivetext
-+	allstatsup
- 	checkfaint
- 	buildopponentrage
--	allstatsup
- 	endmove
 ```
 
 
@@ -948,7 +1148,7 @@ This can occur if your party and current PC box are both full when you start the
 -; Uncomment the line below to fix this.
  	ld b, a
  	ld a, [wEnemyMonStatus]
- 	and 1 << FRZ | SLP
+ 	and 1 << FRZ | SLP_MASK
  	ld c, 10
  	jr nz, .addstatus
 -	; ld a, [wEnemyMonStatus]
@@ -1022,10 +1222,10 @@ This can occur if your party and current PC box are both full when you start the
 
 ### Heavy Ball uses wrong weight value for three Pokémon
 
-**Fix:** Edit `GetPokedexEntryBank` in [engine/items/item_effects.asm](https://github.com/pret/pokecrystal/blob/master/engine/items/item_effects.asm):
+**Fix:** Edit `HeavyBall_GetDexEntryBank` in [engine/items/item_effects.asm](https://github.com/pret/pokecrystal/blob/master/engine/items/item_effects.asm):
 
 ```diff
- GetPokedexEntryBank:
+ HeavyBall_GetDexEntryBank:
 -; This function is buggy.
 -; It gets the wrong bank for Kadabra (64), Tauros (128), and Sunflora (192).
 -; Uncomment the line below to fix this.
@@ -1112,6 +1312,41 @@ As Pryce's dialog ("That BADGE will raise the SPECIAL stats of POKéMON.") impli
 ```
 
 
+### "Smart" AI does not encourage Solar Beam, Flame Wheel, or Moonlight during Sunny Day
+
+**Fix:** Edit `SunnyDayMoves` in [data/battle/ai/sunny_day_moves.asm](https://github.com/pret/pokecrystal/blob/master/data/battle/ai/sunny_day_moves.asm):
+
+```diff
+SunnyDayMoves:
+ 	db FIRE_PUNCH
+ 	db EMBER
+ 	db FLAMETHROWER
++	db SOLARBEAM
+ 	db FIRE_SPIN
+ 	db FIRE_BLAST
++	db FLAME_WHEEL
+ 	db SACRED_FIRE
+ 	db MORNING_SUN
+ 	db SYNTHESIS
++	db MOONLIGHT
+ 	db -1 ; end
+```
+
+
+### AI does not discourage Future Sight when it's already been used
+
+**Fix:** Edit `AI_Redundant` in [engine/battle/ai/redundant.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/ai/redundant.asm):
+
+```diff
+ .FutureSight:
+-	ld a, [wEnemyScreens]
+-	bit 5, a
++	ld a, [wEnemyFutureSightCount]
++	and a
+ 	ret
+```
+
+
 ### AI makes a false assumption about `CheckTypeMatchup`
 
 **Fix:** Edit `BattleCheckTypeMatchup` in [engine/battle/effect_commands.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/effect_commands.asm):
@@ -1165,19 +1400,13 @@ As Pryce's dialog ("That BADGE will raise the SPECIAL stats of POKéMON.") impli
 -	; res SUBSTATUS_NIGHTMARE, [hl]
 +	ld hl, wEnemySubStatus1
 +	res SUBSTATUS_NIGHTMARE, [hl]
-	; Bug: this should reset SUBSTATUS_CONFUSED
-	; Uncomment the 2 lines below to fix
-	; ld hl, wEnemySubStatus3
-	; res SUBSTATUS_CONFUSED, [hl]
- 	ld hl, wEnemySubStatus5
- 	res SUBSTATUS_TOXIC, [hl]
- 	ret
+ 	...
 ```
 
 
 ### AI use of Full Heal does not cure confusion status
 
-**Fix:** Edit `EnemyUsedFullRestore`, `EnemyUsedFullHeal`, and `AI_HealStatus` in [engine/battle/ai/items.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/ai/items.asm):
+**Fix:** Edit `EnemyUsedFullRestore`, and `AI_HealStatus` in [engine/battle/ai/items.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/ai/items.asm):
 
 ```diff
  EnemyUsedFullRestore:
@@ -1186,19 +1415,8 @@ As Pryce's dialog ("That BADGE will raise the SPECIAL stats of POKéMON.") impli
  	ld [wCurEnemyItem], a
 -	ld hl, wEnemySubStatus3
 -	res SUBSTATUS_CONFUSED, [hl]
- 	xor a
- 	ld [wEnemyConfuseCount], a
-```
-
-```diff
- EnemyUsedFullHeal:
- 	call AIUsedItemSound
- 	call AI_HealStatus
- 	ld a, FULL_HEAL
-+	ld [wCurEnemyItem], a
-+	xor a
-+	ld [wEnemyConfuseCount], a
- 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
+- 	xor a
+- 	ld [wEnemyConfuseCount], a
 ```
 
 ```diff
@@ -1210,6 +1428,7 @@ As Pryce's dialog ("That BADGE will raise the SPECIAL stats of POKéMON.") impli
  	xor a
  	ld [hl], a
  	ld [wEnemyMonStatus], a
++	ld [wEnemyConfuseCount], a
 	; Bug: this should reset SUBSTATUS_NIGHTMARE
 	; Uncomment the 2 lines below to fix
 	; ld hl, wEnemySubStatus1
@@ -1235,13 +1454,29 @@ As Pryce's dialog ("That BADGE will raise the SPECIAL stats of POKéMON.") impli
  	call BattleRandom
  	cp c
  	jr nc, .loop_enemy
+ 	; b = player level / 4
  	srl b
  	srl b
- 	cp b
--	; This should be jr c, .failed
+-	; This should be "jr c, .failed"
 -	; As written, it makes enemy use of Teleport always succeed if able
++	; If the random number >= player level / 4, Teleport will succeed
+ 	cp b
 -	jr nc, .run_away
 +	jr c, .failed
+```
+
+
+### `RIVAL2` has lower DVs than `RIVAL1`
+
+`RIVAL1` is battled throughout the game. `RIVAL2` is battled at Indigo Plateau, and would not be expected to have worse DVs.
+
+**Fix:** Edit `TrainerClassDVs` in [data/trainers/dvs.asm](https://github.com/pret/pokecrystal/blob/master/data/trainers/dvs.asm):
+
+```diff
+ 	dn 13, 13, 13, 13 ; RIVAL1
+ 	...
+-	dn  9,  8,  8,  8 ; RIVAL2
++	dn 13, 13, 13, 13 ; RIVAL2
 ```
 
 
@@ -1325,7 +1560,7 @@ The `[hInMenu]` value determines this button behavior. However, the battle moves
 ```
 
 
-## Overworld engine
+## Game engine
 
 
 ### `LoadMetatiles` wraps around past 128 blocks
@@ -1438,6 +1673,57 @@ This bug is why the Lapras in [maps/UnionCaveB2F.asm](https://github.com/pret/po
 ```
 
 
+### Pokémon deposited in the Day-Care might lose experience
+
+This happens because when a Pokémon is withdrawn from the Day-Care, its Exp. Points are reset to the minimum required for its level. This means that if it hasn't gained any levels, it may lose experience.
+
+**Fix**: Edit `RetrieveBreedmon` in [engine/pokemon/move_mon.asm](https://github.com/pret/pokecrystal/blob/master/engine/pokemon/move_mon.asm):
+
+```diff
+ RetrieveBreedmon:
+
+ 	...
+
+ 	ld a, [wPartyCount]
+ 	dec a
+ 	ld [wCurPartyMon], a
+ 	farcall HealPartyMon
+-	ld a, [wCurPartyLevel]
+-	ld d, a
++	; Check if there's an exp overflow
++	ld d, MAX_LEVEL
+ 	callfar CalcExpAtLevel
+ 	pop bc
+-	ld hl, MON_EXP
++	ld hl, MON_EXP + 2
+ 	add hl, bc
+ 	ldh a, [hMultiplicand]
+-	ld [hli], a
++	ld b, a
+ 	ldh a, [hMultiplicand + 1]
+-	ld [hli], a
++	ld c, a
+ 	ldh a, [hMultiplicand + 2]
++	ld d, a
++	ld a, [hld]
++	sub d
++	ld a, [hld]
++	sbc c
++	ld a, [hl]
++	sbc b
++	jr c, .not_max_exp
++	ld a, b
++	ld [hli], a
++	ld a, c
++	ld [hli], a
++	ld a, d
+ 	ld [hl], a
++.not_max_exp
+ 	and a
+ 	ret
+```
+
+
 ## Graphics
 
 
@@ -1461,6 +1747,58 @@ This is a mistake with the left-hand warp carpet corner tiles in [gfx/tilesets/p
 **Fix:** Adjust them to match the right-hand corner tiles:
 
 ![image](https://raw.githubusercontent.com/pret/pokecrystal/master/docs/images/port.png)
+
+
+## The Ruins of Alph research center's roof color at night looks wrong
+
+The dungeons' map group mostly has indoor maps that don't need roof colors, but [maps/RuinsOfAlphOutside.blk](https://github.com/pret/pokecrystal/blob/master/maps/RuinsOfAlphOutside.blk) is an exception. It appears to have poorly-chosen roof colors: the morning/day colors are the same default gray as the unused group 0, and the night colors combine the light default gray and the dark red of Cinnabar's night roofs.
+
+![image](https://raw.githubusercontent.com/pret/pokecrystal/master/docs/images/ruins_of_alph_outside.png)
+
+**Fix:** Edit [gfx/tilesets/roofs.pal](https://github.com/pret/pokecrystal/blob/master/gfx/tilesets/roofs.pal) to use the same red colors as Cinnabar (which are not actually seen in-game):
+
+```diff
+ ; group 3 (dungeons)
+-	RGB 21,21,21, 11,11,11 ; morn/day
+-	RGB 21,21,21, 17,08,07 ; nite
++	RGB 31,10,00, 18,06,00 ; morn/day
++	RGB 18,05,09, 17,08,07 ; nite
+```
+
+![image](https://raw.githubusercontent.com/pret/pokecrystal/master/docs/images/ruins_of_alph_outside_cinnabar.png)
+
+
+### A hatching Unown egg would not show the right letter
+
+This happens because both `GetEggFrontpic` and `GetHatchlingFrontpic` use `wBattleMonDVs`, but that's not initialized. They should use the current party mon's DVs instead.
+
+**Fix:** Edit both functions in [engine/pokemon/breeding.asm](https://github.com/pret/pokecrystal/blob/master/engine/pokemon/breeding.asm):
+
+```diff
+ GetEggFrontpic:
+ 	push de
+ 	ld [wCurPartySpecies], a
+ 	ld [wCurSpecies], a
+ 	call GetBaseData
+-	ld hl, wBattleMonDVs
++	ld a, MON_DVS
++	call GetPartyParamLocation
+ 	predef GetUnownLetter
+ 	pop de
+ 	predef_jump GetMonFrontpic
+
+ GetHatchlingFrontpic:
+ 	push de
+ 	ld [wCurPartySpecies], a
+ 	ld [wCurSpecies], a
+ 	call GetBaseData
+-	ld hl, wBattleMonDVs
++	ld a, MON_DVS
++	call GetPartyParamLocation
+ 	predef GetUnownLetter
+ 	pop de
+ 	predef_jump GetAnimatedFrontpic
+```
 
 
 ### Using a Park Ball in non-Contest battles has a corrupt animation
@@ -1522,7 +1860,7 @@ First, edit [engine/battle/battle_transition.asm](https://github.com/pret/pokecr
 +.okay
 +	ld de, MON_LEVEL - MON_HP - 1
 +	add hl, de
-	ld de, 0
+ 	ld de, 0
 -	ld a, [wBattleMonLevel]
 +	ld a, [hl]
  	add 3
@@ -1714,7 +2052,7 @@ Most of the NPCs in [maps/NationalParkBugContest.asm](https://github.com/pret/po
 ```diff
  .CheckWarp:
 -; Bug: Since no case is made for STANDING here, it will check
--; [.edgewarps + $ff]. This resolves to $3e at $8035a.
+-; [.EdgeWarps + $ff]. This resolves to $3e.
 -; This causes wWalkingIntoEdgeWarp to be nonzero when standing on tile $3e,
 -; making bumps silent.
 -
@@ -1864,13 +2202,12 @@ This supports up to six entries.
 **Fix:** Edit `DragonsDen1F_MapScripts` in [maps/DragonsDen1F.asm](https://github.com/pret/pokecrystal/blob/master/maps/DragonsDen1F.asm):
 
 ```diff
--	db 0 ; callbacks
-+	db 1 ; callbacks
+ 	def_callbacks
 +	callback MAPCALLBACK_NEWMAP, .UnsetClairScene
 +
 +.UnsetClairScene:
 +	setmapscene DRAGONS_DEN_B1F, SCENE_DRAGONSDENB1F_NOTHING
-+	return
++	endcallback
 ```
 
 
@@ -1917,9 +2254,9 @@ CopyPokemonName_Buffer1_Buffer3:
 
 ```diff
  HappinessData_DaisysGrooming:
--	db 100 percent,     2, HAPPINESS_GROOMING ; 99.6% chance
-+	db 50 percent + 1,  2, HAPPINESS_GROOMING ; 50% chance
-+	db 100 percent,     2, HAPPINESS_GROOMING ; 50% chance
+-	db -1,             2, HAPPINESS_GROOMING ; 99.6% chance
++	db 50 percent,     2, HAPPINESS_GROOMING ; 50% chance
++	db -1,             2, HAPPINESS_GROOMING ; 50% chance
 ```
 
 
@@ -2017,7 +2354,7 @@ CopyPokemonName_Buffer1_Buffer3:
 
 This bug can allow you to talk to Eusine in Celadon City and encounter Ho-Oh with only traded legendary beasts.
 
-**Fix:** Edit `CheckOwnMon` in [engine/pokemon/search.asm](https://github.com/pret/pokecrystal/blob/master/engine/pokemon/search.asm):
+**Fix:** Edit `CheckOwnMon` in [engine/pokemon/search_owned.asm](https://github.com/pret/pokecrystal/blob/master/engine/pokemon/search_owned.asm):
 
 ```diff
  ; check OT
@@ -2049,7 +2386,7 @@ This bug can allow you to talk to Eusine in Celadon City and encounter Ho-Oh wit
 
 This bug can prevent you from talking to Eusine in Celadon City or encountering Ho-Oh when a caught legendary beast is in the Day-Care.
 
-**Fix:** Edit `CheckOwnMonAnywhere` in [engine/pokemon/search.asm](https://github.com/pret/pokecrystal/blob/master/engine/pokemon/search.asm):
+**Fix:** Edit `CheckOwnMonAnywhere` in [engine/pokemon/search_owned.asm](https://github.com/pret/pokecrystal/blob/master/engine/pokemon/search_owned.asm):
 
 ```diff
  	; If there are no monsters in the party,

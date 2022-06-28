@@ -40,4 +40,4 @@
 	const MART_MT_MOON
 	const MART_INDIGO_PLATEAU
 	const MART_UNDERGROUND
-NUM_MARTS EQU const_value
+DEF NUM_MARTS EQU const_value

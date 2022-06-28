@@ -1,6 +1,4 @@
 BattleCommand_Conversion2:
-; conversion2
-
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
@@ -27,7 +25,7 @@ BattleCommand_Conversion2:
 
 .loop
 	call BattleRandom
-	maskbits NUM_TYPES
+	maskbits TYPES_END
 	cp UNUSED_TYPES
 	jr c, .okay
 	cp UNUSED_TYPES_END

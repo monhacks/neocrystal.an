@@ -1,6 +1,6 @@
 ; Characteristics of each move.
 
-move: MACRO
+MACRO move
 	db \1 ; animation
 	db \2 ; effect
 	db \3 ; power
@@ -11,7 +11,8 @@ move: MACRO
 ENDM
 
 Moves:
-; entries correspond to constants/move_constants.asm
+; entries correspond to move ids (see constants/move_constants.asm)
+	table_width MOVE_LENGTH, Moves
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,        85, 10,   0
@@ -266,3 +267,4 @@ Moves:
 	move MOONBLAST,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,        100, 10,  30
 	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN,        90, FAIRY,         90, 10,  10
   move FAIRY_WIND,   EFFECT_ALWAYS_HIT          40, FAIRY,        100, 30,   0
+	assert_table_length NUM_ATTACKS

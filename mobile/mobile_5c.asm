@@ -74,19 +74,19 @@ Function17005a:
 INCLUDE "engine/events/battle_tower/battle_tower.asm"
 
 Function170be4:
-	ld a, $5
+	ld a, BANK(s5_a894)
 	call OpenSRAM
 	xor a
-	ld hl, $a894
-	ld bc, $0008
+	ld hl, s5_a894
+	ld bc, 6 + 2
 	call ByteFill
 	call CloseSRAM
 	ret
 
 Clears5_a89a:
-	ld a, $5
+	ld a, BANK(s5_a89a)
 	call OpenSRAM
-	ld hl, $a89a
+	ld hl, s5_a89a
 	xor a
 	ld [hli], a
 	ld [hl], a
@@ -94,9 +94,9 @@ Clears5_a89a:
 	ret
 
 Function170c06: ; unreferenced
-	ld a, $5
+	ld a, BANK(s5_a894)
 	call OpenSRAM
-	ld hl, $a894
+	ld hl, s5_a894
 	ld a, [wBattleResult]
 	and a ; WIN?
 	jr nz, .asm_170c15
@@ -105,10 +105,10 @@ Function170c06: ; unreferenced
 .asm_170c15
 	inc hl
 	inc hl
-	ld a, [$a89b]
+	ld a, [s5_a89a + 1]
 	add [hl]
 	ld [hld], a
-	ld a, [$a89a]
+	ld a, [s5_a89a]
 	adc [hl]
 	ld [hli], a
 	jr nc, .asm_170c27
@@ -371,15 +371,15 @@ Function171a5d:
 	jp Function171c66
 
 .asm_171a6a
-	ld a, $0
-	call Function3e32
+	ld a, MOBILEAPI_00
+	call MobileAPI
 	ld [wMobileErrorCodeBuffer], a
 	ld a, l
 	ld [wMobileErrorCodeBuffer + 1], a
 	ld a, h
 	ld [wMobileErrorCodeBuffer + 2], a
-	ld a, $a
-	call Function3e32
+	ld a, MOBILEAPI_05
+	call MobileAPI
 	ldh a, [rSVBK]
 	push af
 	ld a, $1
@@ -407,8 +407,8 @@ String_171aa7:
 Function171ac9:
 	ld de, wcd81
 	ld hl, $5c
-	ld a, $2
-	call Function3e32
+	ld a, MOBILEAPI_01
+	call MobileAPI
 	jp Function171c66
 
 Function171ad7:
@@ -417,8 +417,8 @@ Function171ad7:
 	ld bc, $66
 	call ByteFill
 	ld de, $c608
-	ld a, $c
-	call Function3e32
+	ld a, MOBILEAPI_06
+	call MobileAPI
 	jp Function171c66
 
 Function171aec:

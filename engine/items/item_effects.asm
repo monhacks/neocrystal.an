@@ -12,7 +12,8 @@ _DoItemEffect::
 	ret
 
 ItemEffects:
-; entries correspond to item ids
+; entries correspond to item ids (see constants/item_constants.asm)
+	table_width 2, ItemEffects
 	dw PokeBallEffect      ; MASTER_BALL
 	dw PokeBallEffect      ; ULTRA_BALL
 	dw NoEffect            ; BRIGHTPOWDER
@@ -192,6 +193,21 @@ ItemEffects:
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
 	dw NoEffect            ; ITEM_B3
+	assert_table_length ITEM_B3
+; The items past ITEM_B3 do not have effect entries:
+;	BRICK_PIECE
+;	SURF_MAIL
+;	LITEBLUEMAIL
+;	PORTRAITMAIL
+;	LOVELY_MAIL
+;	EON_MAIL
+;	MORPH_MAIL
+;	BLUESKY_MAIL
+;	MUSIC_MAIL
+;	MIRAGE_MAIL
+;	ITEM_BE
+; They all have the ITEMMENU_NOUSE attribute so they can't be used anyway.
+; NoEffect would be appropriate, with the table then being NUM_ITEMS long.
 
 PokeBallEffect:
 	ld a, [wBattleMode]
@@ -325,7 +341,7 @@ PokeBallEffect:
 ; Uncomment the line below to fix this.
 	ld b, a
 	ld a, [wEnemyMonStatus]
-	and 1 << FRZ | SLP
+	and 1 << FRZ | SLP_MASK
 	ld c, 10
 	jr nz, .addstatus
 	; ld a, [wEnemyMonStatus]
@@ -744,7 +760,7 @@ ParkBallMultiplier:
 	ld b, $ff
 	ret
 
-GetPokedexEntryBank:
+HeavyBall_GetDexEntryBank:
 ; This function is buggy.
 ; It gets the wrong bank for Kadabra (64), Tauros (128), and Sunflora (192).
 ; Uncomment the line below to fix this.
@@ -775,7 +791,7 @@ HeavyBallMultiplier:
 ; else add 0 to catch rate if weight < 204.8 kg
 ; else add 20 to catch rate if weight < 307.2 kg
 ; else add 30 to catch rate if weight < 409.6 kg
-; else add 40 to catch rate (never happens)
+; else add 40 to catch rate
 	ld a, [wEnemyMonSpecies]
 	ld hl, PokedexDataPointerTable
 	dec a
@@ -787,13 +803,13 @@ HeavyBallMultiplier:
 	call GetFarWord
 
 .SkipText:
-	call GetPokedexEntryBank
+	call HeavyBall_GetDexEntryBank
 	call GetFarByte
 	inc hl
 	cp "@"
 	jr nz, .SkipText
 
-	call GetPokedexEntryBank
+	call HeavyBall_GetDexEntryBank
 	push bc
 	inc hl
 	inc hl
@@ -1276,7 +1292,7 @@ RareCandy_StatBooster_GetParameters:
 	call GetBaseData
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
-	call GetNick
+	call GetNickname
 	ret
 
 RareCandyEffect:
@@ -2175,7 +2191,7 @@ PokeFluteEffect:
 	xor a
 	ld [wPokeFluteCuredSleep], a
 
-	ld b, $ff ^ SLP
+	ld b, ~SLP_MASK
 
 	ld hl, wPartyMon1Status
 	call .CureSleep
@@ -2217,7 +2233,7 @@ PokeFluteEffect:
 .loop
 	ld a, [hl]
 	push af
-	and SLP
+	and SLP_MASK
 	jr z, .not_asleep
 	ld a, TRUE
 	ld [wPokeFluteCuredSleep], a
