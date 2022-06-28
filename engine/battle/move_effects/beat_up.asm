@@ -1,6 +1,4 @@
 BattleCommand_BeatUp:
-; beatup
-
 	call ResetDamage
 	ldh a, [hBattleTurn]
 	and a
@@ -28,7 +26,7 @@ BattleCommand_BeatUp:
 .got_mon
 	ld a, [wCurBeatUpPartyMon]
 	ld hl, wPartyMonNicknames
-	call GetNick
+	call GetNickname
 	ld a, MON_HP
 	call GetBeatupMonLocation
 	ld a, [hli]
@@ -198,8 +196,6 @@ BattleCommand_BeatUp:
 	jp SkipToBattleCommand
 
 BattleCommand_BeatUpFailText:
-; beatupfailtext
-
 	ld a, [wBeatUpHitAtLeastOnce]
 	and a
 	ret nz

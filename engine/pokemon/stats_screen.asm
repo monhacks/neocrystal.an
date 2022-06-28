@@ -2,9 +2,9 @@
 	const PINK_PAGE  ; 1
 	const GREEN_PAGE ; 2
 	const BLUE_PAGE  ; 3
-NUM_STAT_PAGES EQU const_value - 1
+DEF NUM_STAT_PAGES EQU const_value - 1
 
-STAT_PAGE_MASK EQU %00000011
+DEF STAT_PAGE_MASK EQU %00000011
 
 BattleStatsScreenInit:
 	ld a, [wLinkMode]
@@ -65,12 +65,12 @@ StatsScreenMain:
 ; ???
 	ld [wStatsScreenFlags], a
 	ld a, [wStatsScreenFlags]
-	and $ff ^ STAT_PAGE_MASK
+	and ~STAT_PAGE_MASK
 	or PINK_PAGE ; first_page
 	ld [wStatsScreenFlags], a
 .loop
 	ld a, [wJumptableIndex]
-	and $ff ^ (1 << 7)
+	and ~(1 << 7)
 	ld hl, StatsScreenPointerTable
 	rst JumpTable
 	call StatsScreen_WaitAnim
@@ -85,7 +85,7 @@ StatsScreenMobile:
 ; ???
 	ld [wStatsScreenFlags], a
 	ld a, [wStatsScreenFlags]
-	and $ff ^ STAT_PAGE_MASK
+	and ~STAT_PAGE_MASK
 	or PINK_PAGE ; first_page
 	ld [wStatsScreenFlags], a
 .loop
@@ -394,7 +394,7 @@ StatsScreen_JoypadAction:
 
 .set_page
 	ld a, [wStatsScreenFlags]
-	and $ff ^ STAT_PAGE_MASK
+	and ~STAT_PAGE_MASK
 	or c
 	ld [wStatsScreenFlags], a
 	ld h, 4
@@ -430,7 +430,7 @@ StatsScreen_InitUpperHalf:
 	hlcoord 14, 0
 	call PrintLevel
 	ld hl, .NicknamePointers
-	call GetNicknamePointer
+	call GetNicknamenamePointer
 	call CopyNickname
 	hlcoord 8, 2
 	call PlaceString
@@ -481,7 +481,7 @@ StatsScreen_InitUpperHalf:
 	dw wPartyMonNicknames
 	dw wOTPartyMonNicknames
 	dw sBoxMonNicknames
-	dw wBufferMonNick
+	dw wBufferMonNickname
 
 StatsScreen_PlaceVerticalDivider: ; unreferenced
 ; The Japanese stats screen has a vertical divider.
@@ -570,9 +570,11 @@ StatsScreen_LoadGFX:
 
 .Jumptable:
 ; entries correspond to *_PAGE constants
+	table_width 2, StatsScreen_LoadGFX.Jumptable
 	dw LoadPinkPage
 	dw LoadGreenPage
 	dw LoadBluePage
+	assert_table_length NUM_STAT_PAGES
 
 LoadPinkPage:
 	hlcoord 0, 9
@@ -789,7 +791,7 @@ LoadBluePage:
 	ld de, wTempMonID
 	call PrintNum
 	ld hl, .OTNamePointers
-	call GetNicknamePointer
+	call GetNicknamenamePointer
 	call CopyNickname
 	farcall CorrectNickErrors
 	hlcoord 2, 13
@@ -810,9 +812,9 @@ LoadBluePage:
 	ret
 
 .OTNamePointers:
-	dw wPartyMonOT
-	dw wOTPartyMonOT
-	dw sBoxMonOT
+	dw wPartyMonOTs
+	dw wOTPartyMonOTs
+	dw sBoxMonOTs
 	dw wBufferMonOT
 
 IDNoString:
@@ -1157,7 +1159,7 @@ CopyNickname:
 	pop de
 	ret
 
-GetNicknamePointer:
+GetNicknamenamePointer:
 	ld a, [wMonType]
 	add a
 	ld c, a
@@ -1181,7 +1183,7 @@ CheckFaintedFrzSlp:
 	ld hl, MON_STATUS
 	add hl, bc
 	ld a, [hl]
-	and 1 << FRZ | SLP
+	and 1 << FRZ | SLP_MASK
 	jr nz, .fainted_frz_slp
 	and a
 	ret

@@ -15,7 +15,7 @@
 	const DEXSTATE_UPDATE_UNOWN_MODE
 	const DEXSTATE_EXIT
 
-POKEDEX_SCX EQU 5
+DEF POKEDEX_SCX EQU 5
 EXPORT POKEDEX_SCX
 
 Pokedex:
@@ -356,6 +356,7 @@ Pokedex_UpdateDexEntryScreen:
 	ld a, [hl]
 	and B_BUTTON
 	jr nz, .return_to_prev_screen
+	vc_hook Forbid_printing_Pokedex
 	ld a, [hl]
 	and A_BUTTON
 	jr nz, .do_menu_action
@@ -1805,7 +1806,7 @@ Pokedex_PrevSearchMonType:
 	jr .done
 
 .wrap_around
-	ld [hl], NUM_TYPES - 1
+	ld [hl], NUM_TYPES
 
 .done
 	scf
@@ -1818,7 +1819,7 @@ Pokedex_NextSearchMonType:
 
 	ld hl, wDexSearchMonType1
 	ld a, [hl]
-	cp NUM_TYPES - 1
+	cp NUM_TYPES
 	jr nc, .type1_wrap_around
 	inc [hl]
 	jr .done
@@ -1829,7 +1830,7 @@ Pokedex_NextSearchMonType:
 .type2
 	ld hl, wDexSearchMonType2
 	ld a, [hl]
-	cp NUM_TYPES - 1
+	cp NUM_TYPES
 	jr nc, .type2_wrap_around
 	inc [hl]
 	jr .done
@@ -1862,7 +1863,7 @@ Pokedex_PlaceTypeString:
 	ld e, a
 	ld d, 0
 	ld hl, PokedexTypeSearchStrings
-rept 9
+rept POKEDEX_TYPE_STRING_LENGTH
 	add hl, de
 endr
 	ld e, l

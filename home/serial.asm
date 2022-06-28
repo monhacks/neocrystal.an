@@ -252,11 +252,10 @@ SerialDisconnected::
 	ld [wLinkTimeoutFrames + 1], a
 	ret
 
-; This is used to exchange the button press and selected menu item on the link menu.
-; The data is sent thrice and read twice to increase reliability.
-Serial_ExchangeLinkMenuSelection::
-	ld hl, wPlayerLinkAction
-	ld de, wOtherPlayerLinkMode
+; This is used to check that both players entered the same Cable Club room.
+Serial_ExchangeSyncBytes::
+	ld hl, wLinkPlayerSyncBuffer
+	ld de, wLinkReceivedSyncBuffer
 	ld c, 2
 	ld a, TRUE
 	ldh [hSerialIgnoringInitialData], a
@@ -291,6 +290,7 @@ Serial_SyncAndExchangeNybble:: ; unreferenced
 	jp WaitLinkTransfer ; pointless
 
 WaitLinkTransfer::
+	vc_hook Wireless_WaitLinkTransfer
 	ld a, $ff
 	ld [wOtherPlayerLinkAction], a
 .loop
@@ -318,14 +318,26 @@ WaitLinkTransfer::
 	inc a
 	jr z, .loop
 
+	vc_patch Wireless_net_delay_1
+if DEF(_CRYSTAL11_VC)
+	ld b, 26
+else
 	ld b, 10
+endc
+	vc_patch_end
 .receive
 	call DelayFrame
 	call LinkTransfer
 	dec b
 	jr nz, .receive
 
+	vc_patch Wireless_net_delay_2
+if DEF(_CRYSTAL11_VC)
+	ld b, 26
+else
 	ld b, 10
+endc
+	vc_patch_end
 .acknowledge
 	call DelayFrame
 	call LinkDataReceived
@@ -334,6 +346,7 @@ WaitLinkTransfer::
 
 	ld a, [wOtherPlayerLinkAction]
 	ld [wOtherPlayerLinkMode], a
+	vc_hook Wireless_WaitLinkTransfer_ret
 	ret
 
 LinkTransfer::
