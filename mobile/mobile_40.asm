@@ -481,8 +481,8 @@ Function10034d:
 	ret
 
 .asm_10036a
-	ld a, 0
-	call Function3e32
+	ld a, MOBILEAPI_00
+	call MobileAPI
 	ld [wcd2c], a
 	ld a, h
 	ld [wcd2d], a
@@ -505,14 +505,14 @@ Function100382:
 
 Function10038a:
 	ld hl, wccb4
-	ld a, $2e
-	call Function3e32
+	ld a, MOBILEAPI_17
+	call MobileAPI
 	ret
 
 Function100393:
 	ld hl, wcc60
-	ld a, $3a
-	call Function3e32
+	ld a, MOBILEAPI_1D
+	call MobileAPI
 	ret
 
 Function10039c:
@@ -1083,7 +1083,7 @@ Function1006dc:
 	ldh a, [hHours]
 	sbc c
 	jr nc, .asm_1006fb
-	add $18
+	add MAX_HOUR
 
 .asm_1006fb
 	ld [de], a
@@ -1530,6 +1530,7 @@ Function1009f3:
 _LinkBattleSendReceiveAction:
 	call .StageForSend
 	ld [wLinkBattleSentAction], a
+	vc_hook Wireless_start_exchange
 	farcall PlaceWaitingText
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
@@ -1584,20 +1585,35 @@ _LinkBattleSendReceiveAction:
 	inc a
 	jr z, .waiting
 
+	vc_hook Wireless_end_exchange
+	vc_patch Wireless_net_delay_3
+if DEF(_CRYSTAL11_VC)
+	ld b, 26
+else
 	ld b, 10
+endc
+	vc_patch_end
 .receive
 	call DelayFrame
 	call LinkTransfer
 	dec b
 	jr nz, .receive
 
+	vc_hook Wireless_start_send_zero_bytes
+	vc_patch Wireless_net_delay_4
+if DEF(_CRYSTAL11_VC)
+	ld b, 26
+else
 	ld b, 10
+endc
+	vc_patch_end
 .acknowledge
 	call DelayFrame
 	call LinkDataReceived
 	dec b
 	jr nz, .acknowledge
 
+	vc_hook Wireless_end_send_zero_bytes
 	ld a, [wOtherPlayerLinkAction]
 	ld [wBattleAction], a
 	ret
@@ -2379,41 +2395,51 @@ Function100f8d:
 	call CloseSRAM
 	ret
 
-Unknown_100fc0:
+MACRO macro_100fc0
 	; first byte:
 	;     Bit 7 set: Not SRAM
-	;     Lower 7 bits: Bank
-	; Address, size (dw), address
-	dbwww $80, wPlayerName, NAME_LENGTH, wOTPlayerName
-	dbwww $80, wPartyCount, 1 + PARTY_LENGTH + 1, wOTPartyCount
-	dbwww $80, wPlayerID, 2, wOTPlayerID
-	dbwww $80, wPartyMons, PARTYMON_STRUCT_LENGTH * PARTY_LENGTH, wOTPartyMons
-	dbwww $80, wPartyMonOT, NAME_LENGTH * PARTY_LENGTH, wOTPartyMonOT
-	dbwww $80, wPartyMonNicknames, MON_NAME_LENGTH * PARTY_LENGTH, wOTPartyMonNicknames
-	db -1
+	;     Lower 7 bits: Bank if SRAM
+	; address, size[, OT address]
+	db ($80 * (\1 >= SRAM_End)) | (BANK(\1) * (\1 < SRAM_End))
+	dw \1, \2
+	if _NARG == 3
+		dw \3
+	else
+		dw NULL
+	endc
+ENDM
+
+Unknown_100fc0:
+	macro_100fc0 wPlayerName,          NAME_LENGTH,                           wOTPlayerName
+	macro_100fc0 wPartyCount,          1 + PARTY_LENGTH + 1,                  wOTPartyCount
+	macro_100fc0 wPlayerID,            2,                                     wOTPlayerID
+	macro_100fc0 wPartyMons,           PARTYMON_STRUCT_LENGTH * PARTY_LENGTH, wOTPartyMons
+	macro_100fc0 wPartyMonOTs,         NAME_LENGTH * PARTY_LENGTH,            wOTPartyMonOTs
+	macro_100fc0 wPartyMonNicknames,   MON_NAME_LENGTH * PARTY_LENGTH,        wOTPartyMonNicknames
+	db -1 ; end
 
 Unknown_100feb:
-	dbwww $00, sPartyMail, MAIL_STRUCT_LENGTH * PARTY_LENGTH, NULL
-	db -1
+	macro_100fc0 sPartyMail,           MAIL_STRUCT_LENGTH * PARTY_LENGTH
+	db -1 ; end
 
 Unknown_100ff3:
-	dbwww $80, wdc41, 1, NULL
-	dbwww $80, wPlayerName, NAME_LENGTH, NULL
-	dbwww $80, wPlayerName, NAME_LENGTH, NULL
-	dbwww $80, wPlayerID, 2, NULL
-	dbwww $80, wSecretID, 2, NULL
-	dbwww $80, wPlayerGender, 1, NULL
-	dbwww $04, $a603, 8, NULL
-	dbwww $04, $a007, PARTYMON_STRUCT_LENGTH, NULL
-	db -1
+	macro_100fc0 wdc41,                1
+	macro_100fc0 wPlayerName,          NAME_LENGTH
+	macro_100fc0 wPlayerName,          NAME_LENGTH
+	macro_100fc0 wPlayerID,            2
+	macro_100fc0 wSecretID,            2
+	macro_100fc0 wPlayerGender,        1
+	macro_100fc0 s4_a603,              8
+	macro_100fc0 s4_a007,              PARTYMON_STRUCT_LENGTH
+	db -1 ; end
 
 Unknown_10102c:
-	dbwww $80, wOTPlayerName, NAME_LENGTH, NULL
-	dbwww $80, wOTPlayerID, 2, NULL
-	dbwww $80, wOTPartyMonNicknames, MON_NAME_LENGTH * PARTY_LENGTH, NULL
-	dbwww $80, wOTPartyMonOT, NAME_LENGTH * PARTY_LENGTH, NULL
-	dbwww $80, wOTPartyMons, PARTYMON_STRUCT_LENGTH * PARTY_LENGTH, NULL
-	db -1
+	macro_100fc0 wOTPlayerName,        NAME_LENGTH
+	macro_100fc0 wOTPlayerID,          2
+	macro_100fc0 wOTPartyMonNicknames, MON_NAME_LENGTH * PARTY_LENGTH
+	macro_100fc0 wOTPartyMonOTs,       NAME_LENGTH * PARTY_LENGTH
+	macro_100fc0 wOTPartyMons,         PARTYMON_STRUCT_LENGTH * PARTY_LENGTH
+	db -1 ; end
 
 Function101050:
 	call Function10107d
@@ -2454,7 +2480,7 @@ Function10107d:
 	ld de, wc608 + 13
 	ld bc, NAME_LENGTH
 	call .CopyAllFromOT
-	ld hl, wOTPartyMonOT
+	ld hl, wOTPartyMonOTs
 	ld de, wOTClassName + 1
 	ld bc, NAME_LENGTH
 	call .CopyAllFromOT
@@ -2510,7 +2536,7 @@ LoadSelectedPartiesForColosseum:
 	ld de, wPartyMon1Species
 	call .CopyPartyStruct
 	ld hl, wPlayerMonSelection
-	ld de, wPartyMonOT
+	ld de, wPartyMonOTs
 	call .CopyName
 	ld hl, wPlayerMonSelection
 	ld de, wPartyMonNicknames
@@ -2522,7 +2548,7 @@ LoadSelectedPartiesForColosseum:
 	ld de, wOTPartyMon1Species
 	call .CopyPartyStruct
 	ld hl, wOTMonSelection
-	ld de, wOTPartyMonOT
+	ld de, wOTPartyMonOTs
 	call .CopyName
 	ld hl, wOTMonSelection
 	ld de, wOTPartyMonNicknames
@@ -2712,7 +2738,7 @@ Jumptable_101247:
 Function101251:
 	call UpdateSprites
 	call RefreshScreen
-	ld hl, UnknownText_0x1021f4
+	ld hl, ClosingLinkText
 	call Function1021e0
 	call Function1020ea
 	ret c
@@ -2720,14 +2746,14 @@ Function101251:
 	ret
 
 Function101265:
-	ld hl, UnknownText_0x1021ef
+	ld hl, LinkTerminatedText
 	call Function1021e0
 	ret
 
 Function10126c:
 	call UpdateSprites
 	farcall Script_reloadmappart
-	ld hl, UnknownText_0x1021f4
+	ld hl, ClosingLinkText
 	call Function1021e0
 	ret
 
@@ -3128,32 +3154,32 @@ Function101507:
 	ld de, wcd30
 	ld hl, $40
 	ld bc, $40
-	ld a, $02
-	call Function3e32
+	ld a, MOBILEAPI_01
+	call MobileAPI
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
 	ret
 
 Function10151d: ; unreferenced
-	ld a, $34
-	call Function3e32
+	ld a, MOBILEAPI_1A
+	call MobileAPI
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
 	ret
 
 Function10152a:
-	ld a, $36
-	call Function3e32
+	ld a, MOBILEAPI_1B
+	call MobileAPI
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
 	ret
 
 Function101537:
-	ld a, $0a
-	call Function3e32
+	ld a, MOBILEAPI_05
+	call MobileAPI
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3161,8 +3187,8 @@ Function101537:
 
 Function101544:
 	farcall StartMobileInactivityTimer
-	ld a, $12
-	call Function3e32
+	ld a, MOBILEAPI_09
+	call MobileAPI
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -3171,8 +3197,8 @@ Function101544:
 Function101557:
 	farcall StartMobileInactivityTimer
 	ld hl, wcd53
-	ld a, $08
-	call Function3e32
+	ld a, MOBILEAPI_04
+	call MobileAPI
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -4733,14 +4759,14 @@ Function102112:
 Function102142:
 	call Function10218d
 	call Function102180
-	ld hl, UnknownText_0x1021d1
+	ld hl, NewCardArrivedText
 	call MenuTextbox
 	ld de, SFX_LEVEL_UP
 	call PlaySFX
 	call JoyWaitAorB
 	call ExitMenu
 	call Function10219f
-	ld hl, UnknownText_0x1021d6
+	ld hl, PutCardInCardFolderText
 	call MenuTextbox
 	call YesNoBox
 	call ExitMenu
@@ -4749,7 +4775,7 @@ Function102142:
 	jr c, .asm_10217c
 	call Function10218d
 	call Function102180
-	ld hl, UnknownText_0x1021db
+	ld hl, CardWasListedText
 	call PrintText
 
 .asm_10217c
@@ -4794,16 +4820,16 @@ Function1021b8:
 	pop af
 	ret
 
-UnknownText_0x1021d1:
-	text_far UnknownText_0x1bd19a
+NewCardArrivedText:
+	text_far _NewCardArrivedText
 	text_end
 
-UnknownText_0x1021d6:
-	text_far UnknownText_0x1bd1ba
+PutCardInCardFolderText:
+	text_far _PutCardInCardFolderText
 	text_end
 
-UnknownText_0x1021db:
-	text_far UnknownText_0x1bd1dd
+CardWasListedText:
+	text_far _CardWasListedText
 	text_end
 
 Function1021e0:
@@ -4812,16 +4838,16 @@ Function1021e0:
 	call ExitMenu
 	ret
 
-UnknownText_0x1021ea: ; unreferenced
-	text_far UnknownText_0x1bd201
+StartingLinkText: ; unreferenced
+	text_far _StartingLinkText
 	text_end
 
-UnknownText_0x1021ef:
-	text_far UnknownText_0x1bd211
+LinkTerminatedText:
+	text_far _LinkTerminatedText
 	text_end
 
-UnknownText_0x1021f4:
-	text_far UnknownText_0x1bd223
+ClosingLinkText:
+	text_far _ClosingLinkText
 	text_end
 
 Function1021f9:
@@ -6004,7 +6030,7 @@ Function102a3b:
 	ld [wPlayerTrademonSpecies], a
 	ld a, [wcd4c]
 	dec a
-	ld hl, wPartyMonOT
+	ld hl, wPartyMonOTs
 	call SkipNames
 	ld de, wPlayerTrademonOTName
 	ld bc, NAME_LENGTH
@@ -6049,7 +6075,7 @@ Function102a3b:
 	ld [wOTTrademonSpecies], a
 	ld a, [wcd4d]
 	dec a
-	ld hl, wOTPartyMonOT
+	ld hl, wOTPartyMonOTs
 	call SkipNames
 	ld de, wOTTrademonOTName
 	ld bc, NAME_LENGTH
@@ -6238,8 +6264,8 @@ Function102c21:
 	ret
 
 Function102c2e:
-	ld hl, wPartyMonOT
-	ld de, wOTPartyMonOT
+	ld hl, wPartyMonOTs
+	ld de, wOTPartyMonOTs
 	ld bc, 11
 	call Function102c71
 	ret
@@ -6565,12 +6591,12 @@ Function102ea8:
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
-	ld hl, UnknownText_0x102ee2
+	ld hl, TradingMonForOTMonText
 	call PrintTextboxText
 	ret
 
-UnknownText_0x102ee2:
-	text_far UnknownText_0x1bd286
+TradingMonForOTMonText:
+	text_far _TradingMonForOTMonText
 	text_end
 
 Function102ee7:
@@ -7339,7 +7365,7 @@ Mobile_SelectThreeMons:
 	farcall Mobile_AlwaysReturnNotCarry
 	bit 7, c
 	jr z, .asm_10369b
-	ld hl, UnknownText_0x10375d
+	ld hl, MobileBattleMustPickThreeMonText
 	call PrintText
 	call YesNoBox
 	jr c, .asm_103696
@@ -7363,7 +7389,7 @@ Mobile_SelectThreeMons:
 	bit 7, [hl]
 	set 7, [hl]
 	jr nz, .asm_1036b5
-	ld hl, UnknownText_0x103762
+	ld hl, MobileBattleMoreInfoText
 	call PrintText
 	call YesNoBox
 	jr c, .asm_1036b5
@@ -7409,49 +7435,48 @@ Mobile_SelectThreeMons:
 	ret
 
 Function1036f9:
-	ld hl, UnknownText_0x103767
+	ld hl, MobileBattleRulesText
 	call PrintText
 	ret
 
 Function103700:
-	ld c, $0a
+	ld c, 10
 	ld hl, wSwarmFlags
 	bit SWARMFLAGS_MOBILE_4_F, [hl]
 	jr z, .asm_10370f
 	farcall MobileBattleGetRemainingTime
-
 .asm_10370f
 	ld a, c
 	ld [wStringBuffer2], a
 	ld a, [wStringBuffer2]
-	cp $05
-	jr nc, .asm_103724
-	cp $02
-	jr nc, .asm_10372c
-	cp $01
-	jr nc, .asm_103734
-	jr .asm_10373c
+	cp 5
+	jr nc, .five_or_more_mins
+	cp 2
+	jr nc, .two_to_five_mins
+	cp 1
+	jr nc, .one_min
+	jr .times_up
 
-.asm_103724
-	ld hl, UnknownText_0x10376c
+.five_or_more_mins
+	ld hl, WouldYouLikeToMobileBattleText
 	call PrintText
 	and a
 	ret
 
-.asm_10372c
-	ld hl, UnknownText_0x103771
+.two_to_five_mins
+	ld hl, WantAQuickMobileBattleText
 	call PrintText
 	and a
 	ret
 
-.asm_103734
-	ld hl, UnknownText_0x103776
+.one_min
+	ld hl, WantToRushThroughAMobileBattleText
 	call PrintText
 	and a
 	ret
 
-.asm_10373c
-	ld hl, UnknownText_0x10377b
+.times_up
+	ld hl, PleaseTryAgainTomorrowText
 	call PrintText
 	call JoyWaitAorB
 	scf
@@ -7470,32 +7495,32 @@ MenuData_10374f:
 	db "やめる@"
 	db "せつめい@"
 
-UnknownText_0x10375d:
-	text_far UnknownText_0x1c422a
+MobileBattleMustPickThreeMonText:
+	text_far _MobileBattleMustPickThreeMonText
 	text_end
 
-UnknownText_0x103762:
-	text_far UnknownText_0x1c4275
+MobileBattleMoreInfoText:
+	text_far _MobileBattleMoreInfoText
 	text_end
 
-UnknownText_0x103767:
-	text_far UnknownText_0x1c4298
+MobileBattleRulesText:
+	text_far _MobileBattleRulesText
 	text_end
 
-UnknownText_0x10376c:
-	text_far UnknownText_0x1c439c
+WouldYouLikeToMobileBattleText:
+	text_far _WouldYouLikeToMobileBattleText
 	text_end
 
-UnknownText_0x103771:
-	text_far UnknownText_0x1c43dc
+WantAQuickMobileBattleText:
+	text_far _WantAQuickMobileBattleText
 	text_end
 
-UnknownText_0x103776:
-	text_far UnknownText_0x1c4419
+WantToRushThroughAMobileBattleText:
+	text_far _WantToRushThroughAMobileBattleText
 	text_end
 
-UnknownText_0x10377b:
-	text_far UnknownText_0x1c445a
+PleaseTryAgainTomorrowText:
+	text_far _PleaseTryAgainTomorrowText
 	text_end
 
 Function103780:
@@ -7544,7 +7569,7 @@ Function1037c2:
 	ld a, [wdc5f]
 	and a
 	jr z, .nope
-	ld hl, UnknownText_0x1037e6
+	ld hl, TryAgainUsingSameSettingsText
 	call PrintText
 	call YesNoBox
 	jr c, .nope
@@ -7558,8 +7583,8 @@ Function1037c2:
 	ld [wScriptVar], a
 	ret
 
-UnknownText_0x1037e6:
-	text_far UnknownText_0x1c449c
+TryAgainUsingSameSettingsText:
+	text_far _TryAgainUsingSameSettingsText
 	text_end
 
 Function1037eb:
@@ -7622,7 +7647,7 @@ Function10383c:
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	ld hl, UnknownText_0x103876
+	ld hl, PickThreeMonForMobileBattleText
 	call PrintText
 	call JoyWaitAorB
 	farcall Script_reloadmappart
@@ -7641,8 +7666,8 @@ Function10383c:
 	ld [wScriptVar], a
 	ret
 
-UnknownText_0x103876:
-	text_far UnknownText_0x1c4508
+PickThreeMonForMobileBattleText:
+	text_far _PickThreeMonForMobileBattleText
 	text_end
 
 Function10387b:
@@ -7652,11 +7677,11 @@ Function10387b:
 	farcall MobileBattleGetRemainingTime
 	ld a, c
 	ld [wStringBuffer2], a
-	ld hl, UnknownText_0x103898
+	ld hl, MobileBattleRemainingTimeText
 	call PrintText
 	call JoyWaitAorB
 	ret
 
-UnknownText_0x103898:
-	text_far UnknownText_0x1c4525
+MobileBattleRemainingTimeText:
+	text_far _MobileBattleRemainingTimeText
 	text_end

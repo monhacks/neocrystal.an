@@ -343,7 +343,7 @@ Unused_PlaceEnemyHPLevel:
 	push hl
 	ld hl, wPartyMonNicknames
 	ld a, [wCurPartyMon]
-	call GetNick
+	call GetNickname
 	pop hl
 	call PlaceString
 	call CopyMonToTempMon
@@ -416,7 +416,7 @@ PlaceNonFaintStatus:
 	bit PAR, a
 	jr nz, .place
 	ld de, SlpString
-	and SLP
+	and SLP_MASK
 	jr z, .no_status
 
 .place

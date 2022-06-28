@@ -43,10 +43,8 @@ BuenasPassword:
 
 .PasswordIndices:
 	db NUM_PASSWORDS_PER_CATEGORY
-x = 0
-rept NUM_PASSWORDS_PER_CATEGORY
+for x, NUM_PASSWORDS_PER_CATEGORY
 	db x
-x = x + 1
 endr
 	db -1
 
@@ -236,7 +234,7 @@ Buena_PrizeMenu:
 	ld a, [wMenuCursorY]
 	ld [wMenuSelection], a
 	ld a, [wMenuJoypad]
-	cp $2
+	cp B_BUTTON
 	jr z, .cancel
 	ld a, c
 	and a
@@ -264,10 +262,8 @@ Buena_PrizeMenu:
 
 .Prizes:
 	db NUM_BUENA_PRIZES
-x = 1
-rept NUM_BUENA_PRIZES
-	db x
-x = x + 1
+for x, NUM_BUENA_PRIZES
+	db x + 1
 endr
 	db -1
 

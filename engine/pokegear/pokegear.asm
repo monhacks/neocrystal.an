@@ -4,9 +4,9 @@
 	const POKEGEARCARD_MAP   ; 1
 	const POKEGEARCARD_PHONE ; 2
 	const POKEGEARCARD_RADIO ; 3
-NUM_POKEGEAR_CARDS EQU const_value
+DEF NUM_POKEGEAR_CARDS EQU const_value
 
-PHONE_DISPLAY_HEIGHT EQU 4
+DEF PHONE_DISPLAY_HEIGHT EQU 4
 
 ; PokegearJumptable.Jumptable indexes
 	const_def
@@ -1004,11 +1004,9 @@ PokegearPhone_GetDPad:
 
 PokegearPhone_UpdateCursor:
 	ld a, " "
-x = 4
-rept PHONE_DISPLAY_HEIGHT
-	hlcoord 1, x
+for y, PHONE_DISPLAY_HEIGHT
+	hlcoord 1, 4 + y * 2
 	ld [hl], a
-x = x + 2
 endr
 	hlcoord 1, 4
 	ld a, [wPokegearPhoneCursorPosition]
@@ -1273,9 +1271,9 @@ PokegearPhoneContactSubmenu:
 
 GetAMPMHours: ; unreferenced
 	ldh a, [hHours]
-	cp 12
+	cp NOON_HOUR
 	jr c, .am
-	sub 12
+	sub NOON_HOUR
 	ld [wTempByteValue], a
 	scf
 	ret
@@ -1718,6 +1716,7 @@ Radio_BackUpFarCallParams:
 NoRadioStation:
 	call NoRadioMusic
 	call NoRadioName
+; no radio channel
 	xor a
 	ld [wPokegearRadioChannelBank], a
 	ld [wPokegearRadioChannelAddr], a
@@ -1956,7 +1955,7 @@ PlayRadio:
 .PlayStation:
 	ld a, ENTER_MAP_MUSIC
 	ld [wPokegearRadioMusicPlaying], a
-	ld hl, .StationPointers
+	ld hl, PlayRadioStationPointers
 	ld d, 0
 	add hl, de
 	add hl, de
@@ -1983,9 +1982,10 @@ PlayRadio:
 	call WaitBGMap
 	ret
 
-.StationPointers:
+PlayRadioStationPointers:
 ; entries correspond to MAPRADIO_* constants
-	dw .OakOrPnP
+	table_width 2, PlayRadioStationPointers
+	dw LoadStation_PokemonChannel
 	dw LoadStation_OaksPokemonTalk
 	dw LoadStation_PokedexShow
 	dw LoadStation_PokemonMusic
@@ -1994,8 +1994,9 @@ PlayRadio:
 	dw LoadStation_PlacesAndPeople
 	dw LoadStation_LetsAllSing
 	dw LoadStation_RocketRadio
+	assert_table_length NUM_MAP_RADIO_STATIONS
 
-.OakOrPnP:
+LoadStation_PokemonChannel:
 	call IsInJohto
 	and a
 	jr nz, .kanto
@@ -2005,7 +2006,7 @@ PlayRadio:
 	jp z, LoadStation_PokedexShow
 	jp LoadStation_OaksPokemonTalk
 
-.kanto
+.kanto:
 	jp LoadStation_PlacesAndPeople
 
 PokegearMap:
@@ -2737,7 +2738,7 @@ TownMapPlayerIcon:
 	ld c, 4 ; # tiles
 	call Request2bpp
 ; Walking icon
-	ld hl, $c0
+	ld hl, 12 tiles
 	add hl, de
 	ld d, h
 	ld e, l

@@ -26,11 +26,11 @@ _PlayBattleAnim:
 
 	ld c, 1
 	ldh a, [rKEY1]
-	bit 7, a
-	jr nz, .asm_cc0ff
+	bit 7, a ; check CGB double speed mode
+	jr nz, .got_speed
 	ld c, 3
 
-.asm_cc0ff
+.got_speed
 	ld hl, hVBlank
 	ld a, [hl]
 	push af
@@ -58,12 +58,16 @@ BattleAnimRunScript:
 	farcall CheckBattleScene
 	jr c, .disabled
 
+; This vc_hook reduces the move animation flashing in the Virtual Console for
+; Fissure, Self-Destruct, Thunder, Flash, Explosion, Horn Drill, and Hyper Beam.
+	vc_hook Reduce_move_anim_flashing
 	call BattleAnimClearHud
 	call RunBattleAnimScript
 
 	call BattleAnimAssignPals
 	call BattleAnimRequestPals
 
+	vc_hook Stop_reducing_move_anim_flashing
 	xor a
 	ldh [hSCX], a
 	ldh [hSCY], a
@@ -245,7 +249,7 @@ BattleAnim_ClearOAM:
 	ld c, NUM_SPRITE_OAM_STRUCTS
 .loop
 	ld a, [hl]
-	and $ff ^ (PALETTE_MASK | VRAM_BANK_1) ; zeros out the palette bits
+	and ~(PALETTE_MASK | VRAM_BANK_1) ; zeros out the palette bits
 	assert PAL_BATTLE_OB_ENEMY == 0
 	ld [hli], a
 rept SPRITEOAMSTRUCT_LENGTH - 1
@@ -329,6 +333,7 @@ RunBattleAnimCommand:
 
 BattleAnimCommands::
 ; entries correspond to anim_* constants (see macros/scripts/battle_anims.asm)
+	table_width 2, BattleAnimCommands
 	dw BattleAnimCmd_Obj
 	dw BattleAnimCmd_1GFX
 	dw BattleAnimCmd_2GFX
@@ -377,6 +382,7 @@ BattleAnimCommands::
 	dw BattleAnimCmd_Loop
 	dw BattleAnimCmd_Call
 	dw BattleAnimCmd_Ret
+	assert_table_length $100 - FIRST_BATTLE_ANIM_CMD
 
 BattleAnimCmd_EA:
 BattleAnimCmd_EB:
@@ -671,6 +677,7 @@ BattleAnimCmd_5GFX:
 .loop
 	ld a, [wBattleAnimGFXTempTileID]
 	cp (vTiles1 - vTiles0) / LEN_2BPP_TILE - BATTLEANIM_BASE_TILE
+	vc_hook Reduce_move_anim_flashing_PRESENT
 	ret nc
 	call GetBattleAnimByte
 	ld [hli], a

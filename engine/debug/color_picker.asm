@@ -99,7 +99,7 @@ DebugColor_InitMonColor:
 DebugColor_InitTrainerColor:
 	ld hl, TrainerPalettes
 	ld de, wDebugOriginalColors
-	ld c, NUM_TRAINER_CLASSES
+	ld c, NUM_TRAINER_CLASSES + 1
 .loop
 	push bc
 	push hl
@@ -127,17 +127,17 @@ endr
 	ret
 
 DebugColor_InitVRAM:
-	ld a, BANK(vTiles3)
+	ld a, $1
 	ldh [rVBK], a
-	ld hl, vTiles3
-	ld bc, sScratch - vTiles3
+	ld hl, VRAM_Begin
+	ld bc, VRAM_End - VRAM_Begin
 	xor a
 	call ByteFill
 
-	ld a, BANK(vTiles0)
+	ld a, $0
 	ldh [rVBK], a
-	ld hl, vTiles0
-	ld bc, sScratch - vTiles0
+	ld hl, VRAM_Begin
+	ld bc, VRAM_End - VRAM_Begin
 	xor a
 	call ByteFill
 
@@ -284,7 +284,7 @@ DebugColorMain:
 	ld a, NUM_POKEMON ; CELEBI
 	ret
 .trainer
-	ld a, NUM_TRAINER_CLASSES - 1 ; MYSTICALMAN
+	ld a, NUM_TRAINER_CLASSES ; MYSTICALMAN
 	ret
 
 .Jumptable:
