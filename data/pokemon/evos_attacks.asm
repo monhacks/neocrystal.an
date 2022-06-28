@@ -473,21 +473,27 @@ ClefairyEvosAttacks:
 	db 1, GROWL
 	db 4, ENCORE
 	db 8, SING
-	db 13, DOUBLESLAP
-	db 19, MINIMIZE
-	db 26, METRONOME
-	db 34, LIGHT_SCREEN
-	db 43, MOONLIGHT
-	db 53, MOONBLAST
+	db 12, DOUBLESLAP
+	db 16, MINIMIZE
+	db 20, METRONOME
+	db 24, FAIRY_WIND
+	db 28, CHARM
+	db 32, LIGHT_SCREEN
+	db 36, MIMIC
+	db 40, MOONLIGHT
+	db 44, MOONBLAST
 	db 0 ; no more level-up moves
 
 ClefableEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, FAIRY_WIND
+	db 1, DOUBLE_EDGE
+	db 1, CHARM
 	db 1, SING
 	db 1, DOUBLESLAP
 	db 1, METRONOME
 	db 1, MOONLIGHT
-	db 56, MOONBLAST
+	db 50, MOONBLAST
 	db 0 ; no more level-up moves
 
 VulpixEvosAttacks:
@@ -1761,8 +1767,9 @@ MagikarpEvosAttacks:
 	db EVOLVE_LEVEL, 20, GYARADOS
 	db 0 ; no more evolutions
 	db 1, SPLASH
-	db 15, TACKLE
-	db 30, FLAIL
+	db 10, TACKLE
+	db 20, WATERFALL
+  db 30, FLAIL
 	db 0 ; no more level-up moves
 
 GyaradosEvosAttacks:
@@ -2269,6 +2276,7 @@ LedianEvosAttacks:
 	db 1, SUPERSONIC
 	db 8, SUPERSONIC
 	db 15, CONFUSION
+  db 18, FAIRY_WIND
 	db 24, LIGHT_SCREEN
 	db 24, REFLECT
 	db 24, SAFEGUARD
@@ -2386,21 +2394,25 @@ TogepiEvosAttacks:
 	db 1, TACKLE
 	db 1, CHARM
 	db 7, METRONOME
-	db 18, SWEET_KISS
-	db 25, ENCORE
-	db 31, SAFEGUARD
-	db 38, MOONBLAST
+	db 14, SWEET_KISS
+	db 21, FAIRY_WIND
+	db 28, ENCORE
+	db 35, SAFEGUARD
+	db 42, MOONBLAST
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, DOUBLE_EDGE
+	db 1, RECOVER
 	db 1, TACKLE
 	db 1, CHARM
 	db 7, METRONOME
-	db 18, SWEET_KISS
-	db 25, ENCORE
-	db 31, SAFEGUARD
-	db 38, MOONBLAST
+	db 14, SWEET_KISS
+	db 21, FAIRY_WIND
+	db 28, ENCORE
+	db 35, SAFEGUARD
+	db 42, MOONBLAST
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
