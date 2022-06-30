@@ -59,7 +59,7 @@ Omanyte | Gift in Kanto
 Kabuto | Gift in Kanto
 Johto Starters | Gift from Profs
 
-#### Build
+## Build
 `make` can build the following ROMs:
 
 - Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
