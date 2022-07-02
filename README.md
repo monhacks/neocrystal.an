@@ -1,9 +1,9 @@
-# Pokémon Dusty Crystal
+# Pokémon Neo Crystal
 
 This is a disassembly of Pokémon Crystal built from the [**pret/pokecrystal project**](pret). Check out that project for more information for the decomp.
 
 ## Project
-The project is a fork of [Dusty Crystal by Cooper Halvordson](https://github.com/Cooper-Halvordson/DustyCrystal), which is based on the aforementioned decompile. While at the moment Dusty has changes to TMs and HMs, evolutions, and wild Pokémon availability, Neo expands on this with further updates to Pokémon availability as well as an increase in difficulty for battles with major characters.
+The project is a fork of [Dusty Crystal](https://github.com/Cooper-Halvordson/DustyCrystal), which is based on the aforementioned decompile. While at the moment Dusty has changes to TMs and HMs, evolutions, and wild Pokémon availability, Neo expands on this with further updates to Pokémon availability as well as an increase in difficulty for battles with major characters.
 
 ### TMs
 TMs are now unlimited use.
@@ -59,6 +59,12 @@ Kabuto | Gift in Kanto
 Johto Starters | Gift from Profs
 
 ## Build
+The `build.sh` script was added to the repository to create ROM called Crystal_`timestamp`. Invoke the script with the following command:
+
+```
+  ./build.sh [ crystal | crystal_1.1 ]
+```
+
 `make` can build the following ROMs:
 
 - Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
