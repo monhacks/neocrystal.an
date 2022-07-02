@@ -34,10 +34,14 @@ Vulpix | Route 36, 37 (Night)
 Mareep | Route 32, 42
 Flaaffy | Route 42, 43
 Marill | Route 34, 39, 42, 43
-Azumarill | Victory Road, Tojho Falls
+Azumarill | Route 26, Tojho Falls
 Togetic | Outside Mt. Silver
 Girafarig | Route 43
 Remoraid | Route 44 (Fishing)
+Heracross | Bug-catching contest
+Pineco | Bug-catching contest
+Yanma | Bug-catching contest
+Ledyba | Bug-catching contest
 Pichu | Ilex Forest, National Park (Morning)
 Igglybuff | Route 34
 Cleffa | National Park, Night
