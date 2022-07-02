@@ -3,7 +3,7 @@
 This is a disassembly of Pokémon Crystal built from the [**pret/pokecrystal project**](pret). Check out that project for more information for the decomp.
 
 ## Project
-The project is a fork of [Dusty Crystal by Cooper Halvordson](https://github.com/Cooper-Halvordson/DustyCrystal), which is based on the aforementioned decompile. While at the moment Dusty has changes to TMs and HMs, evolutions, and wild Pokémon availability, Neo expands on this with further updates to Pokémon availability as well as an increase in difficulty for battles with major characters.
+The project is a fork of [Dusty Crystal](https://github.com/Cooper-Halvordson/DustyCrystal), which is based on the aforementioned decompile. While at the moment Dusty has changes to TMs and HMs, evolutions, and wild Pokémon availability, Neo expands on this with further updates to Pokémon availability as well as an increase in difficulty for battles with major characters.
 
 ### TMs
 TMs are now unlimited use.
