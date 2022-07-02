@@ -60,6 +60,12 @@ Kabuto | Gift in Kanto
 Johto Starters | Gift from Profs
 
 ## Build
+The `build.sh` script was added to the repository to create ROM called Crystal_`timestamp`. Invoke the script with the following command:
+
+```
+  ./build.sh [ crystal | crystal_1.1 ]
+```
+
 `make` can build the following ROMs:
 
 - Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `sha1: f4cd194bdee0d04ca4eac29e09b8e4e9d818c133`
