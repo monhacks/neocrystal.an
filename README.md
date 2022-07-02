@@ -1,4 +1,4 @@
-# Pokémon Dusty Crystal
+# Pokémon Neo Crystal
 
 This is a disassembly of Pokémon Crystal built from the [**pret/pokecrystal project**](pret). Check out that project for more information for the decomp.
 
