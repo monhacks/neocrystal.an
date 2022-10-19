@@ -4,6 +4,9 @@ DEF SHINY_ATK_BIT EQU 5
 DEF SHINY_DEF_VAL EQU 10
 DEF SHINY_SPD_VAL EQU 10
 DEF SHINY_SPC_VAL EQU 10
+DEF SHINY_DEF_BIT EQU 5
+DEF SHINY_SPD_BIT EQU 5
+DEF SHINY_SPC_BIT EQU 5
 
 CheckShininess:
 ; Check if a mon is shiny by DVs at bc.
@@ -13,26 +16,29 @@ CheckShininess:
 	ld h, b
 
 ; Attack
-	ld a, [hl]
-	and 1 << SHINY_ATK_BIT
-	jr z, .not_shiny
+	;ld a, [hl]
+	;and 1 << SHINY_ATK_BIT
+	;jr z, .not_shiny
 
 ; Defense
 	ld a, [hli]
-	and $f
-	cp  SHINY_DEF_VAL
+	;and $f
+	;cp  SHINY_DEF_VAL
+	and 1 << SHINY_DEF_BIT
 	jr nz, .not_shiny
 
 ; Speed
 	ld a, [hl]
-	and $f0
-	cp  SHINY_SPD_VAL << 4
+	;and $f0
+	;cp  SHINY_SPD_VAL << 4
+	and 1 << SHINY_SPD_BIT
 	jr nz, .not_shiny
 
 ; Special
 	ld a, [hl]
-	and $f
-	cp  SHINY_SPC_VAL
+	;and $f
+	;cp  SHINY_SPC_VAL
+	and 1 << SHINY_SPC_BIT
 	jr nz, .not_shiny
 
 ; shiny
