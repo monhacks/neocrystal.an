@@ -1,5 +1,6 @@
 MoveEffectsPointers:
 ; entries correspond to EFFECT_* constants
+	table_width 2, MoveEffectsPointers
 	dw NormalHit
 	dw DoSleep
 	dw PoisonHit
@@ -104,6 +105,7 @@ MoveEffectsPointers:
 	dw FalseSwipe
 	dw HealBell
 	dw NormalHit
+	dw NormalHit
 	dw TripleKick
 	dw Thief
 	dw MeanLook
@@ -157,3 +159,4 @@ MoveEffectsPointers:
 	dw BeatUp
 	dw Fly
 	dw DefenseCurl
+	assert_table_length NUM_MOVE_EFECTS

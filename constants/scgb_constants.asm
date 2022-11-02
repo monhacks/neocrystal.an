@@ -1,4 +1,5 @@
-; GetSGBLayout arguments (see engine/gfx/cgb_layouts.asm and engine/gfx/sgb_layouts.asm)
+; CGBLayoutJumptable indexes (see engine/gfx/cgb_layouts.asm)
+; SGBLayoutJumptable indexes (see engine/gfx/sgb_layouts.asm)
 	const_def
 	const SCGB_BATTLE_GRAYSCALE
 	const SCGB_BATTLE_COLORS
@@ -31,9 +32,10 @@
 	const SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	const SCGB_MYSTERY_GIFT
 	const SCGB_1E
+DEF NUM_SCGB_LAYOUTS EQU const_value
 
-SCGB_PARTY_MENU_HP_BARS EQU $fc
-SCGB_DEFAULT EQU $ff
+DEF SCGB_PARTY_MENU_HP_BARS EQU $fc
+DEF SCGB_DEFAULT EQU $ff
 
 ; GetCrystalCGBLayout arguments (see engine/gfx/crystal_layouts.asm)
 	const_def
@@ -123,6 +125,7 @@ SCGB_DEFAULT EQU $ff
 	const PREDEFPAL_UNOWN_PUZZLE
 	const PREDEFPAL_GAMEFREAK_LOGO_OB
 	const PREDEFPAL_GAMEFREAK_LOGO_BG
+DEF NUM_PREDEF_PALS EQU const_value
 
 ; SGB system command codes
 ; http://gbdev.gg8.se/wiki/articles/SGB_Functions#SGB_System_Command_Table
@@ -144,7 +147,7 @@ SCGB_DEFAULT EQU $ff
 	const SGB_ICON_EN
 	const SGB_DATA_SND
 	const SGB_DATA_TRN
-	const SGB_MLT_REG
+	const SGB_MLT_REQ
 	const SGB_JUMP
 	const SGB_CHR_TRN
 	const SGB_PCT_TRN
@@ -153,4 +156,4 @@ SCGB_DEFAULT EQU $ff
 	const SGB_MASK_EN
 	const SGB_OBJ_TRN
 
-PALPACKET_LENGTH EQU $10
+DEF PALPACKET_LENGTH EQU $10

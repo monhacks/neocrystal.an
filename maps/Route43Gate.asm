@@ -1,4 +1,4 @@
-ROUTE43GATE_TOLL EQU 1000
+DEF ROUTE43GATE_TOLL EQU 1000
 
 	object_const_def
 	const ROUTE43GATE_OFFICER
@@ -14,7 +14,7 @@ Route43Gate_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .CheckIfRockets
 
 .RocketShakedown:
-	prioritysjump .RocketTakeover
+	sdefer .RocketTakeover
 	end
 
 .DummyScene:
@@ -196,7 +196,7 @@ RocketText_TollFee:
 	text "Hold it there,"
 	line "kiddo!"
 
-	para "The toll is ¥1000"
+	para "The toll is ¥{d:ROUTE43GATE_TOLL}"
 	line "to go through."
 	done
 

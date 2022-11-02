@@ -852,7 +852,7 @@ BattleBGEffect_RunPicResizeScript:
 	dwcoord 14,  4
 
 .BGSquares:
-bgsquare: MACRO
+MACRO bgsquare
 	dn \1, \2
 	dw \3
 ENDM
@@ -2294,7 +2294,7 @@ BattleBGEffect_Rollout:
 	ldh [hSCY], a
 	xor $ff
 	inc a
-	ld [wAnimObject01YOffset], a
+	ld [wAnimObject1YOffset], a
 	ret
 
 BattleBGEffect_ShakeScreenX:

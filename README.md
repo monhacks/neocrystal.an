@@ -34,10 +34,14 @@ Vulpix | Route 36, 37 (Night)
 Mareep | Route 32, 42
 Flaaffy | Route 42, 43
 Marill | Route 34, 39, 42, 43
-Azumarill | Victory Road, Tojho Falls
+Azumarill | Route 26, Tojho Falls
 Togetic | Outside Mt. Silver
 Girafarig | Route 43
 Remoraid | Route 44 (Fishing)
+Heracross | Bug-catching contest
+Pineco | Bug-catching contest
+Yanma | Bug-catching contest
+Ledyba | Bug-catching contest
 Pichu | Ilex Forest, National Park (Morning)
 Igglybuff | Route 34
 Cleffa | National Park, Night
@@ -49,7 +53,6 @@ Zapdos | Kanto
 Moltres | Kanto
 
 ### Gift Pokémon
-
 Pokemon | Location
 ------- | --------
 Bulbasaur | Gift in Kanto
@@ -73,11 +76,11 @@ The `build.sh` script was added to the repository to create ROM called Crystal_`
 - Pokemon - Crystal Version (A) [C][!].gbc `sha1: a0fc810f1d4e124434f7be2c989ab5b5892ddf36`
 - CRYSTAL_ps3_010328d.bin `sha1: c60d57a24bbe8ecf7cba54ab3f90669f97bd330d`
 - CRYSTAL_ps3_us_revise_010710d.bin `sha1: 391ae86b1d5a26db712ffe6c28bbf2a1f804c3c4`
+- CGBBYTE1.784.patch `sha1: a25517f60ca0e887d39ec698aa56a0040532a4b3`
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
 ## See also
-
 - [**PokeCrystal Documentation**][docs]
 - [**PokeCrystal Wiki**][wiki] (includes [tutorials][tutorials])
 

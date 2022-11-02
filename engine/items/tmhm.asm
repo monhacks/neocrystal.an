@@ -122,7 +122,7 @@ TeachTMHM:
 	push bc
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
-	call GetNick
+	call GetNickname
 	pop bc
 
 	ld a, c
@@ -289,7 +289,7 @@ TMHM_CheckHoveringOverCancel:
 TMHM_ExitPack:
 	call TMHM_PlaySFX_ReadText2
 _TMHM_ExitPack:
-	ld a, $2
+	ld a, B_BUTTON
 	ld [wMenuJoypad], a
 	and a
 	ret

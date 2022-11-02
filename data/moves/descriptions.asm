@@ -1,5 +1,6 @@
 MoveDescriptions::
 ; entries correspond to move ids (see constants/move_constants.asm)
+	table_width 2, MoveDescriptions
 	dw PoundDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
@@ -251,11 +252,13 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
+	dw MoonBlastDescription
+	dw PlayRoughDescription
+	dw FairyWindDescription
+	assert_table_length NUM_ATTACKS
 	dw MoveFFDescription
 	dw Move00Description
+	assert_table_length $100
 
 MoveFCDescription:
 MoveFDDescription:
@@ -1267,3 +1270,15 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+MoonBlastDescription:
+	db   "Attacks with at"
+	next "magical beam.@"
+
+PlayRoughDescription:
+	db   "Attacks foe"
+	next "playfully.@"
+
+FairyWindDescription:
+	db   "Attacks foe with"
+	next "magical wind.@"
