@@ -13,7 +13,7 @@ MoveEffectPriorities:
 	db EFFECT_PRIORITY_HIT,    8
 ;  7  0 	All other moves
 ;  6 -1 	Vital Throw
-	db EFFECT_VITAL_THROW,     6
+;	db EFFECT_VITAL_THROW,     6
 ;  5 -2 	None
 ;  4 -3 	Focus Punch, Shell Trap
 ;  3 -4 	Avalanche, Revenge
