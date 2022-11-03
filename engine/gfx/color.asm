@@ -1,9 +1,14 @@
 INCLUDE "engine/gfx/sgb_layouts.asm"
 
 DEF SHINY_ATK_BIT EQU 5
-DEF SHINY_DEF_VAL EQU 10
-DEF SHINY_SPD_VAL EQU 10
-DEF SHINY_SPC_VAL EQU 10
+DEF SHINY_DEF_BIT EQU 5
+DEF SHINY_SPD_BIT EQU 5
+DEF SHINY_SPC_BIT EQU 5
+
+DEF SHINY_ATK_VAL EQU 31
+DEF SHINY_DEF_VAL EQU 31
+DEF SHINY_SPD_VAL EQU 31
+DEF SHINY_SPC_VAL EQU 31
 
 CheckShininess:
 ; Check if a mon is shiny by DVs at bc.
@@ -14,24 +19,25 @@ CheckShininess:
 
 ; Attack
 	ld a, [hl]
-	and 1 << SHINY_ATK_BIT
-	jr z, .not_shiny
+	or $f
+	cp  SHINY_ATK_VAL
+	jr nz, .not_shiny
 
 ; Defense
-	ld a, [hli]
-	and $f
+	ld a, [hl]
+	or $f
 	cp  SHINY_DEF_VAL
 	jr nz, .not_shiny
 
 ; Speed
 	ld a, [hl]
-	and $f0
-	cp  SHINY_SPD_VAL << 4
+	or $f
+	cp  SHINY_SPD_VAL
 	jr nz, .not_shiny
 
 ; Special
 	ld a, [hl]
-	and $f
+	or $f
 	cp  SHINY_SPC_VAL
 	jr nz, .not_shiny
 
