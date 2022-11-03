@@ -265,6 +265,6 @@ Moves:
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0
 	move MOONBLAST,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,        100, 10,  30
-	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN,        90, FAIRY,         90, 10,  10
+	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN_HIT,    90, FAIRY,         90, 10,  10
   move FAIRY_WIND,   EFFECT_ALWAYS_HIT,         40, FAIRY,        100, 30,   0
 	assert_table_length NUM_ATTACKS
