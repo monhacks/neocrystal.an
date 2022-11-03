@@ -130,7 +130,7 @@ KantoGrassWildMons:
 	db 33, ONIX
 	db 34, GOLBAT
 	db 35, SANDSLASH
-	db 35, AZUMARILL
+	db 35, RHYDON
 	db 35, RHYDON
 	; nite
 	db 34, GOLBAT
@@ -766,7 +766,7 @@ KantoGrassWildMons:
 	db 32, PONYTA
 	db 30, RATICATE
 	db 30, DODUO
-	db 30, ARBOK
+	db 30, AZUMARILL
 	db 30, ARBOK
 	; day
 	db 28, DODUO
@@ -775,7 +775,7 @@ KantoGrassWildMons:
 	db 30, RATICATE
 	db 30, DODUO
 	db 30, ARBOK
-	db 30, ARBOK
+	db 30, AZUMARILL
 	; nite
 	db 28, NOCTOWL
 	db 28, RATICATE
