@@ -1760,6 +1760,7 @@ RapidSpin:
 	criticaltext
 	supereffectivetext
 	clearhazards
+	speedup
 	checkfaint
 	buildopponentrage
 	kingsrock
@@ -1862,6 +1863,7 @@ SkullBash:
 	checkobedience
 	doturn
 	charge
+	defenseup
 	usedmovetext
 	critical
 	damagestats
@@ -1878,7 +1880,6 @@ SkullBash:
 	buildopponentrage
 	kingsrock
 	endturn
-	defenseup
 	statupmessage
 	endmove
 
