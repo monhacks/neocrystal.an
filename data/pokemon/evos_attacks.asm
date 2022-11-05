@@ -2163,11 +2163,14 @@ TotodileEvosAttacks:
 	db 1, SCRATCH
 	db 1, LEER
 	db 7, RAGE
-	db 13, WATER_GUN
-	db 20, BITE
-	db 27, SCARY_FACE
-	db 35, SLASH
-	db 43, SCREECH
+	db 12, WATER_GUN
+	db 17, BITE
+	db 22, SCARY_FACE
+	db 27, BIND
+	db 32, SLASH
+	db 37, SCREECH
+	db 42, CRUNCH
+	db 47, THRASH
 	db 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -2176,13 +2179,15 @@ CroconawEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 1, RAGE
 	db 7, RAGE
-	db 13, WATER_GUN
-	db 21, BITE
-	db 28, SCARY_FACE
-	db 37, SLASH
-	db 45, SCREECH
+	db 12, WATER_GUN
+	db 17, BITE
+	db 23, SCARY_FACE
+	db 28, BIND
+	db 34, SLASH
+	db 39, SCREECH
+	db 45, CRUNCH
+	db 50, THRASH
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -2190,14 +2195,15 @@ FeraligatrEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 1, RAGE
-	db 1, WATER_GUN
 	db 7, RAGE
-	db 13, WATER_GUN
-	db 21, BITE
-	db 28, SCARY_FACE
-	db 38, SLASH
-	db 47, SCREECH
+	db 12, WATER_GUN
+	db 17, BITE
+	db 23, SCARY_FACE
+	db 28, BIND
+	db 34, SLASH
+	db 40, SCREECH
+	db 47, CRUNCH
+	db 53, THRASH
 	db 58, HYDRO_PUMP
 	db 0 ; no more level-up moves
 

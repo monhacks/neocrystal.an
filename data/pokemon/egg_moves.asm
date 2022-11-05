@@ -464,6 +464,10 @@ CyndaquilEggMoves:
 TotodileEggMoves:
 	db CRUNCH
 	db THRASH
+	db METAL_CLAW
+	db MORNING_SUN
+	db AGILITY
+	db SUBMISSION
 	db HYDRO_PUMP
 	db ANCIENTPOWER
 	db RAZOR_WIND
