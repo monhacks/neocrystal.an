@@ -1,7 +1,6 @@
 BattleCommand_MirrorCoat:
 	ld a, 1
 	ld [wAttackMissed], a
-
 	ld a, BATTLE_VARS_LAST_COUNTER_MOVE_OPP
 	call GetBattleVar
 	and a
@@ -31,7 +30,7 @@ BattleCommand_MirrorCoat:
 	and a
 	ret z
 
-	ld a, [wStringBuffer1 + MOVE_TYPE]
+	ld a, [wStringBuffer1 + MOVE_CATEGORY]
 	cp SPECIAL
 	ret c
 

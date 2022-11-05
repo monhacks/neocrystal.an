@@ -1119,13 +1119,6 @@ AI_Smart_SpDefenseUp2:
 	cp BASE_STAT_LEVEL + 2
 	ret nc
 
-	ld a, [wBattleMonType1]
-	cp SPECIAL
-	jr nc, .encourage
-	ld a, [wBattleMonType2]
-	cp SPECIAL
-	ret c
-
 .encourage
 	call AI_80_20
 	ret c
@@ -1347,7 +1340,7 @@ AI_Smart_Counter:
 	and a
 	jr z, .skipmove
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_TYPE] ; MOVE_CATEGORY
 	cp SPECIAL
 	jr nc, .skipmove
 
@@ -1375,7 +1368,7 @@ AI_Smart_Counter:
 	and a
 	jr z, .done
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_TYPE] ; MOVE_CATEGORY
 	cp SPECIAL
 	jr nc, .done
 
@@ -1841,11 +1834,6 @@ AI_Smart_Curse:
 	ld a, [wBattleMonType1]
 	cp GHOST
 	jr z, .greatly_encourage
-	cp SPECIAL
-	ret nc
-	ld a, [wBattleMonType2]
-	cp SPECIAL
-	ret nc
 	call AI_80_20
 	ret c
 	dec [hl]
@@ -2531,7 +2519,7 @@ AI_Smart_MirrorCoat:
 	and a
 	jr z, .skipmove
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_TYPE] ; MOVE_CATEGORY
 	cp SPECIAL
 	jr c, .skipmove
 
@@ -2559,7 +2547,7 @@ AI_Smart_MirrorCoat:
 	and a
 	jr z, .done
 
-	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	ld a, [wEnemyMoveStruct + MOVE_TYPE] ; MOVE_CATEGORY
 	cp SPECIAL
 	jr c, .done
 

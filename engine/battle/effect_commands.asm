@@ -2544,7 +2544,9 @@ PlayerAttackDamage:
 	ld d, a
 	ret z
 
-	ld a, [hl]
+;	ld a, [hl]
+	ld hl, wPlayerMoveStructCategory
+	ld a, [hli]
 	cp SPECIAL
 	jr nc, .special
 
@@ -2786,7 +2788,9 @@ EnemyAttackDamage:
 	and a
 	ret z
 
-	ld a, [hl]
+;	ld a, [hl]
+	ld hl, wEnemyMoveStructCategory
+	ld a, [hli]
 	cp SPECIAL
 	jr nc, .special
 
