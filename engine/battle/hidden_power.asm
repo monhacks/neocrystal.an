@@ -79,16 +79,6 @@ HiddenPowerDamage:
 ; Skip Normal
 	inc a
 
-; Skip Bird
-	cp BIRD
-	jr c, .done
-	inc a
-
-; Skip unused types
-	cp UNUSED_TYPES
-	jr c, .done
-	add UNUSED_TYPES_END - UNUSED_TYPES
-
 .done
 
 ; Overwrite the current move type.
@@ -100,7 +90,7 @@ HiddenPowerDamage:
 
 ; Get the rest of the damage formula variables
 ; based on the new type, but keep base power.
-	ld a, d
+	ld a, d ;replace d with 70 base power
 	push af
 	farcall BattleCommand_DamageStats ; damagestats
 	pop af

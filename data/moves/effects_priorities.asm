@@ -11,7 +11,7 @@ MoveEffectPriorities:
 ;  8 +1 	Accelerock, Aqua Jet, Baby-Doll Eyes, Bullet Punch, Ice Shard, Mach Punch,
 ;         Quick Attack, Shadow Sneak, Sucker Punch, Vacuum Wave, Water Shuriken
 	db EFFECT_PRIORITY_HIT,    8
-;  7  0 	All other moves
+;  7  0 	All other moves (constants/battle_constants.asm)
 ;  6 -1 	Vital Throw
 ;	db EFFECT_VITAL_THROW,     6
 ;  5 -2 	None
@@ -22,5 +22,6 @@ MoveEffectPriorities:
 	db EFFECT_MIRROR_COAT,     2
 ;  1 -6 	Circle Throw, Dragon Tail, Roar, Whirlwind, Teleport
 	db EFFECT_FORCE_SWITCH,    1
+	db EFFECT_TELEPORT,        1
 ;  0 -7 	Trick Room
 	db -1

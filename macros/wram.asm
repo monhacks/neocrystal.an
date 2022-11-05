@@ -256,13 +256,14 @@ MACRO trademon
 ENDM
 
 MACRO move_struct
-\1Animation::    db
-\1Effect::       db
-\1Power::        db
-\1Type::         db
-\1Accuracy::     db
-\1PP::           db
-\1EffectChance:: db
+\1Animation::    ds 1
+\1Effect::       ds 1
+\1Power::        ds 1
+\1Type::         ds 1
+\1Accuracy::     ds 1
+\1PP::           ds 1
+\1EffectChance:: ds 1
+\1Category::     ds 1
 ENDM
 
 MACRO slot_reel
