@@ -444,7 +444,7 @@ DratiniEggMoves:
 	db -1 ; end
 
 ChikoritaEggMoves:
-	db VINE_WHIP
+	db HEAL_BELL
 	db LEECH_SEED
 	db COUNTER
 	db ANCIENTPOWER
@@ -453,19 +453,15 @@ ChikoritaEggMoves:
 	db -1 ; end
 
 CyndaquilEggMoves:
-	db FURY_SWIPES
-	db QUICK_ATTACK
+	db METAL_CLAW
+	db ENDURE
 	db REVERSAL
 	db THRASH
-	db FORESIGHT
+	db RECOVER
 	db SUBMISSION
 	db -1 ; end
 
 TotodileEggMoves:
-	db CRUNCH
-	db THRASH
-	db METAL_CLAW
-	db MORNING_SUN
 	db AGILITY
 	db SUBMISSION
 	db HYDRO_PUMP
