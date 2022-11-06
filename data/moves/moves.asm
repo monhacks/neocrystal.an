@@ -269,3 +269,33 @@ Moves:
 	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN_HIT,    90, FAIRY,         90, 10,  10, PHYSICAL
 	move FAIRY_WIND,   EFFECT_ALWAYS_HIT,         40, FAIRY,        100, 30,   0, SPECIAL
 	assert_table_length NUM_ATTACKS
+
+; New Moves
+;	move MOVE_NAME   , EFFECT_TYPE              , BP, TYPE        , ACC, PP,   %, CATEGORY ;Comment
+;	move SIGNAL_BEAM,  EFFECT_CONFUSE_HIT,        70, BUG,          100, 70,  15, SPECIAL  ;
+;	move WATER_PULSE,  EFFECT_CONFUSE_HIT,        60, WATER,        100, 20,  10, SPECIAL  ;
+;	move DRAGON_CLAW,  EFFECT_NORMAL_HIT,         80, DRAGON,       100, 15,   0, PHYSICAL ;
+;	move DRAGON_PULSE, EFFECT_NORMAL_HIT,         80, DRAGON,       100, 15,   0, SPECIAL  ;
+;	move BULLDOZE,     EFFECT_SPEED_DOWN_HIT,     60, GROUND,       100, 20,  10, PHYSICAL ;
+;	move SHOCK_WAVE,   EFFECT_ALWAYS_HIT,         60, ELECTRIC,     100, 20,   0, SPECIAL  ;
+;	move EARTH_POWER,  EFFECT_NORMAL_HIT,         90, GROUND,       100, 10,   0, SPECIAL  ;
+;	move POISON_FANG,  EFFECT_POISON_HIT,         50, POISON,       100, 20,  30, PHYSICAL ;
+;	move X_SCISSOR,    EFFECT_NORMAL_HIT,         80, BUG,          100, 15,   0, PHYSICAL ;
+;	move BUG_BUZZ,     EFFECT_SP_DEF_DOWN_HIT,    90, BUG,          100, 10,  10, SPECIAL  ;
+;	move IRON_DEFENSE, EFFECT_DEFENSE_UP_2,        0, STEEL,        100, 15,   0, STATUS   ;
+;	move CALM_MIND,    EFFECT_CALM_MIND,           0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ;
+;	move BULK_UP,      EFFECT_BULK_UP,             0, FIGHTING,     100, 20,   0, STATUS   ;
+;	move DRAGON_DANCE, EFFECT_DRAGON_DANCE,        0, DRAGON,       100, 20,   0, STATUS   ;
+;	move FLAME_CHARGE, EFFECT_SPEED_UP_HIT,       50, FIRE,         100, 20,   0, PHYSICAL ;
+;	move GIGA_IMPACT,  EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0, PHYSICAL ;
+;	move FLASH_CANNON, EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,        100, 10,  10, SPECIAL  ;
+;	move HURRICANE,    EFFECT_CONFUSE_HIT,       110, FLYING,        70,  5,  20, SPECIAL  ;
+;	move AURA_SPHERE,  EFFECT_ALWAYS_HIT,         80, FIGHTING,     100, 15,   0, SPECIAL  ;
+;	move DEATH_ROLL,   EFFECT_NORMAL_HIT,        100, WATER,        100,  5,   0, PHYSICAL ;Totodile signature?
+;	move DARK_PULSE,   EFFECT_FLINCH_HIT,         80, DARK,         100, 10,  10, SPECIAL  ;
+;	move IRON_HEAD,    EFFECT_FLINCH_HIT,         80, STEEL,        100, 15,  10, PHYSICAL ;
+;	move ENERGY_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,        100, 10,  10, SPECIAL  ;
+;	move AIR_CUTTER,   EFFECT_NORMAL_HIT,         55, FLYING,       100, 25,   0, SPECIAL  ;High critical chance
+;	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,        95, 20,  10, SPECIAL  ;
+;	move FOCUS_BLAST,  EFFECT_NORMAL_HIT,        110, FIGHTING,      80,  5,   0, SPECIAL  ;
+;	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        100, 10,   0, PHYSICAL ;
