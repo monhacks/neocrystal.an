@@ -180,7 +180,7 @@ Moves:
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,       100, 10,   0, STATUS
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       100,  1,   0, PHYSICAL
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,       100,  1,   0, STATUS
-	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        30, FIGHTING,      90, 10,   0, PHYSICAL
+	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        10, FIGHTING,      90, 10,   0, PHYSICAL ; Very weak, a BP of 18 would give this a total bp of 108
 	move THIEF,        EFFECT_THIEF,              60, DARK,         100, 25, 100, PHYSICAL
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,          100, 10,   0, STATUS
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,       100,  5,   0, STATUS
