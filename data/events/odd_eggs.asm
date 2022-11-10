@@ -1,4 +1,4 @@
-DEF NUM_ODD_EGGS EQU 9
+DEF NUM_ODD_EGGS EQU 54
 
 MACRO prob
 	DEF prob_total += \1
