@@ -1,4 +1,4 @@
-DEF NUM_ODD_EGGS EQU 48
+DEF NUM_ODD_EGGS EQU 42
 
 MACRO prob
 	DEF prob_total += \1
@@ -15,42 +15,42 @@ DEF prob_total = 0
 	prob 2
 	prob 2
 	prob 2
-	prob 4
+	prob 5
 ; Cleffa
 	prob 1
 	prob 2
 	prob 2
 	prob 2
 	prob 2
-	prob 4
+	prob 5
 ; Igglybuff
 	prob 1
 	prob 2
 	prob 2
 	prob 2
 	prob 2
-	prob 4
+	prob 5
 ; Smoochum
 	prob 1
 	prob 2
 	prob 2
 	prob 2
 	prob 2
-	prob 3
+	prob 6
 ; Magby
 	prob 1
 	prob 2
 	prob 2
 	prob 2
 	prob 2
-	prob 3
+	prob 6
 ; Elekid
 	prob 1
 	prob 2
 	prob 2
 	prob 2
 	prob 2
-	prob 3
+	prob 6
 ; Tyrogue
 	prob 1
 	prob 2
@@ -58,13 +58,6 @@ DEF prob_total = 0
 	prob 2
 	prob 2
 	prob 4
-; Teddiursa
-	prob 1
-	prob 2
-	prob 2
-	prob 2
-	prob 2
-	prob 3
 	assert_table_length NUM_ODD_EGGS
 	assert prob_total == 100, "OddEggProbabilities do not sum to 100%!"
 
@@ -1203,168 +1196,6 @@ OddEggs:
 	bigdw 5 ; Spd
 	bigdw 5 ; SAtk
 	bigdw 5 ; SDef
-	db "EGG@@@@@@@@"
-
-;-------------------------------------------------------------------------------
-; TEDDIURSA EGGS
-;-------------------------------------------------------------------------------
-; All perfect DVs
-	db TEDDIURSA
-	db NO_ITEM
-	db SCRATCH, LEER, DIZZY_PUNCH, PLAY_ROUGH
-	dw 00256 ; OT ID
-	dt 0 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 15, 15, 15, 15 ; DVs
-	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 1 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 12; Max HP
-	bigdw 6 ; Atk
-	bigdw 6 ; Def
-	bigdw 6 ; Spd
-	bigdw 6 ; SAtk
-	bigdw 6 ; SDef
-	db "EGG@@@@@@@@"
-
-; One perfect DV
-	db TEDDIURSA
-	db NO_ITEM
-	db SCRATCH, LEER, DIZZY_PUNCH, PLAY_ROUGH
-	dw 00256 ; OT ID
-	dt 0 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 15, 10, 10, 10 ; DVs
-	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 1 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 12; Max HP
-	bigdw 6 ; Atk
-	bigdw 6 ; Def
-	bigdw 6 ; Spd
-	bigdw 6 ; SAtk
-	bigdw 6 ; SDef
-	db "EGG@@@@@@@@"
-
-	db TEDDIURSA
-	db NO_ITEM
-	db SCRATCH, LEER, DIZZY_PUNCH, PLAY_ROUGH
-	dw 00256 ; OT ID
-	dt 0 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 10, 15, 10, 10 ; DVs
-	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 1 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 12; Max HP
-	bigdw 6 ; Atk
-	bigdw 6 ; Def
-	bigdw 6 ; Spd
-	bigdw 6 ; SAtk
-	bigdw 6 ; SDef
-	db "EGG@@@@@@@@"
-
-	db TEDDIURSA
-	db NO_ITEM
-	db SCRATCH, LEER, DIZZY_PUNCH, PLAY_ROUGH
-	dw 00256 ; OT ID
-	dt 0 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 10, 10, 15, 10 ; DVs
-	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 1 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 12; Max HP
-	bigdw 6 ; Atk
-	bigdw 6 ; Def
-	bigdw 6 ; Spd
-	bigdw 6 ; SAtk
-	bigdw 6 ; SDef
-	db "EGG@@@@@@@@"
-
-	db TEDDIURSA
-	db NO_ITEM
-	db SCRATCH, LEER, DIZZY_PUNCH, PLAY_ROUGH
-	dw 00256 ; OT ID
-	dt 0 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 10, 10, 10, 15 ; DVs
-	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 1 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 12; Max HP
-	bigdw 6 ; Atk
-	bigdw 6 ; Def
-	bigdw 6 ; Spd
-	bigdw 6 ; SAtk
-	bigdw 6 ; SDef
-	db "EGG@@@@@@@@"
-
-; No perfect DVs
-	db TEDDIURSA
-	db NO_ITEM
-	db SCRATCH, LEER, DIZZY_PUNCH, PLAY_ROUGH
-	dw 00256 ; OT ID
-	dt 0 ; Exp
-	; Stat exp
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	bigdw 0
-	dn 12, 12, 12, 12 ; DVs
-	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 1 ; Level
-	db 0, 0 ; Status
-	bigdw 0 ; HP
-	bigdw 12; Max HP
-	bigdw 6 ; Atk
-	bigdw 6 ; Def
-	bigdw 6 ; Spd
-	bigdw 6 ; SAtk
-	bigdw 6 ; SDef
 	db "EGG@@@@@@@@"
 
 ;-------------------------------------------------------------------------------
