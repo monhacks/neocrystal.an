@@ -13,6 +13,7 @@ ENDM
 
 Moves:
 ; entries correspond to move ids (see constants/move_constants.asm)
+;	move MOVE_NAME   , EFFECT_TYPE              , BP, TYPE        , ACC, PP,   %, CATEGORY ;Comment
 	table_width MOVE_LENGTH, Moves
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL
@@ -250,7 +251,7 @@ Moves:
 	move MORNING_SUN,  EFFECT_MORNING_SUN,         0, NORMAL,       100,  5,   0, STATUS
 	move SYNTHESIS,    EFFECT_SYNTHESIS,           0, GRASS,        100,  5,   0, STATUS
 	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, FAIRY,        100,  5,   0, STATUS
-	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,        1, NORMAL,       100, 15,   0, SPECIAL ;up power to 60 or 70
+	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,       70, NORMAL,       100, 15,   0, SPECIAL
 	move CROSS_CHOP,   EFFECT_NORMAL_HIT,        100, FIGHTING,      80,  5,   0, PHYSICAL
 	move TWISTER,      EFFECT_TWISTER,            40, DRAGON,       100, 20,  20, SPECIAL
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,         90,  5,   0, STATUS
@@ -299,3 +300,6 @@ Moves:
 ;	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,        95, 20,  10, SPECIAL  ;
 ;	move FOCUS_BLAST,  EFFECT_NORMAL_HIT,        110, FIGHTING,      80,  5,   0, SPECIAL  ;
 ;	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        100, 10,   0, PHYSICAL ;
+
+; Custom Moves
+;	move ONSLAUGHT,    EFFECT_MULTI_HIT,          16, NORMAL,        90, 15,   0, PHYSICAL ;

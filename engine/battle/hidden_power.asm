@@ -76,9 +76,6 @@ HiddenPowerDamage:
 	add a
 	or b
 
-; Skip Normal
-	inc a
-
 .done
 
 ; Overwrite the current move type.
@@ -90,7 +87,7 @@ HiddenPowerDamage:
 
 ; Get the rest of the damage formula variables
 ; based on the new type, but keep base power.
-	ld a, d ;replace d with 70 base power
+	ld a, 70; 70 base power
 	push af
 	farcall BattleCommand_DamageStats ; damagestats
 	pop af
