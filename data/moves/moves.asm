@@ -154,7 +154,7 @@ Moves:
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE, 100, 15,   0, SPECIAL  ; ok
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,        90, 40,   0, STATUS   ; ok
-	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,        85, 20,   0, PHYSICAL ; replace with Bullet Seed
+	move BULLET_SEED,  EFFECT_MULTI_HIT,          20, GRASS,         90, 20,   0, PHYSICAL ; ok
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          80, BUG,          100, 10,   0, PHYSICAL ; ok
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        75, 10,   0, STATUS   ; ok
 	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        90,  5,   0, PHYSICAL ; replace

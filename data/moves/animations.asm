@@ -2417,7 +2417,7 @@ BattleAnim_PetalDance:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_Barrage:
+BattleAnim_Barrage: ;TODO Update to BulletSeed
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_EXPLOSION
 	anim_sound 6, 2, SFX_THROW_BALL
 	anim_obj ANIM_OBJ_SLUDGE_BOMB, 64, 92, $10

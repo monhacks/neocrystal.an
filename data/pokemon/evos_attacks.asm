@@ -1313,7 +1313,7 @@ ElectrodeEvosAttacks:
 ExeggcuteEvosAttacks:
 	db EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR
 	db 0 ; no more evolutions
-	db 1, BARRAGE
+	db 1, BULLET_SEED
 	db 1, HYPNOSIS
 	db 7, REFLECT
 	db 13, LEECH_SEED
@@ -1326,7 +1326,7 @@ ExeggcuteEvosAttacks:
 
 ExeggutorEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BARRAGE
+	db 1, BULLET_SEED
 	db 1, HYPNOSIS
 	db 1, CONFUSION
 	db 19, STOMP

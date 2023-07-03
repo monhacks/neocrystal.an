@@ -140,7 +140,7 @@ MoveDescriptions::
 	dw GlareDescription
 	dw DreamEaterDescription
 	dw PoisonGasDescription
-	dw BarrageDescription
+	dw BulletSeedDescription
 	dw LeechLifeDescription
 	dw LovelyKissDescription
 	dw SkyAttackDescription
@@ -823,9 +823,9 @@ PoisonGasDescription:
 	db   "A move that may"
 	next "poison the foe.@"
 
-BarrageDescription:
-	db   "Throws orbs to hit"
-	next "2-5 times.@"
+BulletSeedDescription:
+	db   "Launches seeds to "
+	next "hit 2-5 times.@"
 
 LeechLifeDescription:
 	db   "Steals 1/2 of the"
