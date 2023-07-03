@@ -242,7 +242,7 @@
 	const MORNING_SUN  ; ea
 	const SYNTHESIS    ; eb
 	const MOONLIGHT    ; ec
-	const HIDDEN_POWER ; ed
+	const HIDDEN_POWER ; ed	
 	const CROSS_CHOP   ; ee
 	const TWISTER      ; ef
 	const RAIN_DANCE   ; f0
@@ -259,7 +259,7 @@
 	const BEAT_UP      ; fb
 	const MOONBLAST    ; fc
 	const PLAY_ROUGH   ; fd
-  const FAIRY_WIND   ; fe
+	const FAIRY_WIND   ; fe
 DEF NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point
