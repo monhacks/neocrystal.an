@@ -16,7 +16,7 @@ Moves:
 ;	move MOVE_NAME   , EFFECT_TYPE              , BP, TYPE        , ACC, PP,   %, CATEGORY ;Comment
 	table_width MOVE_LENGTH, Moves
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
-	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; Add Poli? Tyrogue? Kanga?
+	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; Heracross, Nidos, Grimer/Muk, Hypno
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,        90, 15,   0, PHYSICAL ; ok, buff pp 5, acc 5
 	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, FIGHTING,      85, 15,   0, PHYSICAL ; made fighting type, still need to give more or replace
 	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,        85, 20,   0, PHYSICAL ; buff or replace
@@ -36,7 +36,7 @@ Moves:
 	move FLY,          EFFECT_FLY,                90, FLYING,        95, 15,   0, PHYSICAL ; ok
 	move BIND,         EFFECT_TRAP_TARGET,        15, NORMAL,        90, 20,   0, PHYSICAL ; This is the de-facto trapping move, buff pp 5
 	move SLAM,         EFFECT_NORMAL_HIT,         80, NORMAL,        75, 20,   0, PHYSICAL ; ok, but should buff or absorb Mega Punch / Kick
-	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; Chiko line should lvl up with this
+	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; ok?
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker
 	move MEGA_KICK,    EFFECT_NORMAL_HIT,        120, NORMAL,        75,  5,   0, PHYSICAL ; unique to hitmonlee, replace
@@ -96,7 +96,7 @@ Moves:
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,         75, 15,   0, STATUS   ; ok
 	move PETAL_DANCE,  EFFECT_RAMPAGE,           120, GRASS,        100, 10,   0, SPECIAL  ; ok
 	move STRING_SHOT,  EFFECT_SPEED_DOWN,          0, BUG,           95, 40,   0, STATUS   ; ok
-	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,       100, 10,   0, SPECIAL  ; New effect entirely, maybe a dragon type trapper?
+	move DRAGON_RAGE,  EFFECT_TRAP_TARGET,        35, DRAGON,        85, 15,   0, SPECIAL  ; ok?
 	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        35, FIRE,          85, 15,   0, SPECIAL  ; ok
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,     100, 30,  10, SPECIAL  ; ok
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       90, ELECTRIC,     100, 15,  10, SPECIAL  ; ok

@@ -790,7 +790,7 @@ PoliwrathEvosAttacks:
 	db 1, WATER_GUN
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
-	db 1, SUBMISSION
+	db 1, KARATE_CHOP
 	db 35, SUBMISSION
 	db 51, MIND_READER
 	db 0 ; no more level-up moves
@@ -1489,12 +1489,12 @@ TangelaEvosAttacks:
 
 KangaskhanEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, COMET_PUNCH
+	db 1, RAGE
 	db 7, LEER
 	db 13, BITE
 	db 19, TAIL_WHIP
-	db 25, MEGA_PUNCH
-	db 31, RAGE
+	db 25, KARATE_CHOP
+	db 31, BODY_SLAM
 	db 37, ENDURE
 	db 43, DIZZY_PUNCH
 	db 49, REVERSAL
