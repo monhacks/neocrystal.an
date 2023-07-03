@@ -2076,3 +2076,42 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+
+AttackUpSpeedUp:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	speedup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+AttackUpDefenseUp:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	defenseup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+DefenseUp2SpeedDown:
+	checkobedience
+	usedmovetext
+	doturn
+	defenseup2
+	speeddown
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
