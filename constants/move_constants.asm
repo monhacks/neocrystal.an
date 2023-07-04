@@ -256,7 +256,7 @@
 	const FUTURE_SIGHT ; f8
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
-	const BEAT_UP      ; fb
+	const DEATH_ROLL   ; fb
 	const MOONBLAST    ; fc
 	const PLAY_ROUGH   ; fd
 	const FAIRY_WIND   ; fe

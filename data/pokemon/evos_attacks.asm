@@ -2070,6 +2070,7 @@ TyphlosionEvosAttacks:
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
+	db 1, DEATH_ROLL
 	db 1, SCRATCH
 	db 1, LEER
 	db 7, RAGE
@@ -2081,7 +2082,7 @@ TotodileEvosAttacks:
 	db 37, SCREECH
 	db 42, CRUNCH
 	db 47, THRASH
-	db 52, HYDRO_PUMP
+	db 52, DEATH_ROLL
 	db 0 ; no more level-up moves
 
 CroconawEvosAttacks:
@@ -2098,7 +2099,7 @@ CroconawEvosAttacks:
 	db 39, SCREECH
 	db 45, CRUNCH
 	db 50, THRASH
-	db 55, HYDRO_PUMP
+	db 55, DEATH_ROLL
 	db 0 ; no more level-up moves
 
 FeraligatrEvosAttacks:
@@ -2114,7 +2115,7 @@ FeraligatrEvosAttacks:
 	db 40, SCREECH
 	db 47, CRUNCH
 	db 53, THRASH
-	db 58, HYDRO_PUMP
+	db 58, DEATH_ROLL
 	db 0 ; no more level-up moves
 
 SentretEvosAttacks:
@@ -2791,7 +2792,7 @@ SneaselEvosAttacks:
 	db 33, FURY_SWIPES
 	db 41, AGILITY
 	db 49, SLASH
-	db 57, BEAT_UP
+	db 57, ICE_PUNCH ;Replaces BEAT_UP
 	db 65, METAL_CLAW
 	db 0 ; no more level-up moves
 

@@ -252,7 +252,7 @@ BattleAnimations::
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_BeatUp
+	dw BattleAnim_DeathRoll
 	dw BattleAnim_MoonBlast
 	dw BattleAnim_PlayRough
 	dw BattleAnim_FairyWind
@@ -4650,24 +4650,28 @@ BattleAnim_Whirlpool:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_BeatUp:
-	anim_if_param_equal $0, .current_mon
-	anim_sound 0, 0, SFX_BALL_POOF
-	anim_bgeffect ANIM_BG_RETURN_MON, $0, BG_EFFECT_USER, $0
+BattleAnim_DeathRoll:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $40, $2, $0
+	anim_obj ANIM_OBJ_CLAMP, 136, 56, $a0
+	anim_obj ANIM_OBJ_CLAMP, 136, 56, $20
 	anim_wait 16
-	anim_beatup
-	anim_sound 0, 0, SFX_BALL_POOF
-	anim_bgeffect ANIM_BG_ENTER_MON, $0, BG_EFFECT_USER, $0
-	anim_wait 16
-.current_mon
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_1Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, BG_EFFECT_USER, $0
-	anim_wait 4
-	anim_sound 0, 1, SFX_BEAT_UP
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 136, 48, $0
+	anim_sound 0, 1, SFX_BITE
+	anim_obj ANIM_OBJ_HIT_YFIX, 144, 48, $18
+	anim_wait 32
+	anim_sound 0, 1, SFX_BITE
+	anim_obj ANIM_OBJ_HIT_YFIX, 128, 64, $18
+	anim_wait 32
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_HIT, 120, 32, $0
 	anim_wait 8
-	anim_call BattleAnim_ShowMon_0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_HIT, 152, 40, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_HIT, 136, 48, $0
+	anim_wait 8
 	anim_ret
 
 BattleAnimSub_Drain:

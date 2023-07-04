@@ -265,7 +265,7 @@ Moves:
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      120, PSYCHIC_TYPE, 100, 10,   0, SPECIAL  ; ok
 	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   40, FIGHTING,     100, 15,  50, PHYSICAL ; ok
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        35, WATER,         85, 15,   0, SPECIAL  ; ok
-	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0, PHYSICAL ; replace
+	move DEATH_ROLL,   EFFECT_TRAP_TARGET,       100, WATER,        100,  5,   0, PHYSICAL ; ok : Totodile line signature
 	move MOONBLAST,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,        100, 10,  30, SPECIAL  ; ok
 	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN_HIT,    90, FAIRY,         90, 10,  10, PHYSICAL ; ok
 	move FAIRY_WIND,   EFFECT_NORMAL_HIT,         40, FAIRY,        100, 30,   0, SPECIAL  ; ok
@@ -292,7 +292,6 @@ Moves:
 ;	move FLASH_CANNON, EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,        100, 10,  10, SPECIAL  ;
 ;	move HURRICANE,    EFFECT_CONFUSE_HIT,       110, FLYING,        70,  5,  20, SPECIAL  ;
 ;	move AURA_SPHERE,  EFFECT_ALWAYS_HIT,         80, FIGHTING,     100, 15,   0, SPECIAL  ;
-;	move DEATH_ROLL,   EFFECT_NORMAL_HIT,        100, WATER,        100,  5,   0, PHYSICAL ;Totodile signature?
 ;	move DARK_PULSE,   EFFECT_FLINCH_HIT,         80, DARK,         100, 10,  10, SPECIAL  ;
 ;	move IRON_HEAD,    EFFECT_FLINCH_HIT,         80, STEEL,        100, 15,  10, PHYSICAL ;
 ;	move ENERGY_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,        100, 10,  10, SPECIAL  ;

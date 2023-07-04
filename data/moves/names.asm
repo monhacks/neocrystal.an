@@ -250,7 +250,7 @@ MoveNames::
 	li "FUTURE SIGHT"
 	li "ROCK SMASH"
 	li "WHIRLPOOL"
-	li "BEAT UP"
+	li "DEATH ROLL"
 	li "MOONBLAST"
 	li "PLAY ROUGH"
 	li "FAIRY WIND"

@@ -251,7 +251,7 @@ MoveDescriptions::
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw BeatUpDescription
+	dw DeathRollDescription
 	dw MoonBlastDescription
 	dw PlayRoughDescription
 	dw FairyWindDescription
@@ -1267,9 +1267,9 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
+DeathRollDescription:
+	db   "Clamps with jaws"
+	next "and thrashes about.@"
 
 MoonBlastDescription:
 	db   "Attacks with at"
