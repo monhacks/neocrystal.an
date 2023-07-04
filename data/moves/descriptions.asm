@@ -11,7 +11,7 @@ MoveDescriptions::
 	dw IcePunchDescription
 	dw ThunderpunchDescription
 	dw ScratchDescription
-	dw VicegripDescription
+	dw AirCutterDescription
 	dw GuillotineDescription
 	dw RazorWindDescription
 	dw SwordsDanceDescription
@@ -307,9 +307,9 @@ ScratchDescription:
 	db   "Scratches with"
 	next "sharp claws.@"
 
-VicegripDescription:
-	db   "Grips with power-"
-	next "ful pincers.@"
+AirCutterDescription:
+	db   "Whips up a sharp,"
+	next "cutting wind.@"
 
 GuillotineDescription:
 	db   "A one-hit KO,"
@@ -649,7 +649,7 @@ HypnosisDescription:
 
 MeditateDescription:
 	db   "Raises the user's"
-	next "ATTACK.@"
+	next "PHYSICAL stats.@"
 
 AgilityDescription:
 	db   "Sharply increases"

@@ -2095,9 +2095,13 @@ AttackUpDefenseUp:
 	usedmovetext
 	doturn
 	attackup
-	defenseup
 	lowersub
 	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	defenseup
+	lowersub
 	raisesub
 	statupmessage
 	statupfailtext

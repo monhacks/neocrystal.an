@@ -17,7 +17,7 @@ BulbasaurEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
 	db SAFEGUARD
-	db RAZOR_WIND
+;	db RAZOR_WIND
 	db PETAL_DANCE
 	db -1 ; end
 
@@ -266,6 +266,7 @@ SeelEggMoves:
 GrimerEggMoves:
 	db HAZE
 	db MEAN_LOOK
+	db KARATE_CHOP
 	db LICK
 	db -1 ; end
 
@@ -291,6 +292,7 @@ OnixEggMoves:
 DrowzeeEggMoves:
 	db LIGHT_SCREEN
 	db BARRIER
+	db KARATE_CHOP
 	db -1 ; end
 
 KrabbyEggMoves:

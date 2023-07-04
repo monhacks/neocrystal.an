@@ -401,7 +401,7 @@ NidoqueenEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, SCRATCH
-	db 1, DOUBLE_KICK
+	db 1, KARATE_CHOP
 	db 1, TAIL_WHIP
 	db 23, BODY_SLAM
 	db 0 ; no more level-up moves
@@ -425,7 +425,7 @@ NidorinoEvosAttacks:
 	db 1, LEER
 	db 1, TACKLE
 	db 8, HORN_ATTACK
-	db 12, DOUBLE_KICK
+	db 12, KARATE_CHOP
 	db 19, POISON_STING
 	db 27, FOCUS_ENERGY
 	db 36, FURY_ATTACK
@@ -1263,7 +1263,7 @@ KrabbyEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 5, LEER
-	db 12, VICEGRIP
+	db 12, CLAMP
 	db 16, HARDEN
 	db 23, STOMP
 	db 27, GUILLOTINE
@@ -1275,7 +1275,7 @@ KinglerEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 5, LEER
-	db 12, VICEGRIP
+	db 12, CLAMP
 	db 16, HARDEN
 	db 23, STOMP
 	db 27, GUILLOTINE
@@ -1381,7 +1381,7 @@ HitmonleeEvosAttacks:
 
 HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, COMET_PUNCH
+	db 1, POUND
 	db 7, AGILITY
 	db 13, PURSUIT
 	db 26, THUNDERPUNCH
@@ -1646,12 +1646,12 @@ MagmarEvosAttacks:
 
 PinsirEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, VICEGRIP
+	db 1, BIND
 	db 7, FOCUS_ENERGY
-	db 13, BIND
+	db 13, MEDITATE
 	db 19, SEISMIC_TOSS
-	db 25, HARDEN
-	db 31, GUILLOTINE
+	db 25, SLASH
+	db 31, LEECH_LIFE
 	db 37, SUBMISSION
 	db 43, SWORDS_DANCE
 	db 0 ; no more level-up moves
@@ -1981,7 +1981,7 @@ ChikoritaEvosAttacks:
 	db 36, REFLECT
 	db 40, LIGHT_SCREEN
 	db 45, SAFEGUARD
-	db 50, SOLARBEAM
+	db 50, SOLARBEAM ;Something like "nature's glow"
 	db 0 ; no more level-up moves
 
 BayleefEvosAttacks:
@@ -2031,7 +2031,7 @@ CyndaquilEvosAttacks:
 	db 35, SWIFT
 	db 40, HAZE
 	db 44, DOUBLE_EDGE
-	db 48, FLAMETHROWER
+	db 48, FLAMETHROWER ; Eruption
 	db 0 ; no more level-up moves
 
 QuilavaEvosAttacks:
@@ -2070,7 +2070,6 @@ TyphlosionEvosAttacks:
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
-	db 1, DEATH_ROLL
 	db 1, SCRATCH
 	db 1, LEER
 	db 7, RAGE
@@ -2776,7 +2775,7 @@ HeracrossEvosAttacks:
 	db 6, HORN_ATTACK
 	db 12, ENDURE
 	db 19, FURY_ATTACK
-	db 27, COUNTER
+	db 27, KARATE_CHOP
 	db 35, TAKE_DOWN
 	db 44, REVERSAL
 	db 54, MEGAHORN

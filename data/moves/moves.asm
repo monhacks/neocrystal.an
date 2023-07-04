@@ -16,16 +16,16 @@ Moves:
 ;	move MOVE_NAME   , EFFECT_TYPE              , BP, TYPE        , ACC, PP,   %, CATEGORY ;Comment
 	table_width MOVE_LENGTH, Moves
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
-	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; Heracross, Nidos, Grimer/Muk, Hypno
+	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; ok
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,        90, 15,   0, PHYSICAL ; ok, buff pp 5, acc 5
-	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, FIGHTING,      85, 15,   0, PHYSICAL ; made fighting type, still need to give more or replace
+	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, FIGHTING,      85, 15,   0, PHYSICAL ; replace
 	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,        85, 20,   0, PHYSICAL ; buff or replace
 	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,       100, 20,   0, PHYSICAL ; review gen 9 egg learn
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,         100, 15,  10, PHYSICAL ; ok
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,          100, 15,  10, PHYSICAL ; ok
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,     100, 15,  10, PHYSICAL ; ok
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
-	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,       100, 30,   0, PHYSICAL ; replace or use more mons
+	move AIR_CUTTER,   EFFECT_NORMAL_HIT,         55, FLYING,       100, 25,   0, SPECIAL  ; ok, high crit chance
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        30,  5,   0, PHYSICAL ; OHKO replace
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,        90, 10,   0, SPECIAL  ; replace
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       100, 30,   0, STATUS   ; ok
@@ -110,7 +110,7 @@ Moves:
 	move CONFUSION,    EFFECT_CONFUSE_HIT,        50, PSYCHIC_TYPE, 100, 25,  10, SPECIAL  ; ok
 	move PSYCHIC_M,    EFFECT_SP_DEF_DOWN_HIT,    90, PSYCHIC_TYPE, 100, 10,  10, SPECIAL  ; ok
 	move HYPNOSIS,     EFFECT_SLEEP,               0, PSYCHIC_TYPE,  60, 20,   0, STATUS   ; ok
-	move MEDITATE,     EFFECT_ATTACK_UP,           0, PSYCHIC_TYPE, 100, 40,   0, STATUS   ; Should raise Attack and Defense
+	move MEDITATE,     EFFECT_ATK_UP_DEF_UP,       0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ; Should raise Attack and Defense
 	move AGILITY,      EFFECT_SPEED_UP_2,          0, PSYCHIC_TYPE, 100, 30,   0, STATUS   ; ok
 	move QUICK_ATTACK, EFFECT_PRIORITY_HIT,       40, NORMAL,       100, 30,   0, PHYSICAL ; ok
 	move RAGE,         EFFECT_RAGE,               20, NORMAL,       100, 20,   0, PHYSICAL ; ok
@@ -295,7 +295,6 @@ Moves:
 ;	move DARK_PULSE,   EFFECT_FLINCH_HIT,         80, DARK,         100, 10,  10, SPECIAL  ;
 ;	move IRON_HEAD,    EFFECT_FLINCH_HIT,         80, STEEL,        100, 15,  10, PHYSICAL ;
 ;	move ENERGY_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,        100, 10,  10, SPECIAL  ;
-;	move AIR_CUTTER,   EFFECT_NORMAL_HIT,         55, FLYING,       100, 25,   0, SPECIAL  ;High critical chance
 ;	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,        95, 20,  10, SPECIAL  ;
 ;	move FOCUS_BLAST,  EFFECT_NORMAL_HIT,        110, FIGHTING,      80,  5,   0, SPECIAL  ;
 ;	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        100, 10,   0, PHYSICAL ;
