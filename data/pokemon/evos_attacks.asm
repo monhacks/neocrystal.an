@@ -1388,7 +1388,7 @@ HitmonchanEvosAttacks:
 	db 26, ICE_PUNCH
 	db 26, FIRE_PUNCH
 	db 32, MACH_PUNCH
-	db 38, MEGA_PUNCH
+	db 38, SLAM
 	db 44, DETECT
 	db 50, COUNTER
 	db 0 ; no more level-up moves
@@ -2021,7 +2021,7 @@ CyndaquilEvosAttacks:
 	db EVOLVE_LEVEL, 14, QUILAVA
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, GROWL
+	db 1, ERUPTION
 	db 6, SMOKESCREEN
 	db 12, EMBER
 	db 18, QUICK_ATTACK
@@ -2072,6 +2072,7 @@ TotodileEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
+	db 1, DRAGON_DANCE
 	db 7, RAGE
 	db 12, WATER_GUN
 	db 17, BITE
@@ -2081,7 +2082,7 @@ TotodileEvosAttacks:
 	db 37, SCREECH
 	db 42, CRUNCH
 	db 47, THRASH
-	db 52, DEATH_ROLL
+	db 52, CROC_CHOMP
 	db 0 ; no more level-up moves
 
 CroconawEvosAttacks:
@@ -2098,7 +2099,7 @@ CroconawEvosAttacks:
 	db 39, SCREECH
 	db 45, CRUNCH
 	db 50, THRASH
-	db 55, DEATH_ROLL
+	db 55, CROC_CHOMP
 	db 0 ; no more level-up moves
 
 FeraligatrEvosAttacks:
@@ -2114,7 +2115,7 @@ FeraligatrEvosAttacks:
 	db 40, SCREECH
 	db 47, CRUNCH
 	db 53, THRASH
-	db 58, DEATH_ROLL
+	db 58, CROC_CHOMP
 	db 0 ; no more level-up moves
 
 SentretEvosAttacks:

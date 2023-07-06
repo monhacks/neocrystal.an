@@ -2082,9 +2082,13 @@ AttackUpSpeedUp:
 	usedmovetext
 	doturn
 	attackup
-	speedup
 	lowersub
 	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	speedup
+	lowersub
 	raisesub
 	statupmessage
 	statupfailtext
@@ -2112,9 +2116,13 @@ DefenseUp2SpeedDown:
 	usedmovetext
 	doturn
 	defenseup2
-	speeddown
 	lowersub
 	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	speeddown
+	lowersub
 	raisesub
 	statupmessage
 	statupfailtext

@@ -4,8 +4,8 @@ MoveDescriptions::
 	dw PoundDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
-	dw CometPunchDescription
-	dw MegaPunchDescription
+	dw DragonDanceDescription
+	dw EruptionDescription
 	dw PayDayDescription
 	dw FirePunchDescription
 	dw IcePunchDescription
@@ -251,7 +251,7 @@ MoveDescriptions::
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw DeathRollDescription
+	dw CrocChompDescription
 	dw MoonBlastDescription
 	dw PlayRoughDescription
 	dw FairyWindDescription
@@ -279,13 +279,13 @@ DoubleslapDescription:
 	db   "Repeatedly slaps"
 	next "2-5 times.@"
 
-CometPunchDescription:
-	db   "Repeatedly punches"
-	next "2-5 times.@"
+DragonDanceDescription:
+	db   "A dance to raise"
+	next "ATTACK and SPEED.@"
 
-MegaPunchDescription:
-	db   "A powerful punch"
-	next "thrown very hard.@"
+EruptionDescription:
+	db   "Releases an erup-"
+	next "tion of flame.@"
 
 PayDayDescription:
 	db   "Throws coins. Gets"
@@ -1267,9 +1267,9 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-DeathRollDescription:
-	db   "Clamps with jaws"
-	next "and thrashes about.@"
+CrocChompDescription:
+	db   "Chomps enemy and"
+	next "thrashes about.@"
 
 MoonBlastDescription:
 	db   "Attacks with at"

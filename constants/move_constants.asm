@@ -9,8 +9,8 @@
 	const POUND        ; 01
 	const KARATE_CHOP  ; 02
 	const DOUBLESLAP   ; 03
-	const COMET_PUNCH  ; 04
-	const MEGA_PUNCH   ; 05
+	const DRAGON_DANCE ; 04
+	const ERUPTION     ; 05
 	const PAY_DAY      ; 06
 	const FIRE_PUNCH   ; 07
 	const ICE_PUNCH    ; 08
@@ -256,7 +256,7 @@
 	const FUTURE_SIGHT ; f8
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
-	const DEATH_ROLL   ; fb
+	const CROC_CHOMP   ; fb
 	const MOONBLAST    ; fc
 	const PLAY_ROUGH   ; fd
 	const FAIRY_WIND   ; fe

@@ -18,8 +18,8 @@ Moves:
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; ok
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,        90, 15,   0, PHYSICAL ; ok, buff pp 5, acc 5
-	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, FIGHTING,      85, 15,   0, PHYSICAL ; replace
-	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,        85, 20,   0, PHYSICAL ; buff or replace
+	move DRAGON_DANCE, EFFECT_ATK_UP_SPE_UP,       0, DRAGON,       100, 15,   0, STATUS   ; ok
+	move ERUPTION,     EFFECT_BURN_HIT,          100, NORMAL,       100,  5,  50, SPECIAL  ; ok - Typhlosion signature
 	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,       100, 20,   0, PHYSICAL ; review gen 9 egg learn
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,         100, 15,  10, PHYSICAL ; ok
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,          100, 15,  10, PHYSICAL ; ok
@@ -224,7 +224,7 @@ Moves:
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,        85, 15, 100, STATUS   ; ok
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,       100, 10,   0, STATUS   ; replace
 	move SPARK,        EFFECT_PARALYZE_HIT,       65, ELECTRIC,     100, 20,  30, PHYSICAL ; ok
-	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        40, BUG,           95, 20,   0, PHYSICAL ; ok
+	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        20, BUG,           95, 20,   0, PHYSICAL ; ok - 20bp to start, doubles 4 times
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,         90, 25,  10, PHYSICAL ; ok
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move ATTRACT,      EFFECT_ATTRACT,             0, NORMAL,       100, 15,   0, STATUS   ; ok
@@ -265,7 +265,7 @@ Moves:
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      120, PSYCHIC_TYPE, 100, 10,   0, SPECIAL  ; ok
 	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   40, FIGHTING,     100, 15,  50, PHYSICAL ; ok
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        35, WATER,         85, 15,   0, SPECIAL  ; ok
-	move DEATH_ROLL,   EFFECT_TRAP_TARGET,       100, WATER,        100,  5,   0, PHYSICAL ; ok : Totodile line signature
+	move CROC_CHOMP,   EFFECT_TRAP_TARGET,       100, WATER,        100,  5,   0, PHYSICAL ; ok : Totodile line signature
 	move MOONBLAST,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,        100, 10,  30, SPECIAL  ; ok
 	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN_HIT,    90, FAIRY,         90, 10,  10, PHYSICAL ; ok
 	move FAIRY_WIND,   EFFECT_NORMAL_HIT,         40, FAIRY,        100, 30,   0, SPECIAL  ; ok
@@ -286,7 +286,6 @@ Moves:
 ;	move IRON_DEFENSE, EFFECT_DEFENSE_UP_2,        0, STEEL,        100, 15,   0, STATUS   ;
 ;	move CALM_MIND,    EFFECT_CALM_MIND,           0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ;
 ;	move BULK_UP,      EFFECT_BULK_UP,             0, FIGHTING,     100, 20,   0, STATUS   ;
-;	move DRAGON_DANCE, EFFECT_DRAGON_DANCE,        0, DRAGON,       100, 20,   0, STATUS   ;
 ;	move FLAME_CHARGE, EFFECT_SPEED_UP_HIT,       50, FIRE,         100, 20,   0, PHYSICAL ;
 ;	move GIGA_IMPACT,  EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0, PHYSICAL ;
 ;	move FLASH_CANNON, EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,        100, 10,  10, SPECIAL  ;

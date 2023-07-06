@@ -5,8 +5,8 @@ BattleAnimations::
 	dw BattleAnim_Pound
 	dw BattleAnim_KarateChop
 	dw BattleAnim_Doubleslap
-	dw BattleAnim_CometPunch
-	dw BattleAnim_MegaPunch
+	dw BattleAnim_DragonDance
+	dw BattleAnim_Eruption
 	dw BattleAnim_PayDay
 	dw BattleAnim_FirePunch
 	dw BattleAnim_IcePunch
@@ -252,7 +252,7 @@ BattleAnimations::
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_DeathRoll
+	dw BattleAnim_CrocChomp
 	dw BattleAnim_MoonBlast
 	dw BattleAnim_PlayRough
 	dw BattleAnim_FairyWind
@@ -699,14 +699,19 @@ BattleAnim_Doubleslap:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_CometPunch:
-	anim_1gfx ANIM_GFX_HIT
-	anim_if_param_equal $1, .alternate
-	anim_sound 0, 1, SFX_COMET_PUNCH
-	anim_obj ANIM_OBJ_PUNCH, 144, 48, $0
-	anim_wait 6
-	anim_obj ANIM_OBJ_HIT_YFIX, 144, 48, $0
-	anim_wait 8
+BattleAnim_DragonDance:
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_HIT
+.loop
+	anim_obj ANIM_OBJ_BURNED, 48, 88, $10
+	anim_obj ANIM_OBJ_BURNED, 48, 88, $90
+	anim_wait 4
+	anim_loop 4, .loop
+	anim_wait 40
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_WOBBLE_MON, $0, BG_EFFECT_USER, $0
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_WOBBLE_MON
+	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 .alternate:
@@ -717,19 +722,20 @@ BattleAnim_CometPunch:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_MegaPunch:
-	anim_1gfx ANIM_GFX_HIT
-	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $40, $2, $0
-	anim_wait 48
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $3
-.loop
-	anim_sound 0, 1, SFX_MEGA_PUNCH
-	anim_obj ANIM_OBJ_PUNCH, 136, 56, $0
-	anim_obj ANIM_OBJ_HIT_BIG_YFIX, 136, 56, $0
-	anim_wait 6
-	anim_obj ANIM_OBJ_PUNCH, 136, 56, $0
-	anim_wait 6
-	anim_loop 3, .loop
+BattleAnim_Eruption:
+	anim_2gfx ANIM_GFX_EXPLOSION, ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $60, $4, $10
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $24
+.loop3
+	anim_sound 0, 1, SFX_EMBER
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 56, $1
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 56, $2
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 56, $3
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 56, $4
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 56, $5
+	anim_wait 16
+	anim_loop 2, .loop3
+	anim_wait 32
 	anim_ret
 
 BattleAnim_Stomp:
@@ -1759,7 +1765,7 @@ BattleAnim_FocusEnergy:
 	anim_ret
 
 BattleAnim_Bide:
-	anim_if_param_equal $0, BattleAnim_MegaPunch
+	anim_if_param_equal $0, BattleAnim_Eruption
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
 	anim_sound 0, 0, SFX_ESCAPE_ROPE
@@ -4653,7 +4659,7 @@ BattleAnim_Whirlpool:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_DeathRoll:
+BattleAnim_CrocChomp:
 	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
 	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $40, $2, $0
