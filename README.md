@@ -63,10 +63,11 @@ Kabuto | Gift in Kanto
 Johto Starters | Gift from Profs
 
 ## Build
-The `build.sh` script was added to the repository to create ROM called Crystal_`timestamp`. Invoke the script with the following command:
+The `build.sh` and `build11.sh` scripts were added to the repository to create ROM called Crystal_`timestamp`. Invoke the script with one of the following commands:
 
 ```
-  ./build.sh [ crystal | crystal_1.1 ]
+  ./build.     // Build 1.0
+  ./build11.sh // Build 1.1
 ```
 
 `make` can build the following ROMs:
