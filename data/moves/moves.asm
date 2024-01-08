@@ -152,7 +152,7 @@ Moves:
 	move SOFTBOILED,   EFFECT_HEAL,                0, NORMAL,       100, 10,   0, STATUS   ; replace, give 'em recover
 	move HI_JUMP_KICK, EFFECT_JUMP_KICK,         130, FIGHTING,      90, 10,   0, PHYSICAL ; ok
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,       100, 30,   0, STATUS   ; ok
-	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE, 100, 15,   0, SPECIAL  ; ok
+	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE, 100, 15,   0, SPECIAL  ; rarely used, potential replace
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,        90, 40,   0, STATUS   ; ok
 	move BULLET_SEED,  EFFECT_MULTI_HIT,          20, GRASS,         90, 20,   0, PHYSICAL ; ok
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          80, BUG,          100, 10,   0, PHYSICAL ; ok
@@ -173,9 +173,9 @@ Moves:
 	move REST,         EFFECT_HEAL,                0, PSYCHIC_TYPE, 100, 10,   0, STATUS   ; ok
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,          90, 10,  30, PHYSICAL ; ok
 	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,        90, 15,  10, PHYSICAL ; more
-	move SHARPEN,      EFFECT_ATTACK_UP,           0, NORMAL,       100, 30,   0, STATUS   ; ok, but more
+	move SHARPEN,      EFFECT_ATTACK_UP,           0, NORMAL,       100, 30,   0, STATUS   ; ok, but more pokes
 	move CONVERSION,   EFFECT_CONVERSION,          0, NORMAL,       100, 30,   0, STATUS   ; replace
-	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,       100, 10,  20, SPECIAL  ; ok but more
+	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,       100, 10,  20, SPECIAL  ; ok but more pokes
 	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,        90, 10,   0, PHYSICAL ; more
 	move SLASH,        EFFECT_NORMAL_HIT,         70, NORMAL,       100, 20,   0, PHYSICAL ; ok
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,       100, 10,   0, STATUS   ; ok
@@ -247,7 +247,7 @@ Moves:
 	move SWEET_SCENT,  EFFECT_EVASION_DOWN,        0, NORMAL,       100, 20,   0, STATUS   ; ok
 	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,         75, 15,  30, PHYSICAL ; ok
 	move METAL_CLAW,   EFFECT_ATTACK_UP_HIT,      50, STEEL,         95, 35,  10, PHYSICAL ; ok
-	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING,     100, 10,   0, PHYSICAL ; move effect requires update?
+	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING,     100, 10,   0, PHYSICAL ; move effect requires update? or replace.
 	move MORNING_SUN,  EFFECT_MORNING_SUN,         0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move SYNTHESIS,    EFFECT_SYNTHESIS,           0, GRASS,        100,  5,   0, STATUS   ; ok
 	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, FAIRY,        100,  5,   0, STATUS   ; ok
