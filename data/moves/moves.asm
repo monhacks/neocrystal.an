@@ -54,7 +54,7 @@ Moves:
 	move THRASH,       EFFECT_RAMPAGE,           120, NORMAL,       100, 10,   0, PHYSICAL ; ok
 	move DOUBLE_EDGE,  EFFECT_RECOIL_HIT,        120, NORMAL,       100, 15,   0, PHYSICAL ; ok
 	move TAIL_WHIP,    EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
-	move POISON_STING, EFFECT_POISON_HIT,         15, POISON,       100, 35,  30, PHYSICAL ; buff maybe?
+	move POISON_STING, EFFECT_POISON_HIT,         35, POISON,       100, 35,  30, PHYSICAL ; buff maybe?
 	move TWINEEDLE,    EFFECT_POISON_MULTI_HIT,   25, BUG,          100, 20,  20, PHYSICAL ; give to more pokemon
 	move PIN_MISSILE,  EFFECT_MULTI_HIT,          20, BUG,          100, 15,   0, PHYSICAL ; give to more pokemon
 	move LEER,         EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
