@@ -199,7 +199,7 @@ BattleAnimations::
 	dw BattleAnim_PerishSong
 	dw BattleAnim_IcyWind
 	dw BattleAnim_Detect
-	dw BattleAnim_BoneRush
+	dw BattleAnim_Bulldoze
 	dw BattleAnim_LockOn
 	dw BattleAnim_Outrage
 	dw BattleAnim_Sandstorm
@@ -2828,7 +2828,6 @@ BattleAnim_Conversion2:
 	anim_obj ANIM_OBJ_CONVERSION2, 132, 44, $30
 	anim_obj ANIM_OBJ_CONVERSION2, 132, 44, $38
 	anim_wait 128
-	anim_wait 48
 	anim_ret
 
 BattleAnim_Smokescreen:
@@ -3692,17 +3691,21 @@ BattleAnim_Detect:
 	anim_wait 24
 	anim_ret
 
-BattleAnim_BoneRush:
-	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_MISC
-	anim_sound 0, 1, SFX_BONE_CLUB
-	anim_obj ANIM_OBJ_BONE_RUSH, 132, 56, $2
+BattleAnim_Bulldoze:
+	anim_3gfx ANIM_GFX_HAZE, ANIM_GFX_EGG, ANIM_GFX_SMOKE
+.loop
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $e, $4, $0
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_BALL_POOF, 132, 70, $10
 	anim_wait 16
-	anim_sound 0, 1, SFX_COMET_PUNCH
-	anim_obj ANIM_OBJ_HIT_YFIX, 120, 48, $0
+	anim_obj ANIM_OBJ_BALL_POOF, 132, 70, $10
 	anim_wait 16
-	anim_sound 0, 1, SFX_COMET_PUNCH
-	anim_obj ANIM_OBJ_HIT_YFIX, 144, 64, $0
+	anim_obj ANIM_OBJ_BALL_POOF, 132, 70, $10
 	anim_wait 16
+	anim_obj ANIM_OBJ_BALL_POOF, 132, 70, $10
+	anim_wait 16
+	anim_jumpuntil .loop
+	anim_wait 64
 	anim_ret
 
 BattleAnim_LockOn:

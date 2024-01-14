@@ -197,7 +197,7 @@ MoveNames::
 	li "PERISH SONG"
 	li "ICY WIND"
 	li "DETECT"
-	li "BONE RUSH"
+	li "BULLDOZE"
 	li "LOCK-ON"
 	li "OUTRAGE"
 	li "SANDSTORM"
