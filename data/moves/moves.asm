@@ -54,7 +54,7 @@ Moves:
 	move THRASH,       EFFECT_RAMPAGE,           120, NORMAL,       100, 10,   0, PHYSICAL ; ok
 	move DOUBLE_EDGE,  EFFECT_RECOIL_HIT,        120, NORMAL,       100, 15,   0, PHYSICAL ; ok
 	move TAIL_WHIP,    EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
-	move POISON_STING, EFFECT_POISON_HIT,         35, POISON,       100, 35,  30, PHYSICAL ; buff maybe?
+	move POISON_STING, EFFECT_POISON_HIT,         30, POISON,       100, 20,  30, PHYSICAL ; Buffed to 30 BP
 	move TWINEEDLE,    EFFECT_POISON_MULTI_HIT,   25, BUG,          100, 20,  20, PHYSICAL ; give to more pokemon
 	move PIN_MISSILE,  EFFECT_MULTI_HIT,          20, BUG,          100, 15,   0, PHYSICAL ; give to more pokemon
 	move LEER,         EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
@@ -136,8 +136,8 @@ Moves:
 	move MIRROR_MOVE,  EFFECT_MIRROR_MOVE,         0, FLYING,       100, 20,   0, STATUS   ; replace with copycat
 	move SELFDESTRUCT, EFFECT_SELFDESTRUCT,      200, NORMAL,       100,  5,   0, PHYSICAL ; replace
 	move EGG_BOMB,     EFFECT_NORMAL_HIT,        100, NORMAL,        75, 10,   0, PHYSICAL ; replace
-	move LICK,         EFFECT_PARALYZE_HIT,       30, GHOST,        100, 30,  30, PHYSICAL ; ok
-	move SMOG,         EFFECT_POISON_HIT,         30, POISON,        70, 20,  40, SPECIAL  ; ok
+	move LICK,         EFFECT_PARALYZE_HIT,       40, GHOST,        100, 25,  25, PHYSICAL ; ok
+	move SMOG,         EFFECT_POISON_HIT,         30, POISON,       100, 20,  30, SPECIAL  ; Buffed to 30BP, Buff ACC to 100, lower chance to 30%
 	move SLUDGE,       EFFECT_POISON_HIT,         65, POISON,       100, 20,  30, SPECIAL  ; ok
 	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, GROUND,        85, 20,  10, PHYSICAL ; replace
 	move FIRE_BLAST,   EFFECT_BURN_HIT,          110, FIRE,          85,  5,  10, SPECIAL  ; ok
