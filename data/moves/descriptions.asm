@@ -12,7 +12,7 @@ MoveDescriptions::
 	dw ThunderpunchDescription
 	dw ScratchDescription
 	dw AirCutterDescription
-	dw GuillotineDescription
+	dw XScissorDescription
 	dw RazorWindDescription
 	dw SwordsDanceDescription
 	dw CutDescription
@@ -311,9 +311,9 @@ AirCutterDescription:
 	db   "Whips up a sharp,"
 	next "cutting wind.@"
 
-GuillotineDescription:
-	db   "A one-hit KO,"
-	next "pincer attack.@"
+XScissorDescription:
+	db   "A chop attack"
+	next "with pincers.@"
 
 RazorWindDescription:
 	db   "1st turn: Prepare"

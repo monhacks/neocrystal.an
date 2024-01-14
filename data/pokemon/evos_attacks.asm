@@ -1266,7 +1266,7 @@ KrabbyEvosAttacks:
     db 12, CLAMP
     db 16, HARDEN
     db 23, STOMP
-    db 27, GUILLOTINE
+    db 27, CLAMP
     db 34, PROTECT
     db 41, CRABHAMMER
     db 0 ; no more level-up moves
@@ -1278,7 +1278,7 @@ KinglerEvosAttacks:
     db 12, CLAMP
     db 16, HARDEN
     db 23, STOMP
-    db 27, GUILLOTINE
+    db 27, CLAMP
     db 38, PROTECT
     db 49, CRABHAMMER
     db 0 ; no more level-up moves
@@ -2688,7 +2688,7 @@ GligarEvosAttacks:
     db 28, FAINT_ATTACK
     db 36, SLASH
     db 44, SCREECH
-    db 52, GUILLOTINE
+    db 52, EARTHQUAKE
     db 0 ; no more level-up moves
 
 SteelixEvosAttacks:

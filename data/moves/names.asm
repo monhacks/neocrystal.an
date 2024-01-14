@@ -11,7 +11,7 @@ MoveNames::
 	li "THUNDERPUNCH"
 	li "SCRATCH"
 	li "AIR CUTTER"
-	li "GUILLOTINE"
+	li "X-SCISSOR"
 	li "RAZOR WIND"
 	li "SWORDS DANCE"
 	li "CUT"
