@@ -930,11 +930,9 @@ BattleAnim_DragonRage:
 ;	anim_ret
 
 ;.alternate:
-	anim_sound 0, 1, SFX_COMET_PUNCH
-	anim_obj ANIM_OBJ_PUNCH, 120, 64, $0
-	anim_wait 6
-	anim_obj ANIM_OBJ_HIT_YFIX, 120, 64, $0
-	anim_wait 8
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_HIT_YFIX, 132, 32, $0
+	anim_wait 16
 	anim_ret
 
 BattleAnim_Flamethrower:
