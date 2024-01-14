@@ -316,8 +316,8 @@ XScissorDescription:
 	next "with pincers.@"
 
 RazorWindDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "Create a powerful"
+	next "slashing wind.@"
 
 SwordsDanceDescription:
 	db   "A dance that in-"

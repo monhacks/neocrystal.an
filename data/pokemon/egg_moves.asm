@@ -17,7 +17,6 @@ BulbasaurEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
 	db SAFEGUARD
-;	db RAZOR_WIND
 	db PETAL_DANCE
 	db -1 ; end
 
@@ -468,7 +467,6 @@ TotodileEggMoves:
 	db SUBMISSION
 	db HYDRO_PUMP
 	db ANCIENTPOWER
-	db RAZOR_WIND
 	db ROCK_SLIDE
 	db -1 ; end
 

@@ -27,7 +27,7 @@ Moves:
 	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
 	move AIR_CUTTER,   EFFECT_NORMAL_HIT,         55, FLYING,       100, 25,   0, SPECIAL  ; ok, high crit chance
 	move X_SCISSOR,    EFFECT_NORMAL_HIT,         80, BUG,          100, 15,   0, PHYSICAL ; ok
-	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,        90, 10,   0, SPECIAL  ; replace
+	move RAZOR_WIND,   EFFECT_FLINCH_HIT,         75, FLYING,        95, 15,  30, SPECIAL  ; Calling Razor Wind in code, but it's Air Slash.
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move CUT,          EFFECT_NORMAL_HIT,         55, NORMAL,       100, 30,   0, PHYSICAL ; Like a mini-slash
 	move GUST,         EFFECT_GUST,               40, FLYING,       100, 35,   0, SPECIAL  ; Anything that can learn Gust should
@@ -292,6 +292,5 @@ Moves:
 ;	move DARK_PULSE,   EFFECT_FLINCH_HIT,         80, DARK,         100, 10,  10, SPECIAL  ;
 ;	move IRON_HEAD,    EFFECT_FLINCH_HIT,         80, STEEL,        100, 15,  10, PHYSICAL ;
 ;	move ENERGY_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,        100, 10,  10, SPECIAL  ;
-;	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,        95, 20,  10, SPECIAL  ;
 ;	move FOCUS_BLAST,  EFFECT_NORMAL_HIT,        110, FIGHTING,      80,  5,   0, SPECIAL  ;
 ;	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        100, 10,   0, PHYSICAL ;
