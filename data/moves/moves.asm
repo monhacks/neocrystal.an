@@ -17,7 +17,7 @@ Moves:
 	table_width MOVE_LENGTH, Moves
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; ok
-	move DOUBLESLAP,   EFFECT_MULTI_HIT,          18, NORMAL,       100, 15,   0, PHYSICAL ; Lowest BP, Highest ACC
+	move DOUBLESLAP,   EFFECT_MULTI_HIT,          20, NORMAL,       100, 15,   0, PHYSICAL ; Lowest BP, Highest ACC
 	move DRAGON_DANCE, EFFECT_ATK_UP_SPE_UP,       0, DRAGON,       100, 15,   0, STATUS   ; ok
 	move ERUPTION,     EFFECT_BURN_HIT,          100, NORMAL,       100,  5,  50, SPECIAL  ; ok - Typhlosion signature
 	move PAY_DAY,      EFFECT_PAY_DAY,            60, NORMAL,       100, 20,   0, PHYSICAL ; Increased to BP 60 for Technician
@@ -29,12 +29,12 @@ Moves:
 	move GUILLOTINE,   EFFECT_OHKO,                0, NORMAL,        30,  5,   0, PHYSICAL ; OHKO replace
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,        90, 10,   0, SPECIAL  ; replace
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       100, 30,   0, STATUS   ; ok
-	move CUT,          EFFECT_NORMAL_HIT,         50, NORMAL,        95, 30,   0, PHYSICAL ; HM - buff necessary
+	move CUT,          EFFECT_NORMAL_HIT,         55, NORMAL,       100, 30,   0, PHYSICAL ; Like a mini-slash
 	move GUST,         EFFECT_GUST,               40, FLYING,       100, 35,   0, SPECIAL  ; Anything that can learn Gust should
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,       100, 35,   0, PHYSICAL ; learn Wing attack and vice versa
 	move WHIRLWIND,    EFFECT_FORCE_SWITCH,        0, NORMAL,       100, 20,   0, STATUS   ; same as gust
 	move FLY,          EFFECT_FLY,                90, FLYING,        95, 15,   0, PHYSICAL ; ok
-	move BIND,         EFFECT_TRAP_TARGET,        15, NORMAL,        90, 20,   0, PHYSICAL ; This is the de-facto trapping move, buff pp 5
+	move BIND,         EFFECT_TRAP_TARGET,        35, NORMAL,        90, 20,   0, PHYSICAL ; This is the de-facto trapping move, buff pp 5
 	move SLAM,         EFFECT_NORMAL_HIT,         80, NORMAL,        75, 20,   0, PHYSICAL ; ok, but should buff or absorb Mega Punch / Kick
 	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; 45BP to match latter gens.
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
@@ -45,7 +45,7 @@ Moves:
 	move SAND_ATTACK,  EFFECT_ACCURACY_DOWN,       0, GROUND,       100, 15,   0, STATUS   ; ok
 	move HEADBUTT,     EFFECT_FLINCH_HIT,         70, NORMAL,       100, 15,  30, PHYSICAL ; ok
 	move HORN_ATTACK,  EFFECT_NORMAL_HIT,         65, NORMAL,       100, 25,   0, PHYSICAL ; ok
-	move FURY_ATTACK,  EFFECT_MULTI_HIT,          22, NORMAL,        90, 15,   0, PHYSICAL ; Highest BP, Lowest ACC
+	move FURY_ATTACK,  EFFECT_MULTI_HIT,          24, NORMAL,        90, 15,   0, PHYSICAL ; Highest BP, Lowest ACC
 	move HORN_DRILL,   EFFECT_OHKO,                1, NORMAL,        30,  5,   0, PHYSICAL ; OHKO replace
 	move TACKLE,       EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
 	move BODY_SLAM,    EFFECT_PARALYZE_HIT,       85, NORMAL,       100, 15,  30, PHYSICAL ; ok
@@ -55,8 +55,8 @@ Moves:
 	move DOUBLE_EDGE,  EFFECT_RECOIL_HIT,        120, NORMAL,       100, 15,   0, PHYSICAL ; ok
 	move TAIL_WHIP,    EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move POISON_STING, EFFECT_POISON_HIT,         30, POISON,       100, 20,  30, PHYSICAL ; Buffed to 30 BP
-	move TWINEEDLE,    EFFECT_POISON_MULTI_HIT,   25, BUG,          100, 20,  20, PHYSICAL ; give to more pokemon
-	move PIN_MISSILE,  EFFECT_MULTI_HIT,          20, BUG,          100, 15,   0, PHYSICAL ; give to more pokemon
+	move TWINEEDLE,    EFFECT_POISON_MULTI_HIT,   35, BUG,          100, 20,  25, PHYSICAL ; More users
+	move PIN_MISSILE,  EFFECT_MULTI_HIT,          20, BUG,          100, 15,   0, PHYSICAL ; More users
 	move LEER,         EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move BITE,         EFFECT_FLINCH_HIT,         60, DARK,         100, 25,  30, PHYSICAL ; ok
 	move GROWL,        EFFECT_ATTACK_DOWN,         0, NORMAL,       100, 40,   0, STATUS   ; ok
@@ -85,8 +85,8 @@ Moves:
 	move COUNTER,      EFFECT_COUNTER,             1, FIGHTING,     100, 20,   0, PHYSICAL ; ok
 	move SEISMIC_TOSS, EFFECT_LEVEL_DAMAGE,        1, FIGHTING,     100, 20,   0, PHYSICAL ; ok
 	move STRENGTH,     EFFECT_NORMAL_HIT,         80, NORMAL,       100, 15,   0, PHYSICAL ; ok, type change maybe?
-	move ABSORB,       EFFECT_LEECH_HIT,          20, GRASS,        100, 25,   0, SPECIAL  ; ok, update to latest game stats
-	move MEGA_DRAIN,   EFFECT_LEECH_HIT,          40, GRASS,        100, 15,   0, SPECIAL  ; ok, update to latest game stats
+	move ABSORB,       EFFECT_LEECH_HIT,          35, GRASS,        100, 25,   0, SPECIAL  ; ok, update to latest game stats
+	move MEGA_DRAIN,   EFFECT_LEECH_HIT,          55, GRASS,        100, 15,   0, SPECIAL  ; ok, update to latest game stats
 	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,         90, 10,   0, STATUS   ; ok
 	move GROWTH,       EFFECT_SP_ATK_UP,           0, NORMAL,       100, 40,   0, STATUS   ; Update effect to increase both Attack and Sp. Attack
 	move RAZOR_LEAF,   EFFECT_NORMAL_HIT,         55, GRASS,         95, 25,   0, PHYSICAL ; ok
@@ -96,8 +96,8 @@ Moves:
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,         75, 15,   0, STATUS   ; ok
 	move PETAL_DANCE,  EFFECT_RAMPAGE,           120, GRASS,        100, 10,   0, SPECIAL  ; ok
 	move STRING_SHOT,  EFFECT_SPEED_DOWN,          0, BUG,           95, 40,   0, STATUS   ; ok
-	move DRAGON_RAGE,  EFFECT_TRAP_TARGET,        35, DRAGON,        85, 15,   0, SPECIAL  ; ok?
-	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        35, FIRE,          85, 15,   0, SPECIAL  ; ok
+	move DRAGON_RAGE,  EFFECT_TRAP_TARGET,        35, DRAGON,        90, 20,   0, SPECIAL  ; Trapping move to mimic anime.
+	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        35, FIRE,          90, 20,   0, SPECIAL  ; ok
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,     100, 30,  10, SPECIAL  ; ok
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       90, ELECTRIC,     100, 15,  10, SPECIAL  ; ok
 	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,      90, 20,   0, STATUS   ; ok
@@ -142,10 +142,10 @@ Moves:
 	move BONE_CLUB,    EFFECT_FLINCH_HIT,         65, GROUND,        85, 20,  10, PHYSICAL ; replace
 	move FIRE_BLAST,   EFFECT_BURN_HIT,          110, FIRE,          85,  5,  10, SPECIAL  ; ok
 	move WATERFALL,    EFFECT_FLINCH_HIT,         80, WATER,        100, 15,   0, PHYSICAL ; ok
-	move CLAMP,        EFFECT_TRAP_TARGET,        35, WATER,         85, 15,   0, PHYSICAL ; ok
+	move CLAMP,        EFFECT_TRAP_TARGET,        35, WATER,         90, 20,   0, PHYSICAL ; ok
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,       100, 20,   0, SPECIAL  ; ok
 	move SKULL_BASH,   EFFECT_SKULL_BASH,        130, NORMAL,       100, 10,   0, PHYSICAL ; ok
-	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, ROCK,         100, 15,   0, PHYSICAL ; rock type
+	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, ROCK,         100, 15,   0, PHYSICAL ; ok
 	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     10, NORMAL,       100, 35,  10, PHYSICAL ; ok, use more
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ; ok
 	move KINESIS,      EFFECT_ACCURACY_DOWN,       0, PSYCHIC_TYPE,  80, 15,   0, STATUS   ; replace
@@ -155,7 +155,7 @@ Moves:
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC_TYPE, 100, 15,   0, SPECIAL  ; rarely used, potential replace
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,        90, 40,   0, STATUS   ; ok
 	move BULLET_SEED,  EFFECT_MULTI_HIT,          20, GRASS,        100, 15,   0, PHYSICAL ; ok
-	move LEECH_LIFE,   EFFECT_LEECH_HIT,          50, BUG,          100, 10,   0, PHYSICAL ; ok
+	move LEECH_LIFE,   EFFECT_LEECH_HIT,          55, BUG,          100, 10,   0, PHYSICAL ; ok
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        75, 10,   0, STATUS   ; ok
 	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        90,  5,   0, PHYSICAL ; replace
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,       100, 10,   0, STATUS   ; ok
@@ -166,9 +166,9 @@ Moves:
 	move PSYWAVE,      EFFECT_PSYWAVE,             1, PSYCHIC_TYPE, 100, 15,   0, SPECIAL  ; replace
 	move SPLASH,       EFFECT_SPLASH,              0, NORMAL,       100, 40,   0, STATUS   ; replace
 	move ACID_ARMOR,   EFFECT_DEFENSE_UP_2,        0, POISON,       100, 20,   0, STATUS   ; ok
-	move CRABHAMMER,   EFFECT_NORMAL_HIT,        100, WATER,         90, 10,   0, PHYSICAL ; ok for now
+	move CRABHAMMER,   EFFECT_NORMAL_HIT,        100, WATER,         95, 10,   0, PHYSICAL ; Buffed ACC to 95
 	move EXPLOSION,    EFFECT_SELFDESTRUCT,      250, NORMAL,       100,  5,   0, PHYSICAL ; replace
-	move FURY_SWIPES,  EFFECT_MULTI_HIT,          20, NORMAL,        95, 15,   0, PHYSICAL ; Mid BP, Mid ACC
+	move FURY_SWIPES,  EFFECT_MULTI_HIT,          22, NORMAL,        95, 15,   0, PHYSICAL ; Mid BP, Mid ACC
 	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,        90, 10,   0, PHYSICAL ; replace
 	move REST,         EFFECT_HEAL,                0, PSYCHIC_TYPE, 100, 10,   0, STATUS   ; ok
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,          90, 10,  30, PHYSICAL ; ok
@@ -181,7 +181,7 @@ Moves:
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,       100, 10,   0, STATUS   ; ok
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       100,  1,   0, PHYSICAL ; ok
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,       100,  1,   0, STATUS   ; ok
-	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        15, FIGHTING,      90, 10,   0, PHYSICAL ; Updated for 75 max, more or replace
+	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        15, FIGHTING,     100, 15,   0, PHYSICAL ; Updated for 75 max, more or replace
 	move THIEF,        EFFECT_THIEF,              60, DARK,         100, 25, 100, PHYSICAL ; ok
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,          100, 10,   0, STATUS   ; more or replace
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,       100,  5,   0, STATUS   ; ok
@@ -204,7 +204,7 @@ Moves:
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,       100, 10,   0, STATUS   ; ok but more
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,       100, 10,  30, SPECIAL  ; ok
 	move MUD_SLAP,     EFFECT_ACCURACY_DOWN_HIT,  20, GROUND,       100, 10, 100, SPECIAL  ; ok
-	move OCTAZOOKA,    EFFECT_ACCURACY_DOWN_HIT,  65, WATER,         85, 10,  50, SPECIAL  ; more or replace
+	move OCTAZOOKA,    EFFECT_ACCURACY_DOWN_HIT,  65, WATER,        100, 10,  50, SPECIAL  ; More users
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,       100, 20,   0, STATUS   ; ok
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      120, ELECTRIC,      50,  5, 100, SPECIAL  ; ok
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,       100, 40,   0, STATUS   ; ok
@@ -253,7 +253,7 @@ Moves:
 	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, FAIRY,        100,  5,   0, STATUS   ; ok
 	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,       70, NORMAL,       100, 15,   0, SPECIAL  ; ok
 	move CROSS_CHOP,   EFFECT_NORMAL_HIT,        100, FIGHTING,      80,  5,   0, PHYSICAL ; ok
-	move TWISTER,      EFFECT_TWISTER,            40, DRAGON,       100, 20,  20, SPECIAL  ; ok
+	move TWISTER,      EFFECT_TWISTER,            60, DRAGON,       100, 20,  30, SPECIAL  ; ok
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,         90,  5,   0, STATUS   ; ok
 	move SUNNY_DAY,    EFFECT_SUNNY_DAY,           0, FIRE,          90,  5,   0, STATUS   ; ok
 	move CRUNCH,       EFFECT_SP_DEF_DOWN_HIT,    80, DARK,         100, 15,  20, PHYSICAL ; ok
@@ -263,8 +263,8 @@ Moves:
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,         100,  5,  10, SPECIAL  ; ok
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,        100, 15,  20, SPECIAL  ; ok
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,      120, PSYCHIC_TYPE, 100, 10,   0, SPECIAL  ; ok
-	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   40, FIGHTING,     100, 15,  50, PHYSICAL ; ok
-	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        35, WATER,         85, 15,   0, SPECIAL  ; ok
+	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   50, FIGHTING,     100, 15,  50, PHYSICAL ; ok
+	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        35, WATER,         90, 20,   0, SPECIAL  ; ok
 	move CROC_CHOMP,   EFFECT_TRAP_TARGET,       100, WATER,        100,  5,   0, PHYSICAL ; ok : Totodile line signature
 	move MOONBLAST,    EFFECT_SP_ATK_DOWN_HIT,    95, FAIRY,        100, 10,  30, SPECIAL  ; ok
 	move PLAY_ROUGH,   EFFECT_ATTACK_DOWN_HIT,    90, FAIRY,         90, 10,  10, PHYSICAL ; ok
