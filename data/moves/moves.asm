@@ -46,7 +46,7 @@ Moves:
 	move HEADBUTT,     EFFECT_FLINCH_HIT,         70, NORMAL,       100, 15,  30, PHYSICAL ; ok
 	move HORN_ATTACK,  EFFECT_NORMAL_HIT,         65, NORMAL,       100, 25,   0, PHYSICAL ; ok
 	move FURY_ATTACK,  EFFECT_MULTI_HIT,          24, NORMAL,        90, 15,   0, PHYSICAL ; Highest BP, Lowest ACC
-	move HORN_DRILL,   EFFECT_OHKO,                1, NORMAL,        30,  5,   0, PHYSICAL ; OHKO replace
+	move GIGA_IMPACT,  EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0, PHYSICAL ; ok
 	move TACKLE,       EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
 	move BODY_SLAM,    EFFECT_PARALYZE_HIT,       85, NORMAL,       100, 15,  30, PHYSICAL ; ok
 	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,        90, 20,   0, PHYSICAL ; Replace, have all wrappers be binders instead
@@ -285,7 +285,6 @@ Moves:
 ;	move CALM_MIND,    EFFECT_CALM_MIND,           0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ;
 ;	move BULK_UP,      EFFECT_BULK_UP,             0, FIGHTING,     100, 20,   0, STATUS   ;
 ;	move FLAME_CHARGE, EFFECT_SPEED_UP_HIT,       50, FIRE,         100, 20,   0, PHYSICAL ;
-;	move GIGA_IMPACT,  EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0, PHYSICAL ;
 ;	move FLASH_CANNON, EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,        100, 10,  10, SPECIAL  ;
 ;	move HURRICANE,    EFFECT_CONFUSE_HIT,       110, FLYING,        70,  5,  20, SPECIAL  ;
 ;	move AURA_SPHERE,  EFFECT_ALWAYS_HIT,         80, FIGHTING,     100, 15,   0, SPECIAL  ;

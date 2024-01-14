@@ -33,7 +33,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_HornAttack
 	dw BattleAnim_FuryAttack
-	dw BattleAnim_HornDrill
+	dw BattleAnim_GigaImpact
 	dw BattleAnim_Tackle
 	dw BattleAnim_BodySlam
 	dw BattleAnim_Wrap
@@ -2319,10 +2319,9 @@ BattleAnim_FuryAttack:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_HornDrill:
-	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
+BattleAnim_GigaImpact:
+	anim_1gfx ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
-	anim_obj ANIM_OBJ_HORN, 72, 80, $3
 	anim_wait 8
 .loop
 	anim_sound 0, 1, SFX_HORN_ATTACK

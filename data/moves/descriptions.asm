@@ -32,7 +32,7 @@ MoveDescriptions::
 	dw HeadbuttDescription
 	dw HornAttackDescription
 	dw FuryAttackDescription
-	dw HornDrillDescription
+	dw GigaImpactDescription
 	dw TackleDescription
 	dw BodySlamDescription
 	dw WrapDescription
@@ -391,9 +391,9 @@ FuryAttackDescription:
 	db   "Jabs the target"
 	next "2-5 times.@"
 
-HornDrillDescription:
-	db   "A one-hit KO,"
-	next "drill attack.@"
+GigaImpactDescription:
+	db   "1st turn: Attack"
+	next "2nd turn: Rest@"
 
 TackleDescription:
 	db   "A full-body charge"

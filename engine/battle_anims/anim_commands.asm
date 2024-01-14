@@ -59,7 +59,7 @@ BattleAnimRunScript:
 	jr c, .disabled
 
 ; This vc_hook reduces the move animation flashing in the Virtual Console for
-; Fissure, Self-Destruct, Thunder, Flash, Explosion, Horn Drill, and Hyper Beam.
+; Fissure, Self-Destruct, Thunder, Flash, Explosion, Giga Impact, and Hyper Beam.
 	vc_hook Reduce_move_anim_flashing
 	call BattleAnimClearHud
 	call RunBattleAnimScript

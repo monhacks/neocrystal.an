@@ -416,7 +416,6 @@ NidoranMEvosAttacks:
     db 17, POISON_STING
     db 23, FOCUS_ENERGY
     db 30, FURY_ATTACK
-    db 38, HORN_DRILL
     db 0 ; no more level-up moves
 
 NidorinoEvosAttacks:
@@ -429,7 +428,6 @@ NidorinoEvosAttacks:
     db 19, POISON_STING
     db 27, FOCUS_ENERGY
     db 36, FURY_ATTACK
-    db 46, HORN_DRILL
     db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
@@ -1440,7 +1438,6 @@ RhyhornEvosAttacks:
     db 13, STOMP
     db 19, FURY_ATTACK
     db 31, SCARY_FACE
-    db 37, HORN_DRILL
     db 49, TAKE_DOWN
     db 55, EARTHQUAKE
     db 0 ; no more level-up moves
@@ -1452,7 +1449,6 @@ RhydonEvosAttacks:
     db 13, STOMP
     db 19, FURY_ATTACK
     db 31, SCARY_FACE
-    db 37, HORN_DRILL
     db 54, TAKE_DOWN
     db 65, EARTHQUAKE
     db 0 ; no more level-up moves
@@ -1534,7 +1530,6 @@ GoldeenEvosAttacks:
     db 24, FLAIL
     db 29, FURY_ATTACK
     db 38, WATERFALL
-    db 43, HORN_DRILL
     db 52, AGILITY
     db 0 ; no more level-up moves
 
@@ -1547,7 +1542,6 @@ SeakingEvosAttacks:
     db 24, FLAIL
     db 29, FURY_ATTACK
     db 41, WATERFALL
-    db 49, HORN_DRILL
     db 61, AGILITY
     db 0 ; no more level-up moves
 
@@ -1686,7 +1680,7 @@ GyaradosEvosAttacks:
     db 35, TWISTER
     db 40, HYDRO_PUMP
     db 45, RAIN_DANCE
-    db 50, HYPER_BEAM
+    db 50, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 LaprasEvosAttacks:
@@ -1844,7 +1838,7 @@ AerodactylEvosAttacks:
     db 29, ANCIENTPOWER
     db 36, SCARY_FACE
     db 43, TAKE_DOWN
-    db 50, HYPER_BEAM
+    db 50, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 SnorlaxEvosAttacks:
@@ -1858,7 +1852,7 @@ SnorlaxEvosAttacks:
     db 36, REST
     db 43, BODY_SLAM
     db 50, ROLLOUT
-    db 57, HYPER_BEAM
+    db 57, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 ArticunoEvosAttacks:
@@ -1910,6 +1904,7 @@ DratiniEvosAttacks:
     db 43, SAFEGUARD
     db 50, OUTRAGE
     db 57, HYPER_BEAM
+    db 57, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 DragonairEvosAttacks:
@@ -1925,6 +1920,7 @@ DragonairEvosAttacks:
     db 47, SAFEGUARD
     db 56, OUTRAGE
     db 65, HYPER_BEAM
+    db 65, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 DragoniteEvosAttacks:
@@ -1940,6 +1936,7 @@ DragoniteEvosAttacks:
     db 55, WING_ATTACK
     db 61, OUTRAGE
     db 75, HYPER_BEAM
+    db 75, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 MewtwoEvosAttacks:
@@ -3184,6 +3181,7 @@ LarvitarEvosAttacks:
     db 43, CRUNCH
     db 50, EARTHQUAKE
     db 57, HYPER_BEAM
+    db 57, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 PupitarEvosAttacks:
@@ -3199,6 +3197,7 @@ PupitarEvosAttacks:
     db 47, CRUNCH
     db 56, EARTHQUAKE
     db 65, HYPER_BEAM
+    db 65, GIGA_IMPACT
     db 0 ; no more level-up moves
 
 TyranitarEvosAttacks:
@@ -3214,6 +3213,7 @@ TyranitarEvosAttacks:
     db 38, SCARY_FACE
     db 47, CRUNCH
     db 61, EARTHQUAKE
+    db 75, GIGA_IMPACT
     db 75, HYPER_BEAM
     db 0 ; no more level-up moves
 
