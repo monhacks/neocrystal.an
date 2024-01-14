@@ -592,8 +592,8 @@ StringShotDescription:
 	next "the foe's SPEED.@"
 
 DragonRageDescription:
-	db   "Always inflicts"
-	next "40HP damage.@"
+	db   "A powerful slam"
+	next "with dragonfire.@"
 
 FireSpinDescription:
 	db   "Traps foe in fire"

@@ -915,13 +915,26 @@ BattleAnim_FireSpin:
 	anim_ret
 
 BattleAnim_DragonRage:
-	anim_1gfx ANIM_GFX_FIRE
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_HIT
 .loop
-	anim_sound 6, 2, SFX_EMBER
-	anim_obj ANIM_OBJ_DRAGON_RAGE, 64, 92, $0
-	anim_wait 3
-	anim_loop 16, .loop
-	anim_wait 64
+	anim_obj ANIM_OBJ_BURNED, 48, 88, $10
+	anim_obj ANIM_OBJ_BURNED, 48, 88, $90
+	anim_wait 4
+	anim_loop 4, .loop
+	anim_wait 40
+;	anim_call BattleAnim_TargetObj_2Row
+;	anim_bgeffect ANIM_BG_WOBBLE_MON, $0, BG_EFFECT_USER, $0
+;	anim_wait 32
+;	anim_incbgeffect ANIM_BG_WOBBLE_MON
+;	anim_call BattleAnim_ShowMon_0
+;	anim_ret
+
+;.alternate:
+	anim_sound 0, 1, SFX_COMET_PUNCH
+	anim_obj ANIM_OBJ_PUNCH, 120, 64, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_HIT_YFIX, 120, 64, $0
+	anim_wait 8
 	anim_ret
 
 BattleAnim_Flamethrower:

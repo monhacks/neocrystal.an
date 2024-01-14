@@ -96,7 +96,7 @@ Moves:
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,         75, 15,   0, STATUS   ; ok
 	move PETAL_DANCE,  EFFECT_RAMPAGE,           120, GRASS,        100, 10,   0, SPECIAL  ; ok
 	move STRING_SHOT,  EFFECT_SPEED_DOWN,          0, BUG,           95, 40,   0, STATUS   ; ok
-	move DRAGON_RAGE,  EFFECT_TRAP_TARGET,        35, DRAGON,        90, 20,   0, SPECIAL  ; Trapping move to mimic anime.
+	move DRAGON_RAGE,  EFFECT_NORMAL_HIT,         55, DRAGON,       100, 25,   0, PHYSICAL ; ok
 	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        35, FIRE,          90, 20,   0, SPECIAL  ; ok
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,     100, 30,  10, SPECIAL  ; ok
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       90, ELECTRIC,     100, 15,  10, SPECIAL  ; ok
