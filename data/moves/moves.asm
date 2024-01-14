@@ -36,7 +36,7 @@ Moves:
 	move FLY,          EFFECT_FLY,                90, FLYING,        95, 15,   0, PHYSICAL ; ok
 	move BIND,         EFFECT_TRAP_TARGET,        15, NORMAL,        90, 20,   0, PHYSICAL ; This is the de-facto trapping move, buff pp 5
 	move SLAM,         EFFECT_NORMAL_HIT,         80, NORMAL,        75, 20,   0, PHYSICAL ; ok, but should buff or absorb Mega Punch / Kick
-	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; ok?
+	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; 45BP to match latter gens.
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker
 	move MEGA_KICK,    EFFECT_NORMAL_HIT,        120, NORMAL,        75,  5,   0, PHYSICAL ; unique to hitmonlee, replace
@@ -50,7 +50,7 @@ Moves:
 	move TACKLE,       EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0, PHYSICAL ; ok
 	move BODY_SLAM,    EFFECT_PARALYZE_HIT,       85, NORMAL,       100, 15,  30, PHYSICAL ; ok
 	move WRAP,         EFFECT_TRAP_TARGET,        15, NORMAL,        90, 20,   0, PHYSICAL ; Replace, have all wrappers be binders instead
-	move TAKE_DOWN,    EFFECT_RECOIL_HIT,         90, NORMAL,        85, 20,   0, PHYSICAL ; ok
+	move TAKE_DOWN,    EFFECT_RECOIL_HIT,         90, NORMAL,        90, 20,   0, PHYSICAL ; ok
 	move THRASH,       EFFECT_RAMPAGE,           120, NORMAL,       100, 10,   0, PHYSICAL ; ok
 	move DOUBLE_EDGE,  EFFECT_RECOIL_HIT,        120, NORMAL,       100, 15,   0, PHYSICAL ; ok
 	move TAIL_WHIP,    EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
@@ -62,7 +62,7 @@ Moves:
 	move GROWL,        EFFECT_ATTACK_DOWN,         0, NORMAL,       100, 40,   0, STATUS   ; ok
 	move ROAR,         EFFECT_FORCE_SWITCH,        0, NORMAL,       100, 20,   0, STATUS   ; ok
 	move SING,         EFFECT_SLEEP,               0, NORMAL,        60, 15,   0, STATUS   ; ok
-	move SUPERSONIC,   EFFECT_CONFUSE,             0, NORMAL,        60, 20,   0, STATUS   ; ok
+	move SUPERSONIC,   EFFECT_CONFUSE,             0, NORMAL,        65, 20,   0, STATUS   ; Increase ACC by 10 to make it usable.
 	move SONICBOOM,    EFFECT_STATIC_DAMAGE,      20, NORMAL,        90, 20,   0, SPECIAL  ; replace
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,       100, 20,   0, STATUS   ; ok
 	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,       100, 30,  10, SPECIAL  ; ok
@@ -80,7 +80,7 @@ Moves:
 	move HYPER_BEAM,   EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0, SPECIAL  ; ok
 	move PECK,         EFFECT_NORMAL_HIT,         35, FLYING,       100, 35,   0, PHYSICAL ; ok
 	move DRILL_PECK,   EFFECT_NORMAL_HIT,         80, FLYING,       100, 20,   0, PHYSICAL ; ok for now
-	move SUBMISSION,   EFFECT_RECOIL_HIT,         80, FIGHTING,      80, 20,   0, PHYSICAL ; more users, different stats maybe?
+	move SUBMISSION,   EFFECT_RECOIL_HIT,         90, FIGHTING,      90, 20,   0, PHYSICAL ; More users needed
 	move LOW_KICK,     EFFECT_FLINCH_HIT,         50, FIGHTING,     100, 20,  30, PHYSICAL ; ok
 	move COUNTER,      EFFECT_COUNTER,             1, FIGHTING,     100, 20,   0, PHYSICAL ; ok
 	move SEISMIC_TOSS, EFFECT_LEVEL_DAMAGE,        1, FIGHTING,     100, 20,   0, PHYSICAL ; ok
@@ -102,7 +102,7 @@ Moves:
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       90, ELECTRIC,     100, 15,  10, SPECIAL  ; ok
 	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC,      90, 20,   0, STATUS   ; ok
 	move THUNDER,      EFFECT_THUNDER,           110, ELECTRIC,      70, 10,  30, SPECIAL  ; ok
-	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,          90, 15,   0, PHYSICAL ; ok
+	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,         100, 20,   0, PHYSICAL ; Increase ACC and PP
 	move EARTHQUAKE,   EFFECT_EARTHQUAKE,        100, GROUND,       100, 10,   0, PHYSICAL ; ok
 	move FISSURE,      EFFECT_OHKO,                1, GROUND,        30,  5,   0, PHYSICAL ; OHKO replace
 	move DIG,          EFFECT_FLY,                80, GROUND,       100, 10,   0, PHYSICAL ; ok
@@ -133,7 +133,7 @@ Moves:
 	move FOCUS_ENERGY, EFFECT_FOCUS_ENERGY,        0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move BIDE,         EFFECT_BIDE,                0, NORMAL,       100, 10,   0, PHYSICAL ; replace
 	move METRONOME,    EFFECT_METRONOME,           0, NORMAL,       100, 10,   0, STATUS   ; replace, too chaotic
-	move MIRROR_MOVE,  EFFECT_MIRROR_MOVE,         0, FLYING,       100, 20,   0, STATUS   ; replace with copycat
+	move MIRROR_MOVE,  EFFECT_MIRROR_MOVE,         0, FLYING,       100, 20,   0, STATUS   ; replace with copycat or something else
 	move SELFDESTRUCT, EFFECT_SELFDESTRUCT,      200, NORMAL,       100,  5,   0, PHYSICAL ; replace
 	move EGG_BOMB,     EFFECT_NORMAL_HIT,        100, NORMAL,        75, 10,   0, PHYSICAL ; replace
 	move LICK,         EFFECT_PARALYZE_HIT,       40, GHOST,        100, 25,  25, PHYSICAL ; ok
@@ -225,7 +225,7 @@ Moves:
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,       100, 10,   0, STATUS   ; replace
 	move SPARK,        EFFECT_PARALYZE_HIT,       65, ELECTRIC,     100, 20,  30, PHYSICAL ; ok
 	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        20, BUG,           95, 20,   0, PHYSICAL ; ok - 20bp to start, doubles 4 times
-	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,         90, 25,  10, PHYSICAL ; ok
+	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,        100, 20,  10, PHYSICAL ; ok
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move ATTRACT,      EFFECT_ATTRACT,             0, NORMAL,       100, 15,   0, STATUS   ; ok
 	move SLEEP_TALK,   EFFECT_SLEEP_TALK,          0, NORMAL,       100, 10,   0, STATUS   ; ok
@@ -245,8 +245,8 @@ Moves:
 	move PURSUIT,      EFFECT_PURSUIT,            40, DARK,         100, 20,   0, PHYSICAL ; replace
 	move RAPID_SPIN,   EFFECT_RAPID_SPIN,         50, NORMAL,       100, 20,   0, PHYSICAL ; ok, increase speed
 	move SWEET_SCENT,  EFFECT_EVASION_DOWN,        0, NORMAL,       100, 20,   0, STATUS   ; ok
-	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,         75, 15,  30, PHYSICAL ; ok
-	move METAL_CLAW,   EFFECT_ATTACK_UP_HIT,      50, STEEL,         95, 35,  10, PHYSICAL ; ok
+	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,         90, 15,  30, PHYSICAL ; ok
+	move METAL_CLAW,   EFFECT_ATTACK_UP_HIT,      55, STEEL,        100, 25,  10, PHYSICAL ; ok
 	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING,     100, 10,   0, PHYSICAL ; move effect requires update? or replace.
 	move MORNING_SUN,  EFFECT_MORNING_SUN,         0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move SYNTHESIS,    EFFECT_SYNTHESIS,           0, GRASS,        100,  5,   0, STATUS   ; ok
