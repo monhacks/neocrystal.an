@@ -2547,10 +2547,24 @@ PlayerAttackDamage:
 ;	ld a, [hl]
 	ld hl, wPlayerMoveStructCategory
 	ld a, [hli]
+    ; Check if the move is Physical
+	cp PHYSICAL
+    jr nc, .physical
+    ; Check if the move is Special
 	cp SPECIAL
 	jr nc, .special
+    ; Move is Max Stat
+	ld hl, wPlayerSpAtk
+	ld a, [hli]
+    ld b, a ; Special Attack stat is put in register b
+	ld hl, wPlayerAttack
+	ld a, [hli] ; Attack stat is put in register a
+    cp b
+    ; a - b < 0 means Attack < SpAtk and we should skip to Special
+    jr c, .special
 
 ; physical
+.physical
 	ld hl, wEnemyMonDefense
 	ld a, [hli]
 	ld b, a
@@ -2574,6 +2588,7 @@ PlayerAttackDamage:
 	ld hl, wPlayerAttack
 	jr .thickclub
 
+; special
 .special
 	ld hl, wEnemyMonSpclDef
 	ld a, [hli]

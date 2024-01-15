@@ -25,7 +25,7 @@ MoveDescriptions::
 	dw VineWhipDescription
 	dw StompDescription
 	dw DoubleKickDescription
-	dw MegaKickDescription
+	dw PrimalPlantDescription
 	dw JumpKickDescription
 	dw RollingKickDescription
 	dw SandAttackDescription
@@ -363,9 +363,9 @@ DoubleKickDescription:
 	db   "A double kicking"
 	next "attack.@"
 
-MegaKickDescription:
-	db   "A powerful kicking"
-	next "attack.@"
+PrimalPlantDescription:
+	db   "A powerful attack"
+	next "that raises stats.@"
 
 JumpKickDescription:
 	db   "May miss, damaging"

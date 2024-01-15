@@ -30,7 +30,7 @@
 	const VINE_WHIP    ; 16
 	const STOMP        ; 17
 	const DOUBLE_KICK  ; 18
-	const MEGA_KICK    ; 19
+	const PRIMAL_PLANT ; 19
 	const JUMP_KICK    ; 1a
 	const ROLLING_KICK ; 1b
 	const SAND_ATTACK  ; 1c

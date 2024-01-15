@@ -162,4 +162,5 @@ MoveEffectsPointers:
 	dw AttackUpSpeedUp
 	dw AttackUpDefenseUp
 	dw DefenseUp2SpeedDown
+    dw PrimalPlant
 	assert_table_length NUM_MOVE_EFECTS

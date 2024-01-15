@@ -2127,3 +2127,20 @@ DefenseUp2SpeedDown:
 	statupmessage
 	statupfailtext
 	endmove
+
+PrimalPlant:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	specialattackup
+	lowersub
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove

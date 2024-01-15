@@ -39,7 +39,7 @@ Moves:
 	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; 45BP to match latter gens.
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker
-	move MEGA_KICK,    EFFECT_NORMAL_HIT,        120, NORMAL,        75,  5,   0, PHYSICAL ; unique to hitmonlee, replace
+	move PRIMAL_PLANT, EFFECT_PRIMAL_PLANT,      100, GRASS,        100,  5,   5, MAX_STAT ; Meganium singature
 	move JUMP_KICK,    EFFECT_JUMP_KICK,         100, FIGHTING,      95, 10,   0, PHYSICAL ; make more common
 	move ROLLING_KICK, EFFECT_FLINCH_HIT,         60, FIGHTING,      85, 15,  30, PHYSICAL ; replace, low kick covers this base
 	move SAND_ATTACK,  EFFECT_ACCURACY_DOWN,       0, GROUND,       100, 15,   0, STATUS   ; ok
@@ -124,7 +124,7 @@ Moves:
 	move MINIMIZE,     EFFECT_EVASION_UP,          0, NORMAL,       100, 10,   0, STATUS   ; ok
 	move SMOKESCREEN,  EFFECT_ACCURACY_DOWN,       0, NORMAL,       100, 20,   0, STATUS   ; ok
 	move CONFUSE_RAY,  EFFECT_CONFUSE,             0, GHOST,        100, 10,   0, STATUS   ; ok
-	move WITHDRAW,     EFFECT_DEF_UP_SPE_DN2,      0, WATER,        100, 20,   0, STATUS   ; Defense +2, Speed -1, lower pp
+	move WITHDRAW,     EFFECT_DEF_UP2_SPE_DN,      0, WATER,        100, 20,   0, STATUS   ; Defense +2, Speed -1, lower pp
 	move DEFENSE_CURL, EFFECT_DEFENSE_CURL,        0, NORMAL,       100, 40,   0, STATUS   ; ok
 	move BARRIER,      EFFECT_DEFENSE_UP_2,        0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ; ok
 	move LIGHT_SCREEN, EFFECT_LIGHT_SCREEN,        0, PSYCHIC_TYPE, 100, 30,   0, STATUS   ; ok

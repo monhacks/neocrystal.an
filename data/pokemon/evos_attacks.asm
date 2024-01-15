@@ -1373,7 +1373,6 @@ HitmonleeEvosAttacks:
     db 31, MIND_READER
     db 36, FORESIGHT
     db 41, ENDURE
-    db 46, MEGA_KICK
     db 51, REVERSAL
     db 0 ; no more level-up moves
 
@@ -2012,6 +2011,7 @@ MeganiumEvosAttacks:
     db 50, LIGHT_SCREEN
     db 55, SAFEGUARD
     db 61, SOLARBEAM
+    db 65, PRIMAL_PLANT
     db 0 ; no more level-up moves
 
 CyndaquilEvosAttacks:
