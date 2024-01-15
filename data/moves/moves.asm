@@ -40,7 +40,7 @@ Moves:
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker
 	move PRIMAL_PLANT, EFFECT_PRIMAL_PLANT,      100, GRASS,        100,  5, 100, MAX_STAT ; Meganium singature
-	move JUMP_KICK,    EFFECT_JUMP_KICK,         100, FIGHTING,      95, 10,   0, PHYSICAL ; make more common
+	move JUMP_KICK,    EFFECT_JUMP_KICK,         100, FIGHTING,      95, 10,   0, PHYSICAL ; ok
 	move ROLLING_KICK, EFFECT_FLINCH_HIT,         60, FIGHTING,      85, 15,  30, PHYSICAL ; replace, low kick covers this base
 	move SAND_ATTACK,  EFFECT_ACCURACY_DOWN,       0, GROUND,       100, 15,   0, STATUS   ; ok
 	move HEADBUTT,     EFFECT_FLINCH_HIT,         70, NORMAL,       100, 15,  30, PHYSICAL ; ok
@@ -55,8 +55,8 @@ Moves:
 	move DOUBLE_EDGE,  EFFECT_RECOIL_HIT,        120, NORMAL,       100, 15,   0, PHYSICAL ; ok
 	move TAIL_WHIP,    EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move POISON_STING, EFFECT_POISON_HIT,         30, POISON,       100, 20,  30, PHYSICAL ; Buffed to 30 BP
-	move TWINEEDLE,    EFFECT_POISON_MULTI_HIT,   35, BUG,          100, 20,  25, PHYSICAL ; More users
-	move PIN_MISSILE,  EFFECT_MULTI_HIT,          20, BUG,          100, 15,   0, PHYSICAL ; More users
+	move TWINEEDLE,    EFFECT_POISON_MULTI_HIT,   35, BUG,          100, 20,  25, PHYSICAL ; ok
+	move PIN_MISSILE,  EFFECT_MULTI_HIT,          20, BUG,          100, 15,   0, PHYSICAL ; ok
 	move LEER,         EFFECT_DEFENSE_DOWN,        0, NORMAL,       100, 30,   0, STATUS   ; ok
 	move BITE,         EFFECT_FLINCH_HIT,         60, DARK,         100, 25,  30, PHYSICAL ; ok
 	move GROWL,        EFFECT_ATTACK_DOWN,         0, NORMAL,       100, 40,   0, STATUS   ; ok
@@ -80,7 +80,7 @@ Moves:
 	move HYPER_BEAM,   EFFECT_HYPER_BEAM,        150, NORMAL,        90,  5,   0, SPECIAL  ; ok
 	move PECK,         EFFECT_NORMAL_HIT,         35, FLYING,       100, 35,   0, PHYSICAL ; ok
 	move DRILL_PECK,   EFFECT_NORMAL_HIT,         80, FLYING,       100, 20,   0, PHYSICAL ; ok for now
-	move SUBMISSION,   EFFECT_RECOIL_HIT,         90, FIGHTING,      90, 20,   0, PHYSICAL ; More users needed
+	move SUBMISSION,   EFFECT_RECOIL_HIT,         90, FIGHTING,      90, 20,   0, PHYSICAL ; More
 	move LOW_KICK,     EFFECT_FLINCH_HIT,         50, FIGHTING,     100, 20,  30, PHYSICAL ; ok
 	move COUNTER,      EFFECT_COUNTER,             1, FIGHTING,     100, 20,   0, PHYSICAL ; ok
 	move SEISMIC_TOSS, EFFECT_LEVEL_DAMAGE,        1, FIGHTING,     100, 20,   0, PHYSICAL ; ok
@@ -146,7 +146,7 @@ Moves:
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,       100, 20,   0, SPECIAL  ; ok
 	move SKULL_BASH,   EFFECT_SKULL_BASH,        130, NORMAL,       100, 10,   0, PHYSICAL ; ok
 	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, ROCK,         100, 15,   0, PHYSICAL ; ok
-	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     10, NORMAL,       100, 35,  10, PHYSICAL ; ok, use more
+	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     50, NORMAL,       100, 15,  50, PHYSICAL ; More
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC_TYPE, 100, 20,   0, STATUS   ; ok
 	move KINESIS,      EFFECT_ACCURACY_DOWN,       0, PSYCHIC_TYPE,  80, 15,   0, STATUS   ; replace
 	move SOFTBOILED,   EFFECT_HEAL,                0, NORMAL,       100, 10,   0, STATUS   ; replace, give 'em recover
@@ -172,18 +172,18 @@ Moves:
 	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,        90, 10,   0, PHYSICAL ; replace
 	move REST,         EFFECT_HEAL,                0, PSYCHIC_TYPE, 100, 10,   0, STATUS   ; ok
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,          90, 10,  30, PHYSICAL ; ok
-	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,        90, 15,  10, PHYSICAL ; more
-	move SHARPEN,      EFFECT_ATTACK_UP,           0, NORMAL,       100, 30,   0, STATUS   ; ok, but more pokes
+	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,        90, 15,  10, PHYSICAL ; More
+	move SHARPEN,      EFFECT_ATTACK_UP,           0, NORMAL,       100, 30,   0, STATUS   ; More
 	move CONVERSION,   EFFECT_CONVERSION,          0, NORMAL,       100, 30,   0, STATUS   ; replace
-	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,       100, 10,  20, SPECIAL  ; ok but more pokes
-	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,        90, 10,   0, PHYSICAL ; more
+	move TRI_ATTACK,   EFFECT_TRI_ATTACK,         80, NORMAL,       100, 10,  20, SPECIAL  ; More
+	move SUPER_FANG,   EFFECT_SUPER_FANG,          1, NORMAL,        90, 10,   0, PHYSICAL ; More
 	move SLASH,        EFFECT_NORMAL_HIT,         70, NORMAL,       100, 20,   0, PHYSICAL ; ok
 	move SUBSTITUTE,   EFFECT_SUBSTITUTE,          0, NORMAL,       100, 10,   0, STATUS   ; ok
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,       100,  1,   0, PHYSICAL ; ok
 	move SKETCH,       EFFECT_SKETCH,              0, NORMAL,       100,  1,   0, STATUS   ; ok
-	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        15, FIGHTING,     100, 15,   0, PHYSICAL ; Updated for 75 max, more or replace
+	move TRIPLE_KICK,  EFFECT_TRIPLE_KICK,        15, FIGHTING,     100, 15,   0, PHYSICAL ; More
 	move THIEF,        EFFECT_THIEF,              60, DARK,         100, 25, 100, PHYSICAL ; ok
-	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,          100, 10,   0, STATUS   ; more or replace
+	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,          100, 10,   0, STATUS   ; More
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move NIGHTMARE,    EFFECT_NIGHTMARE,           0, GHOST,        100, 15,   0, STATUS   ; replace
 	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        60, FIRE,         100, 25,  10, PHYSICAL ; ok
@@ -201,10 +201,10 @@ Moves:
 	move SCARY_FACE,   EFFECT_SPEED_DOWN_2,        0, NORMAL,        90, 10,   0, STATUS   ; ok
 	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         60, DARK,         100, 20,   0, PHYSICAL ; ok
 	move SWEET_KISS,   EFFECT_CONFUSE,             0, FAIRY,         75, 10,   0, STATUS   ; ok
-	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,       100, 10,   0, STATUS   ; ok but more
+	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,       100, 10,   0, STATUS   ; More
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,       100, 10,  30, SPECIAL  ; ok
 	move MUD_SLAP,     EFFECT_ACCURACY_DOWN_HIT,  20, GROUND,       100, 10, 100, SPECIAL  ; ok
-	move OCTAZOOKA,    EFFECT_ACCURACY_DOWN_HIT,  65, WATER,        100, 10,  50, SPECIAL  ; More users
+	move OCTAZOOKA,    EFFECT_ACCURACY_DOWN_HIT,  65, WATER,        100, 10,  50, SPECIAL  ; More
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,       100, 20,   0, STATUS   ; ok
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      120, ELECTRIC,      50,  5, 100, SPECIAL  ; ok
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,       100, 40,   0, STATUS   ; ok
@@ -234,7 +234,7 @@ Moves:
 	move PRESENT,      EFFECT_PRESENT,             1, NORMAL,        90, 15,   0, PHYSICAL ; replace?
 	move FRUSTRATION,  EFFECT_FRUSTRATION,         1, NORMAL,       100, 20,   0, PHYSICAL ; replace
 	move SAFEGUARD,    EFFECT_SAFEGUARD,           0, NORMAL,       100, 25,   0, STATUS   ; ok
-	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,       100, 20,   0, STATUS   ; more or replace
+	move PAIN_SPLIT,   EFFECT_PAIN_SPLIT,          0, NORMAL,       100, 20,   0, STATUS   ; More
 	move SACRED_FIRE,  EFFECT_SACRED_FIRE,       100, FIRE,          95,  5,  50, PHYSICAL ; ok
 	move MAGNITUDE,    EFFECT_MAGNITUDE,           1, GROUND,       100, 30,   0, PHYSICAL ; ok
 	move DYNAMICPUNCH, EFFECT_CONFUSE_HIT,       100, FIGHTING,      50,  5, 100, PHYSICAL ; ok
@@ -243,7 +243,7 @@ Moves:
 	move BATON_PASS,   EFFECT_BATON_PASS,          0, NORMAL,       100, 40,   0, STATUS   ; ok
 	move ENCORE,       EFFECT_ENCORE,              0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move PURSUIT,      EFFECT_PURSUIT,            40, DARK,         100, 20,   0, PHYSICAL ; replace
-	move RAPID_SPIN,   EFFECT_RAPID_SPIN,         50, NORMAL,       100, 20,   0, PHYSICAL ; ok, increase speed
+	move RAPID_SPIN,   EFFECT_RAPID_SPIN,         50, NORMAL,       100, 20,   0, PHYSICAL ; ok
 	move SWEET_SCENT,  EFFECT_EVASION_DOWN,        0, NORMAL,       100, 20,   0, STATUS   ; ok
 	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,         90, 15,  30, PHYSICAL ; ok
 	move METAL_CLAW,   EFFECT_ATTACK_UP_HIT,      55, STEEL,        100, 25,  10, PHYSICAL ; ok

@@ -1760,10 +1760,11 @@ RapidSpin:
 	criticaltext
 	supereffectivetext
 	clearhazards
-	speedup
 	checkfaint
 	buildopponentrage
 	kingsrock
+	speedup
+	statupmessage
 	endmove
 
 MorningSun:

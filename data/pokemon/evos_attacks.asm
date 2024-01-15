@@ -1085,6 +1085,7 @@ DoduoEvosAttacks:
     db 25, RAGE
     db 33, DRILL_PECK
     db 37, AGILITY
+    db 37, JUMP_KICK
     db 0 ; no more level-up moves
 
 DodrioEvosAttacks:
@@ -1097,6 +1098,7 @@ DodrioEvosAttacks:
     db 25, RAGE
     db 38, DRILL_PECK
     db 47, AGILITY
+    db 37, JUMP_KICK
     db 0 ; no more level-up moves
 
 SeelEvosAttacks:
@@ -2208,6 +2210,8 @@ SpinarakEvosAttacks:
     db 37, SPIDER_WEB
     db 45, AGILITY
     db 53, PSYCHIC_M
+    db 53, TWINEEDLE
+    db 53, PIN_MISSILE
     db 0 ; no more level-up moves
 
 AriadosEvosAttacks:
@@ -2222,6 +2226,8 @@ AriadosEvosAttacks:
     db 43, SPIDER_WEB
     db 53, AGILITY
     db 63, PSYCHIC_M
+    db 63, TWINEEDLE
+    db 63, PIN_MISSILE
     db 0 ; no more level-up moves
 
 CrobatEvosAttacks:
@@ -2650,6 +2656,7 @@ PinecoEvosAttacks:
     db 36, EXPLOSION
     db 43, SPIKES
     db 50, DOUBLE_EDGE
+    db 50, TWINEEDLE
     db 0 ; no more level-up moves
 
 ForretressEvosAttacks:
@@ -2663,6 +2670,7 @@ ForretressEvosAttacks:
     db 39, EXPLOSION
     db 49, SPIKES
     db 59, DOUBLE_EDGE
+    db 59, TWINEEDLE
     db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:
@@ -2776,6 +2784,7 @@ HeracrossEvosAttacks:
     db 27, KARATE_CHOP
     db 35, TAKE_DOWN
     db 44, REVERSAL
+    db 44, PIN_MISSILE
     db 54, MEGAHORN
     db 0 ; no more level-up moves
 
@@ -3021,6 +3030,7 @@ StantlerEvosAttacks:
     db 31, SAND_ATTACK
     db 40, TAKE_DOWN
     db 49, CONFUSE_RAY
+    db 49, JUMP_KICK
     db 0 ; no more level-up moves
 
 SmeargleEvosAttacks:
@@ -3057,6 +3067,7 @@ HitmontopEvosAttacks:
     db 37, AGILITY
     db 43, DETECT
     db 49, TRIPLE_KICK
+    db 49, JUMP_KICK
     db 0 ; no more level-up moves
 
 SmoochumEvosAttacks:
