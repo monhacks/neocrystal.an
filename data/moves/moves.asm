@@ -39,7 +39,7 @@ Moves:
 	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; 45BP to match latter gens.
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker
-	move PRIMAL_PLANT, EFFECT_PRIMAL_PLANT,      100, GRASS,        100,  5,   5, MAX_STAT ; Meganium singature
+	move PRIMAL_PLANT, EFFECT_PRIMAL_PLANT,      100, GRASS,        100,  5, 100, MAX_STAT ; Meganium singature
 	move JUMP_KICK,    EFFECT_JUMP_KICK,         100, FIGHTING,      95, 10,   0, PHYSICAL ; make more common
 	move ROLLING_KICK, EFFECT_FLINCH_HIT,         60, FIGHTING,      85, 15,  30, PHYSICAL ; replace, low kick covers this base
 	move SAND_ATTACK,  EFFECT_ACCURACY_DOWN,       0, GROUND,       100, 15,   0, STATUS   ; ok
@@ -251,7 +251,7 @@ Moves:
 	move MORNING_SUN,  EFFECT_MORNING_SUN,         0, NORMAL,       100,  5,   0, STATUS   ; ok
 	move SYNTHESIS,    EFFECT_SYNTHESIS,           0, GRASS,        100,  5,   0, STATUS   ; ok
 	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, FAIRY,        100,  5,   0, STATUS   ; ok
-	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,       70, NORMAL,       100, 15,   0, SPECIAL  ; ok
+	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,       70, NORMAL,       100, 15,   0, MAX_STAT ; Now determines highest stat between Attack and SpAtk.
 	move CROSS_CHOP,   EFFECT_NORMAL_HIT,        100, FIGHTING,      80,  5,   0, PHYSICAL ; ok
 	move TWISTER,      EFFECT_TWISTER,            60, DRAGON,       100, 20,  30, SPECIAL  ; ok
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,         90,  5,   0, STATUS   ; ok
