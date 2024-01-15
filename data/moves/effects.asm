@@ -2132,15 +2132,22 @@ PrimalPlant:
 	checkobedience
 	usedmovetext
 	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
 	attackup
-	lowersub
-	statupanim
-	raisesub
 	statupmessage
-	statupfailtext
 	specialattackup
-	lowersub
-	raisesub
 	statupmessage
-	statupfailtext
 	endmove
