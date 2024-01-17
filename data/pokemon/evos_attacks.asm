@@ -1971,19 +1971,19 @@ ChikoritaEvosAttacks:
 	db  1, TACKLE
 	db  1, GROWL
 	db  6, VINE_WHIP
-	db  9, POISON_POWDER
+	db  9, SWEET_SCENT
 	db 12, LEECH_SEED
 	db 15, BIND
 	db 19, RAZOR_LEAF
 	db 23, REFLECT
 	db 23, LIGHT_SCREEN
-	db 27, SWEET_SCENT
+	db 27, CONSTRICT
 	db 31, BODY_SLAM
 	db 35, SYNTHESIS
 	db 40, GROWTH
 	db 45, ANCIENTPOWER
 	db 50, SAFEGUARD
-	db 55, GIGA_DRAIN
+	db 55, PETAL_DANCE
 	db 60, SOLARBEAM
 	db 65, PRIMAL_PLANT
 	db  0; no more level-up moves
@@ -1994,19 +1994,19 @@ BayleefEvosAttacks:
 	db  1, TACKLE
 	db  1, GROWL
 	db  6, VINE_WHIP
-	db  9, POISON_POWDER
+	db  9, SWEET_SCENT
 	db 12, LEECH_SEED
 	db 15, BIND
 	db 19, RAZOR_LEAF
 	db 23, REFLECT
 	db 23, LIGHT_SCREEN
-	db 27, SWEET_SCENT
+	db 27, CONSTRICT
 	db 31, BODY_SLAM
 	db 35, SYNTHESIS
 	db 40, GROWTH
 	db 45, ANCIENTPOWER
 	db 50, SAFEGUARD
-	db 55, GIGA_DRAIN
+	db 55, PETAL_DANCE
 	db 60, SOLARBEAM
 	db 65, PRIMAL_PLANT
 	db  0; no more level-up moves
@@ -2016,19 +2016,19 @@ MeganiumEvosAttacks:
 	db  1, TACKLE
 	db  1, GROWL
 	db  6, VINE_WHIP
-	db  9, POISON_POWDER
+	db  9, SWEET_SCENT
 	db 12, LEECH_SEED
 	db 15, BIND
 	db 19, RAZOR_LEAF
 	db 23, REFLECT
 	db 23, LIGHT_SCREEN
-	db 27, SWEET_SCENT
+	db 27, CONSTRICT
 	db 31, BODY_SLAM
 	db 35, SYNTHESIS
 	db 40, GROWTH
 	db 45, ANCIENTPOWER
 	db 50, SAFEGUARD
-	db 55, GIGA_DRAIN
+	db 55, PETAL_DANCE
 	db 60, SOLARBEAM
 	db 65, PRIMAL_PLANT
 	db  0; no more level-up moves
