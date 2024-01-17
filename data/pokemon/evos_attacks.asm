@@ -1967,7 +1967,7 @@ MewEvosAttacks:
 
 ChikoritaEvosAttacks:
 	db EVOLVE_LEVEL, 16, BAYLEEF
-	db  0 ; no more evolutions
+	db  0; no more evolutions
 	db  1, TACKLE
 	db  1, GROWL
 	db  6, VINE_WHIP
@@ -1986,11 +1986,11 @@ ChikoritaEvosAttacks:
 	db 55, GIGA_DRAIN
 	db 60, SOLARBEAM
 	db 65, PRIMAL_PLANT
-	db 0 ; no more level-up moves
+	db  0; no more level-up moves
 
 BayleefEvosAttacks:
 	db EVOLVE_LEVEL, 32, MEGANIUM
-	db 0 ; no more evolutions
+	db  0; no more evolutions
 	db  1, TACKLE
 	db  1, GROWL
 	db  6, VINE_WHIP
@@ -2009,10 +2009,10 @@ BayleefEvosAttacks:
 	db 55, GIGA_DRAIN
 	db 60, SOLARBEAM
 	db 65, PRIMAL_PLANT
-	db 0 ; no more level-up moves
+	db  0; no more level-up moves
 
 MeganiumEvosAttacks:
-	db 0 ; no more evolutions
+	db  0; no more evolutions
 	db  1, TACKLE
 	db  1, GROWL
 	db  6, VINE_WHIP
@@ -2031,57 +2031,75 @@ MeganiumEvosAttacks:
 	db 55, GIGA_DRAIN
 	db 60, SOLARBEAM
 	db 65, PRIMAL_PLANT
-	db 0 ; no more level-up moves
+	db  0; no more level-up moves
 
 CyndaquilEvosAttacks:
 	db EVOLVE_LEVEL, 14, QUILAVA
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, ERUPTION
-	db 6, SMOKESCREEN
-	db 12, EMBER
-	db 18, QUICK_ATTACK
-	db 24, FLAME_WHEEL
-	db 30, DEFENSE_CURL
-	db 30, ROLLOUT
-	db 35, SWIFT
-	db 40, HAZE
-	db 44, DOUBLE_EDGE
-	db 48, FLAMETHROWER ; Eruption
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, LEER
+	db  6, EMBER
+	db  9, SMOKESCREEN
+	db 12, QUICK_ATTACK
+	db 16, FIRE_SPIN
+	db 20, FLAME_WHEEL
+	db 24, DEFENSE_CURL
+	db 24, ROLLOUT
+	db 28, HAZE
+	db 32, SWIFT
+	db 34, FLAMETHROWER
+	db 39, SUNNY_DAY
+	db 44, FIRE_PUNCH
+	db 49, THUNDERPUNCH
+	db 54, BULLDOZE
+	db 59, FIRE_BLAST
+	db 64, ERUPTION
+	db  0; no more level-up moves
 
 QuilavaEvosAttacks:
 	db EVOLVE_LEVEL, 36, TYPHLOSION
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, LEER
-	db 6, SMOKESCREEN
-	db 12, EMBER
-	db 21, QUICK_ATTACK
-	db 27, FLAME_WHEEL
-	db 33, DEFENSE_CURL
-	db 33, ROLLOUT
-	db 41, SWIFT
-	db 46, HAZE
-	db 50, DOUBLE_EDGE
-	db 54, FLAMETHROWER
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, LEER
+	db  6, EMBER
+	db  9, SMOKESCREEN
+	db 12, QUICK_ATTACK
+	db 16, FIRE_SPIN
+	db 20, FLAME_WHEEL
+	db 24, DEFENSE_CURL
+	db 24, ROLLOUT
+	db 28, HAZE
+	db 32, SWIFT
+	db 34, FLAMETHROWER
+	db 39, SUNNY_DAY
+	db 44, FIRE_PUNCH
+	db 49, THUNDERPUNCH
+	db 54, BULLDOZE
+	db 59, FIRE_BLAST
+	db 64, ERUPTION
+	db  0; no more level-up moves
 
 TyphlosionEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, LEER
-	db 6, SMOKESCREEN
-	db 12, EMBER
-	db 21, QUICK_ATTACK
-	db 27, FLAME_WHEEL
-	db 33, DEFENSE_CURL
-	db 33, ROLLOUT
-	db 45, SWIFT
-	db 50, HAZE
-	db 55, DOUBLE_EDGE
-	db 60, FLAMETHROWER
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, LEER
+	db  6, EMBER
+	db  9, SMOKESCREEN
+	db 12, QUICK_ATTACK
+	db 16, FIRE_SPIN
+	db 20, FLAME_WHEEL
+	db 24, DEFENSE_CURL
+	db 24, ROLLOUT
+	db 28, HAZE
+	db 32, SWIFT
+	db 34, FLAMETHROWER
+	db 39, SUNNY_DAY
+	db 44, FIRE_PUNCH
+	db 49, THUNDERPUNCH
+	db 54, BULLDOZE
+	db 59, FIRE_BLAST
+	db 64, ERUPTION
+	db  0; no more level-up moves
 
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
