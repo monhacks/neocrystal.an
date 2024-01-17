@@ -2103,54 +2103,71 @@ TyphlosionEvosAttacks:
 
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
-	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 1, DRAGON_DANCE
-	db 7, RAGE
-	db 12, WATER_GUN
-	db 17, BITE
-	db 22, CLAMP
+	db  0; no more evolutions
+	db  1, SCRATCH
+	db  1, LEER
+	db  6, WATER_GUN
+	db  9, RAGE
+	db 12, BITE
+	db 16, CLAMP
+	db 19, FLAIL
+	db 23, MEDITATE
 	db 27, SCARY_FACE
-	db 32, SLASH
-	db 37, SCREECH
-	db 42, CRUNCH
-	db 47, THRASH
-	db 52, CROC_CHOMP
-	db 0 ; no more level-up moves
-
+	db 30, SLASH
+	db 35, SCREECH
+	db 35, SWORDS_DANCE
+	db 40, CRUNCH
+	db 45, ICE_PUNCH
+	db 50, DRAGON_DANCE
+	db 55, THRASH
+	db 60, HYDRO_PUMP
+	db 65, CROC_CHOMP
+	db  0; no more level-up moves
+	
 CroconawEvosAttacks:
 	db EVOLVE_LEVEL, 30, FERALIGATR
-	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 7, RAGE
-	db 12, WATER_GUN
-	db 17, BITE
-	db 23, CLAMP
-	db 28, SCARY_FACE
-	db 34, SLASH
-	db 39, SCREECH
-	db 45, CRUNCH
-	db 50, THRASH
-	db 55, CROC_CHOMP
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, SCRATCH
+	db  1, LEER
+	db  6, WATER_GUN
+	db  9, RAGE
+	db 12, BITE
+	db 16, CLAMP
+	db 19, FLAIL
+	db 23, MEDITATE
+	db 27, SCARY_FACE
+	db 30, SLASH
+	db 35, SCREECH
+	db 35, SWORDS_DANCE
+	db 40, CRUNCH
+	db 45, ICE_PUNCH
+	db 50, DRAGON_DANCE
+	db 55, THRASH
+	db 60, HYDRO_PUMP
+	db 65, CROC_CHOMP
+	db  0; no more level-up moves
 
 FeraligatrEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, LEER
-	db 7, RAGE
-	db 12, WATER_GUN
-	db 17, BITE
-	db 23, CLAMP
-	db 28, SCARY_FACE
-	db 34, SLASH
-	db 40, SCREECH
-	db 47, CRUNCH
-	db 53, THRASH
-	db 58, CROC_CHOMP
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, SCRATCH
+	db  1, LEER
+	db  6, WATER_GUN
+	db  9, RAGE
+	db 12, BITE
+	db 16, CLAMP
+	db 19, FLAIL
+	db 23, MEDITATE
+	db 27, SCARY_FACE
+	db 30, SLASH
+	db 35, SCREECH
+	db 35, SWORDS_DANCE
+	db 40, CRUNCH
+	db 45, ICE_PUNCH
+	db 50, DRAGON_DANCE
+	db 55, THRASH
+	db 60, HYDRO_PUMP
+	db 65, CROC_CHOMP
+	db  0; no more level-up moves
 
 SentretEvosAttacks:
 	db EVOLVE_LEVEL, 15, FURRET
