@@ -1,6 +1,6 @@
 	db FURRET ; 162
 
-	db  85,  76,  64,  90,  45,  55
+	db  85,  80,  70,  90,  45,  80 ; Increase BST from 415 to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
