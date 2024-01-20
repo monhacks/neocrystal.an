@@ -1,6 +1,6 @@
 	db TOGETIC ; 176
 
-	db  55,  40,  85,  40,  80, 105
+	db  70,  45,  90,  60,  98, 112 ; Increase BST from 405 to 475
 	;   hp  atk  def  spd  sat  sdf
 
 	db FAIRY, FLYING ; type
