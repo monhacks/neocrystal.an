@@ -2220,7 +2220,7 @@ HoothootEvosAttacks:
 	db 30, DREAM_EATER
 	db 34, LIGHT_SCREEN
 	db 38, CONFUSE_RAY
-	db 42, PSYCHIC
+	db 42, PSYCHIC_M
 	db 46, RAZOR_WIND
 	db 50, MOONBLAST
 	db  0; no more level-up moves
@@ -2240,7 +2240,7 @@ NoctowlEvosAttacks:
 	db 30, DREAM_EATER
 	db 34, LIGHT_SCREEN
 	db 38, CONFUSE_RAY
-	db 42, PSYCHIC
+	db 42, PSYCHIC_M
 	db 46, RAZOR_WIND
 	db 50, MOONBLAST
 	db  0; no more level-up moves
