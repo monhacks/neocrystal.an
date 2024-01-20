@@ -19,7 +19,7 @@ Moves:
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,     100, 25,   0, PHYSICAL ; ok
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          20, NORMAL,       100, 15,   0, PHYSICAL ; Lowest BP, Highest ACC
 	move DRAGON_DANCE, EFFECT_ATK_UP_SPE_UP,       0, DRAGON,       100, 15,   0, STATUS   ; ok
-	move ERUPTION,     EFFECT_BURN_HIT,          100, NORMAL,       100,  5,  50, SPECIAL  ; ok - Typhlosion signature
+	move ERUPTION,     EFFECT_BURN_HIT,          100, FIRE,         100,  5,  50, SPECIAL  ; ok - Typhlosion signature
 	move PAY_DAY,      EFFECT_PAY_DAY,            60, NORMAL,       100, 20,   0, PHYSICAL ; Increased to BP 60 for Technician
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,         100, 15,  10, PHYSICAL ; ok
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,          100, 15,  10, PHYSICAL ; ok

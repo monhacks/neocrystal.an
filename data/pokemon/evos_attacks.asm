@@ -2337,30 +2337,44 @@ CrobatEvosAttacks:
 
 ChinchouEvosAttacks:
 	db EVOLVE_LEVEL, 27, LANTURN
-	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, THUNDER_WAVE
-	db 5, SUPERSONIC
-	db 13, FLAIL
-	db 17, WATER_GUN
-	db 25, SPARK
-	db 29, CONFUSE_RAY
-	db 37, TAKE_DOWN
-	db 41, HYDRO_PUMP
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, BUBBLE
+	db  1, SUPERSONIC
+	db  5, THUNDER_WAVE
+	db  8, FLAIL
+	db 11, WATER_GUN
+	db 14, THUNDERSHOCK
+	db 17, CONFUSE_RAY
+	db 21, BUBBLEBEAM
+	db 24, SWIFT
+	db 27, SPARK
+	db 31, RECOVER
+	db 35, MEAN_LOOK
+	db 39, SAFEGUARD
+	db 42, HYDRO_PUMP
+	db 46, RAIN_DANCE
+	db 50, THUNDER
+	db  0; no more level-up moves
 
 LanturnEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, BUBBLE
-	db 1, THUNDER_WAVE
-	db 5, SUPERSONIC
-	db 13, FLAIL
-	db 17, WATER_GUN
-	db 25, SPARK
-	db 33, CONFUSE_RAY
-	db 45, TAKE_DOWN
-	db 53, HYDRO_PUMP
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, BUBBLE
+	db  1, SUPERSONIC
+	db  5, THUNDER_WAVE
+	db  8, FLAIL
+	db 11, WATER_GUN
+	db 14, THUNDERSHOCK
+	db 17, CONFUSE_RAY
+	db 21, BUBBLEBEAM
+	db 24, SWIFT
+	db 27, SPARK
+	db 31, RECOVER
+	db 35, MEAN_LOOK
+	db 39, SAFEGUARD
+	db 42, HYDRO_PUMP
+	db 46, RAIN_DANCE
+	db 50, THUNDER
+	db  0; no more level-up moves
 
 PichuEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
@@ -2394,31 +2408,42 @@ IgglybuffEvosAttacks:
 
 TogepiEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, TOGETIC
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, CHARM
-	db 7, METRONOME
-	db 14, SWEET_KISS
-	db 21, FAIRY_WIND
-	db 28, ENCORE
-	db 35, SAFEGUARD
-	db 42, DOUBLE_EDGE
-	db 49, MOONBLAST
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, GROWL
+	db  1, POUND
+	db  4, SWEET_KISS
+	db  8, FAIRY_WIND
+	db 12, CHARM
+	db 16, HEADBUTT
+	db 20, HYPNOSIS
+	db 24, ANCIENTPOWER
+	db 28, RECOVER
+	db 32, PLAY_ROUGH
+	db 36, SWEET_KISS
+	db 40, SAFEGUARD
+	db 44, DOUBLE_EDGE
+	db 48, BATON_PASS
+	db 52, MOONBLAST
+	db  0; no more level-up moves
 
 TogeticEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, CHARM
-	db 7, METRONOME
-	db 14, SWEET_KISS
-	db 21, FAIRY_WIND
+	db  0; no more evolutions
+	db  1, GROWL
+	db  1, POUND
+	db  4, SWEET_KISS
+	db  8, FAIRY_WIND
+	db 12, CHARM
+	db 16, HEADBUTT
+	db 20, HYPNOSIS
+	db 24, AIR_CUTTER
 	db 28, RECOVER
-	db 35, ENCORE
-	db 42, SAFEGUARD
-	db 49, DOUBLE_EDGE
-	db 56, MOONBLAST
-	db 0 ; no more level-up moves
+	db 32, PLAY_ROUGH
+	db 36, SWEET_KISS
+	db 40, SAFEGUARD
+	db 44, RAZOR_WIND
+	db 48, BATON_PASS
+	db 52, MOONBLAST
+	db  0; no more level-up moves
 
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
