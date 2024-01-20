@@ -35,7 +35,7 @@ Moves:
 	move WHIRLWIND,    EFFECT_FORCE_SWITCH,        0, NORMAL,       100, 20,   0, STATUS   ; same as gust
 	move FLY,          EFFECT_FLY,                90, FLYING,        95, 15,   0, PHYSICAL ; ok
 	move BIND,         EFFECT_TRAP_TARGET,        35, NORMAL,        90, 20,   0, PHYSICAL ; This is the de-facto trapping move, buff pp 5
-	move SLAM,         EFFECT_NORMAL_HIT,         80, NORMAL,        75, 20,   0, PHYSICAL ; ok, but should buff or absorb Mega Punch / Kick
+	move SLAM,         EFFECT_DEFENSE_DOWN_HIT,   80, NORMAL,        90, 20,  20, PHYSICAL ; ok
 	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,        100, 25,   0, PHYSICAL ; 45BP to match latter gens.
 	move STOMP,        EFFECT_STOMP,              65, NORMAL,       100, 20,  30, PHYSICAL ; ok
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker

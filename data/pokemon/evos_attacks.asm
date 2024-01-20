@@ -2171,53 +2171,79 @@ FeraligatrEvosAttacks:
 
 SentretEvosAttacks:
 	db EVOLVE_LEVEL, 15, FURRET
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 5, DEFENSE_CURL
-	db 11, QUICK_ATTACK
-	db 17, FURY_SWIPES
-	db 25, SLAM
-	db 33, REST
-	db 41, AMNESIA
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  4, DEFENSE_CURL
+	db  7, QUICK_ATTACK
+	db 10, FURY_SWIPES
+	db 13, FLAIL
+	db 17, MEDITATE
+	db 21, SLAM
+	db 25, REST
+	db 29, TAKE_DOWN
+	db 33, AMNESIA
+	db 37, BATON_PASS
+	db 41, DOUBLE_EDGE
+	db 45, PLAY_ROUGH
+	db  0; no more level-up moves
 
 FurretEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 5, DEFENSE_CURL
-	db 11, QUICK_ATTACK
-	db 18, FURY_SWIPES
-	db 28, SLAM
-	db 38, REST
-	db 48, AMNESIA
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  4, DEFENSE_CURL
+	db  7, QUICK_ATTACK
+	db 10, FURY_SWIPES
+	db 13, FLAIL
+	db 17, MEDITATE
+	db 21, SLAM
+	db 25, REST
+	db 29, TAKE_DOWN
+	db 33, AMNESIA
+	db 37, BATON_PASS
+	db 41, DOUBLE_EDGE
+	db 45, PLAY_ROUGH
+	db  0; no more level-up moves
 
 HoothootEvosAttacks:
 	db EVOLVE_LEVEL, 20, NOCTOWL
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 6, FORESIGHT
-	db 11, PECK
-	db 16, HYPNOSIS
-	db 22, REFLECT
-	db 28, TAKE_DOWN
-	db 34, CONFUSION
-	db 48, DREAM_EATER
-	db 0 ; no more level-up moves
+	db  0 ; no more evolutions
+	db  1, TACKLE
+	db  1, GROWL
+	db  3, PECK
+	db  6, FORESIGHT
+	db  9, GUST
+	db 12, CONFUSION
+	db 15, REFLECT
+	db 18, AIR_CUTTER
+	db 22, HYPNOSIS
+	db 26, PSYBEAM
+	db 30, DREAM_EATER
+	db 34, LIGHT_SCREEN
+	db 38, CONFUSE_RAY
+	db 42, PSYCHIC
+	db 46, RAZOR_WIND
+	db 50, MOONBLAST
+	db  0; no more level-up moves
 
 NoctowlEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 6, FORESIGHT
-	db 11, PECK
-	db 16, HYPNOSIS
-	db 25, REFLECT
-	db 33, TAKE_DOWN
-	db 41, CONFUSION
-	db 57, DREAM_EATER
-	db 0 ; no more level-up moves
+	db  0 ; no more evolutions
+	db  1, TACKLE
+	db  1, GROWL
+	db  3, PECK
+	db  6, FORESIGHT
+	db  9, GUST
+	db 12, CONFUSION
+	db 15, REFLECT
+	db 18, AIR_CUTTER
+	db 22, HYPNOSIS
+	db 26, PSYBEAM
+	db 30, DREAM_EATER
+	db 34, LIGHT_SCREEN
+	db 38, CONFUSE_RAY
+	db 42, PSYCHIC
+	db 46, RAZOR_WIND
+	db 50, MOONBLAST
+	db  0; no more level-up moves
 
 LedybaEvosAttacks:
 	db EVOLVE_LEVEL, 18, LEDIAN
