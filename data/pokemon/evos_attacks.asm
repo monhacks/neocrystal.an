@@ -2247,66 +2247,81 @@ NoctowlEvosAttacks:
 
 LedybaEvosAttacks:
 	db EVOLVE_LEVEL, 18, LEDIAN
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 8, SUPERSONIC
-	db 15, CONFUSION
-	db 22, LIGHT_SCREEN
-	db 22, REFLECT
-	db 22, SAFEGUARD
-	db 29, BATON_PASS
-	db 36, SWIFT
-	db 43, AGILITY
-	db 50, MOONBLAST
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  8, SUPERSONIC
+	db 11, CONFUSION
+	db 14, FAIRY_WIND
+	db 17, AIR_CUTTER
+	db 21, LIGHT_SCREEN
+	db 21, REFLECT
+	db 21, SAFEGUARD
+	db 25, SWIFT
+	db 29, SUPERSONIC
+	db 33, AGILITY
+	db 37, PSYCHIC_M
+	db 41, MOONBLAST
+	db 45, RAZOR_WIND
+	db  0; no more level-up moves
 
 LedianEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 8, SUPERSONIC
-	db 15, CONFUSION
-	db 18, FAIRY_WIND
-	db 24, LIGHT_SCREEN
-	db 24, REFLECT
-	db 24, SAFEGUARD
-	db 33, BATON_PASS
-	db 42, SWIFT
-	db 51, AGILITY
-	db 60, MOONBLAST
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  8, SUPERSONIC
+	db 11, CONFUSION
+	db 14, FAIRY_WIND
+	db 17, AIR_CUTTER
+	db 21, LIGHT_SCREEN
+	db 21, REFLECT
+	db 21, SAFEGUARD
+	db 25, SWIFT
+	db 29, SUPERSONIC
+	db 33, AGILITY
+	db 37, PSYCHIC_M
+	db 41, MOONBLAST
+	db 45, RAZOR_WIND
+	db  0; no more level-up moves
 
 SpinarakEvosAttacks:
 	db EVOLVE_LEVEL, 22, ARIADOS
-	db 0 ; no more evolutions
-	db 1, POISON_STING
-	db 1, STRING_SHOT
-	db 6, SCARY_FACE
+	db  0; no more evolutions
+	db  1, POISON_STING
+	db  1, STRING_SHOT
+	db  5, SCARY_FACE
+	db  8, BIND
 	db 11, CONSTRICT
-	db 17, NIGHT_SHADE
-	db 23, LEECH_LIFE
-	db 30, FURY_SWIPES
-	db 37, SPIDER_WEB
-	db 45, AGILITY
-	db 53, PSYCHIC_M
-	db 53, TWINEEDLE
-	db 53, PIN_MISSILE
-	db 0 ; no more level-up moves
+	db 14, NIGHT_SHADE
+	db 17, LEECH_LIFE
+	db 20, SPIDER_WEB
+	db 24, BITE
+	db 28, PIN_MISSILE
+	db 32, SLUDGE
+	db 36, CONFUSE_RAY
+	db 40, TWINEEDLE
+	db 44, AGILITY
+	db 48, X_SCISSOR
+	db 52, SHADOW_BALL
+	db  0; no more level-up moves
 
 AriadosEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, POISON_STING
-	db 1, STRING_SHOT
-	db 6, SCARY_FACE
+	db  0; no more evolutions
+	db  1, POISON_STING
+	db  1, STRING_SHOT
+	db  5, SCARY_FACE
+	db  8, BIND
 	db 11, CONSTRICT
-	db 17, NIGHT_SHADE
-	db 25, LEECH_LIFE
-	db 34, FURY_SWIPES
-	db 43, SPIDER_WEB
-	db 53, AGILITY
-	db 63, PSYCHIC_M
-	db 63, TWINEEDLE
-	db 63, PIN_MISSILE
-	db 0 ; no more level-up moves
+	db 14, NIGHT_SHADE
+	db 17, LEECH_LIFE
+	db 20, SPIDER_WEB
+	db 24, BITE
+	db 28, PIN_MISSILE
+	db 32, SLUDGE
+	db 36, CONFUSE_RAY
+	db 40, TWINEEDLE
+	db 44, AGILITY
+	db 48, X_SCISSOR
+	db 52, SHADOW_BALL
+	db  0; no more level-up moves
 
 CrobatEvosAttacks:
 	db 0 ; no more evolutions
