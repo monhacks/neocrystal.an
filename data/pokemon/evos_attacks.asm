@@ -2482,39 +2482,68 @@ XatuEvosAttacks:
 
 MareepEvosAttacks:
 	db EVOLVE_LEVEL, 15, FLAAFFY
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 9, THUNDERSHOCK
-	db 16, THUNDER_WAVE
-	db 23, COTTON_SPORE
-	db 30, LIGHT_SCREEN
-	db 37, THUNDER
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, GROWL
+	db  4, THUNDERWAVE
+	db  7, THUNDERSHOCK
+	db 10, COTTON_SPORE
+	db 13, GROWL
+	db 17, TAKE_DOWN
+	db 21, SLAM
+	db 25, CONFUSE_RAY
+	db 29, SPARK
+	db 34, SWIFT
+	db 39, THUNDERBOLT
+	db 44, LIGHT_SCREEN
+	db 49, TWISTER
+	db 54, ANCIENTPOWER
+	db 59, MOONBLAST
+	db 64, THUNDER
+	db  0; no more level-up moves
 
 FlaaffyEvosAttacks:
 	db EVOLVE_LEVEL, 30, AMPHAROS
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 9, THUNDERSHOCK
-	db 18, THUNDER_WAVE
-	db 27, COTTON_SPORE
-	db 36, LIGHT_SCREEN
-	db 45, THUNDER
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, GROWL
+	db  4, THUNDERWAVE
+	db  7, THUNDERSHOCK
+	db 10, COTTON_SPORE
+	db 13, GROWL
+	db 17, TAKE_DOWN
+	db 21, SLAM
+	db 25, CONFUSE_RAY
+	db 29, SPARK
+	db 34, SWIFT
+	db 39, THUNDERBOLT
+	db 44, LIGHT_SCREEN
+	db 49, TWISTER
+	db 54, ANCIENTPOWER
+	db 59, MOONBLAST
+	db 64, THUNDER
+	db  0; no more level-up moves
 
 AmpharosEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 9, THUNDERSHOCK
-	db 18, THUNDER_WAVE
-	db 27, COTTON_SPORE
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, GROWL
+	db  4, THUNDERWAVE
+	db  7, THUNDERSHOCK
+	db 10, COTTON_SPORE
+	db 13, GROWL
+	db 17, TAKE_DOWN
+	db 21, SLAM
+	db 25, CONFUSE_RAY
 	db 30, THUNDERPUNCH
-	db 42, LIGHT_SCREEN
-	db 57, THUNDER
-	db 0 ; no more level-up moves
+	db 34, SWIFT
+	db 39, THUNDERBOLT
+	db 44, LIGHT_SCREEN
+	db 49, TWISTER
+	db 54, ANCIENTPOWER
+	db 59, MOONBLAST
+	db 64, THUNDER
+	db  0; no more level-up moves
 
 BellossomEvosAttacks:
 	db 0 ; no more evolutions
