@@ -2447,26 +2447,38 @@ TogeticEvosAttacks:
 
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
-	db 0 ; no more evolutions
-	db 1, PECK
-	db 1, LEER
-	db 10, NIGHT_SHADE
-	db 15, TELEPORT
-	db 25, FUTURE_SIGHT
-	db 30, CONFUSE_RAY
-	db 35, PSYCHIC_M
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TELEPORT
+	db  1, PECK
+	db  1, LEER
+	db 10, CONFUSION
+	db 13, GUST
+	db 19, AIR_CUTTER
+	db 22, CONFUSE_RAY
+	db 25, RAZOR_WIND
+	db 29, PSYBEAM
+	db 33, TELEPORT
+	db 37, RECOVER
+	db 41, PSYCHIC_M
+	db 45, FUTURE_SIGHT
+	db  0; no more level-up moves
 
 XatuEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, PECK
-	db 1, LEER
-	db 10, NIGHT_SHADE
-	db 15, TELEPORT
-	db 25, FUTURE_SIGHT
-	db 35, CONFUSE_RAY
-	db 45, PSYCHIC_M
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TELEPORT
+	db  1, PECK
+	db  1, LEER
+	db 10, CONFUSION
+	db 13, GUST
+	db 19, AIR_CUTTER
+	db 22, CONFUSE_RAY
+	db 25, RAZOR_WIND
+	db 29, PSYBEAM
+	db 33, TELEPORT
+	db 37, RECOVER
+	db 41, PSYCHIC_M
+	db 45, FUTURE_SIGHT
+	db  0; no more level-up moves
 
 MareepEvosAttacks:
 	db EVOLVE_LEVEL, 15, FLAAFFY
