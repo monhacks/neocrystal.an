@@ -1,7 +1,7 @@
 	db AZUMARILL ; 184
 
-	db 100,  50,  80,  50,  60,  80
-	;   hp  atk  def  spd  sat  sdf
+	db 100, 100,  80,  50,  40,  80 ; Increased BST from 420 to 450
+	;   hp  atk  def  spd  sat  sdf ; specifically to mimic HUGE POWER
 
 	db WATER, FAIRY ; type
 	db 75 ; catch rate

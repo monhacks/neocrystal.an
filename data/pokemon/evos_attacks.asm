@@ -2556,28 +2556,44 @@ BellossomEvosAttacks:
 
 MarillEvosAttacks:
 	db EVOLVE_LEVEL, 18, AZUMARILL
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 3, DEFENSE_CURL
-	db 6, TAIL_WHIP
-	db 10, WATER_GUN
-	db 15, ROLLOUT
-	db 21, BUBBLEBEAM
-	db 28, PLAY_ROUGH
-	db 36, RAIN_DANCE
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  3, DEFENSE_CURL
+	db  6, WATER_GUN
+	db  7, TAIL_WHIP
+	db 10, ROLLOUT
+	db 13, SLAM
+	db 16, BUBBLEBEAM
+	db 20, CHARM
+	db 24, BATON_PASS
+	db 28, SUBMISSION
+	db 32, MEDITATE
+	db 36, SKULL_BASH
+	db 40, HYDRO_PUMP
+	db 44, DOUBLE_EDGE
+	db 48, RAIN_DANCE
+	db 52, PLAY_ROUGH
+	db  0; no more level-up moves
 
 AzumarillEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 3, DEFENSE_CURL
-	db 6, TAIL_WHIP
-	db 10, WATER_GUN
-	db 15, ROLLOUT
-	db 25, BUBBLEBEAM
-	db 36, PLAY_ROUGH
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  3, DEFENSE_CURL
+	db  6, WATER_GUN
+	db  7, TAIL_WHIP
+	db 10, ROLLOUT
+	db 13, SLAM
+	db 16, BUBBLEBEAM
+	db 20, CHARM
+	db 24, BATON_PASS
+	db 28, SUBMISSION
+	db 32, MEDITATE
+	db 36, SKULL_BASH
+	db 40, HYDRO_PUMP
+	db 44, DOUBLE_EDGE
 	db 48, RAIN_DANCE
-	db 0 ; no more level-up moves
+	db 52, PLAY_ROUGH
+	db  0; no more level-up moves
 
 SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
