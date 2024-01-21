@@ -2485,7 +2485,7 @@ MareepEvosAttacks:
 	db  0; no more evolutions
 	db  1, TACKLE
 	db  1, GROWL
-	db  4, THUNDERWAVE
+	db  4, THUNDER_WAVE
 	db  7, THUNDERSHOCK
 	db 10, COTTON_SPORE
 	db 13, GROWL
@@ -2507,7 +2507,7 @@ FlaaffyEvosAttacks:
 	db  0; no more evolutions
 	db  1, TACKLE
 	db  1, GROWL
-	db  4, THUNDERWAVE
+	db  4, THUNDER_WAVE
 	db  7, THUNDERSHOCK
 	db 10, COTTON_SPORE
 	db 13, GROWL
@@ -2528,7 +2528,7 @@ AmpharosEvosAttacks:
 	db  0; no more evolutions
 	db  1, TACKLE
 	db  1, GROWL
-	db  4, THUNDERWAVE
+	db  4, THUNDER_WAVE
 	db  7, THUNDERSHOCK
 	db 10, COTTON_SPORE
 	db 13, GROWL
