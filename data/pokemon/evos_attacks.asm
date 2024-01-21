@@ -2596,15 +2596,20 @@ AzumarillEvosAttacks:
 	db  0; no more level-up moves
 
 SudowoodoEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, ROCK_THROW
-	db 1, MIMIC
-	db 10, FLAIL
-	db 19, LOW_KICK
-	db 28, ROCK_SLIDE
-	db 37, FAINT_ATTACK
-	db 46, SLAM
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, POUND
+	db  1, MIMIC
+	db 12, FLAIL
+	db 16, ROCK_THROW
+	db 20, LOW_KICK
+	db 24, RAGE
+	db 28, MEDITATE
+	db 32, FAINT_ATTACK
+	db 36, ROCK_SLIDE
+	db 40, SLAM
+	db 44, SUBMISSION
+	db 48, EXTREMESPEED
+	db  0; no more level-up moves
 
 PolitoedEvosAttacks:
 	db 0 ; no more evolutions
