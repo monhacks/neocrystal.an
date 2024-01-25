@@ -1,6 +1,6 @@
 	db SUNFLORA ; 192
 
-	db  75,  75,  55,  30, 105,  85
+	db  75,  70,  55,  60, 105,  85 ; Increase BST from 425 to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
