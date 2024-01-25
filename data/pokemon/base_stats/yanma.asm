@@ -1,6 +1,8 @@
 	db YANMA ; 193
 
-	db  65,  65,  45,  95,  75,  45
+	db  75,  75,  55,  95,  95,  55 ; Increase BST from 390 to 450
+;	db  86,  76,  86,  95, 116,  56 Yanmega 515
+;	db  65,  65,  45,  95,  75,  45 Yanma
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type
