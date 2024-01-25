@@ -2716,7 +2716,7 @@ SunkernEvosAttacks:
 	db 28, REFLECT
 	db 31, GIGA_DRAIN
 	db 34, DOUBLE_EDGE
-	db 39, SOLAR_BEAM
+	db 39, SOLARBEAM
 	db 42, SUNNY_DAY
 	db 45, PETAL_DANCE
 	db  0; no more level-up moves
@@ -2736,7 +2736,7 @@ SunfloraEvosAttacks:
 	db 28, REFLECT
 	db 31, GIGA_DRAIN
 	db 34, DOUBLE_EDGE
-	db 39, SOLAR_BEAM
+	db 39, SOLARBEAM
 	db 42, SUNNY_DAY
 	db 45, PETAL_DANCE
 	db  0; no more level-up moves
