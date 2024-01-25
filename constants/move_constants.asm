@@ -32,7 +32,7 @@
 	const DOUBLE_KICK  ; 18
 	const PRIMAL_PLANT ; 19
 	const JUMP_KICK    ; 1a
-	const ROLLING_KICK ; 1b
+	const BUG_BUZZ     ; 1b
 	const SAND_ATTACK  ; 1c
 	const HEADBUTT     ; 1d
 	const HORN_ATTACK  ; 1e
