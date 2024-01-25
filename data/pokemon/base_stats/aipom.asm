@@ -1,6 +1,8 @@
 	db AIPOM ; 190
 
-	db  55,  70,  55,  85,  40,  55
+	db  70,  90,  65, 100,  60,  65 ; Increase BST from 360 to 450
+;	db  75, 100,  66, 115,  60,  66 ; Ambipom
+;	db  55,  70,  55,  85,  40,  55 ; Aipom
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

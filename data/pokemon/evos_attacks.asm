@@ -2623,56 +2623,82 @@ PolitoedEvosAttacks:
 
 HoppipEvosAttacks:
 	db EVOLVE_LEVEL, 18, SKIPLOOM
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 5, TAIL_WHIP
-	db 10, SYNTHESIS
-	db 13, POISONPOWDER
-	db 15, STUN_SPORE
-	db 17, SLEEP_POWDER
-	db 20, LEECH_SEED
-	db 25, COTTON_SPORE
-	db 30, MEGA_DRAIN
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, ABSORB
+	db  8, FAIRY_WIND
+	db 11, POISONPOWDER
+	db 11, STUN_SPORE
+	db 11, SLEEP_POWDER
+	db 14, BULLET_SEED
+	db 18, LEECH_SEED
+	db 22, MEGA_DRAIN
+	db 26, AIR_CUTTER
+	db 31, COTTON_SPORE
+	db 36, GROWTH
+	db 41, GIGA_DRAIN
+	db 46, RAZOR_WIND
+	db 51, BATON_PASS
+	db 56, PETAL_DANCE
+	db  0; no more level-up moves
 
 SkiploomEvosAttacks:
 	db EVOLVE_LEVEL, 27, JUMPLUFF
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 5, TAIL_WHIP
-	db 10, SYNTHESIS
-	db 13, POISONPOWDER
-	db 15, STUN_SPORE
-	db 17, SLEEP_POWDER
-	db 22, LEECH_SEED
-	db 29, COTTON_SPORE
-	db 36, MEGA_DRAIN
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, ABSORB
+	db  8, FAIRY_WIND
+	db 11, POISONPOWDER
+	db 11, STUN_SPORE
+	db 11, SLEEP_POWDER
+	db 14, BULLET_SEED
+	db 18, LEECH_SEED
+	db 22, MEGA_DRAIN
+	db 26, AIR_CUTTER
+	db 31, COTTON_SPORE
+	db 36, GROWTH
+	db 41, GIGA_DRAIN
+	db 46, RAZOR_WIND
+	db 51, BATON_PASS
+	db 56, PETAL_DANCE
+	db  0; no more level-up moves
 
 JumpluffEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 5, TAIL_WHIP
-	db 10, SYNTHESIS
-	db 13, POISONPOWDER
-	db 15, STUN_SPORE
-	db 17, SLEEP_POWDER
-	db 22, LEECH_SEED
-	db 33, COTTON_SPORE
-	db 44, MEGA_DRAIN
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, ABSORB
+	db  8, FAIRY_WIND
+	db 11, POISONPOWDER
+	db 11, STUN_SPORE
+	db 11, SLEEP_POWDER
+	db 14, BULLET_SEED
+	db 18, LEECH_SEED
+	db 22, MEGA_DRAIN
+	db 26, AIR_CUTTER
+	db 31, COTTON_SPORE
+	db 36, GROWTH
+	db 41, GIGA_DRAIN
+	db 46, RAZOR_WIND
+	db 51, BATON_PASS
+	db 56, PETAL_DANCE
+	db  0; no more level-up moves
 
 AipomEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, SCRATCH
-	db 1, TAIL_WHIP
-	db 6, SAND_ATTACK
-	db 12, BATON_PASS
-	db 19, FURY_SWIPES
-	db 27, SWIFT
-	db 36, SCREECH
-	db 46, AGILITY
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, SCRATCH
+	db  1, TAIL_WHIP
+	db  6, SAND_ATTACK
+	db 10, LICK
+	db 14, BATON_PASS
+	db 18, FURY_SWIPES
+	db 22, SWIFT
+	db 26, SCREECH
+	db 30, AGILITY
+	db 34, DOUBLESLAP
+	db 38, SLAM
+	db 42, SWORDS_DANCE
+	db 46, SUBMISSION
+	db  0; no more level-up moves
 
 SunkernEvosAttacks:
 	db EVOLVE_ITEM, SUN_STONE, SUNFLORA
