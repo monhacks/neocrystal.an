@@ -27,7 +27,7 @@ MoveDescriptions::
 	dw DoubleKickDescription
 	dw PrimalPlantDescription
 	dw JumpKickDescription
-	dw RollingKickDescription
+	dw BugBuzzDescription
 	dw SandAttackDescription
 	dw HeadbuttDescription
 	dw HornAttackDescription
@@ -371,9 +371,9 @@ JumpKickDescription:
 	db   "May miss, damaging"
 	next "the user.@"
 
-RollingKickDescription:
-	db   "A fast, spinning"
-	next "kick.@"
+BugBuzzDescription:
+	db   "Makes a loud,"
+	next "buzzing noise.@"
 
 SandAttackDescription:
 	db   "Reduces accuracy"

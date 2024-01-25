@@ -26,7 +26,7 @@ MoveNames::
 	li "DOUBLE KICK"
 	li "PRIMAL PLANT"
 	li "JUMP KICK"
-	li "ROLLING KICK"
+	li "BUG BUZZ"
 	li "SAND-ATTACK"
 	li "HEADBUTT"
 	li "HORN ATTACK"

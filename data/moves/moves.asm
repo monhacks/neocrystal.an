@@ -41,7 +41,7 @@ Moves:
 	move DOUBLE_KICK,  EFFECT_DOUBLE_HIT,         30, FIGHTING,     100, 30,   0, PHYSICAL ; ok, give to any kicker
 	move PRIMAL_PLANT, EFFECT_PRIMAL_PLANT,      100, GRASS,        100,  5, 100, MAX_STAT ; Meganium singature
 	move JUMP_KICK,    EFFECT_JUMP_KICK,         100, FIGHTING,      95, 10,   0, PHYSICAL ; ok
-	move ROLLING_KICK, EFFECT_FLINCH_HIT,         60, FIGHTING,      85, 15,  30, PHYSICAL ; replace, low kick covers this base
+	move BUG_BUZZ,     EFFECT_SP_DEF_DOWN_HIT,    90, BUG,          100, 10,  10, SPECIAL  ; ok
 	move SAND_ATTACK,  EFFECT_ACCURACY_DOWN,       0, GROUND,       100, 15,   0, STATUS   ; ok
 	move HEADBUTT,     EFFECT_FLINCH_HIT,         70, NORMAL,       100, 15,  30, PHYSICAL ; ok
 	move HORN_ATTACK,  EFFECT_NORMAL_HIT,         65, NORMAL,       100, 25,   0, PHYSICAL ; ok

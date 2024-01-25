@@ -1368,7 +1368,7 @@ HitmonleeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_KICK
 	db 6, MEDITATE
-	db 11, ROLLING_KICK
+	db 11, LOW_KICK
 	db 16, JUMP_KICK
 	db 21, FOCUS_ENERGY
 	db 26, HI_JUMP_KICK
@@ -2742,17 +2742,24 @@ SunfloraEvosAttacks:
 	db  0; no more level-up moves
 
 YanmaEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, FORESIGHT
-	db 7, QUICK_ATTACK
-	db 13, DOUBLE_TEAM
-	db 19, SONICBOOM
-	db 25, DETECT
-	db 31, SUPERSONIC
-	db 37, WING_ATTACK
-	db 43, SCREECH
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, FORESIGHT
+	db  6, QUICK_ATTACK
+	db 10, DOUBLE_TEAM
+	db 14, GUST
+	db 17, DETECT
+	db 21, SUPERSONIC
+	db 25, AIR_CUTTER
+	db 29, DOUBLE_TEAM
+	db 33, ANCIENTPOWER
+	db 37, HYPNOSIS
+	db 41, TWISTER
+	db 45, SCREECH
+	db 49, RAZOR_WIND
+	db 53, DRAGON_RAGE
+	db 57, BUG_BUZZ
+	db  0; no more level-up moves
 
 WooperEvosAttacks:
 	db EVOLVE_LEVEL, 20, QUAGSIRE
@@ -3286,7 +3293,7 @@ HitmontopEvosAttacks:
 	db 7, FOCUS_ENERGY
 	db 13, PURSUIT
 	db 19, QUICK_ATTACK
-	db 20, ROLLING_KICK
+	db 20, LOW_KICK
 	db 25, RAPID_SPIN
 	db 31, COUNTER
 	db 37, AGILITY
