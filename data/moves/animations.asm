@@ -2580,8 +2580,9 @@ BattleAnim_DrillPeck:
 
 BattleAnim_XScissor:
 	anim_1gfx ANIM_GFX_CUT
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
-	anim_sound 0, 1, SFX_VICEGRIP
+;	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
+;	anim_sound 0, 1, SFX_VICEGRIP
+	anim_sound 0, 1, SFX_CUT
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 156, 44, $0
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 152, 40, $0
 	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 148, 36, $0
