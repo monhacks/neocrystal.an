@@ -165,7 +165,7 @@ Kurt1:
 	setevent EVENT_GAVE_KURT_PNK_APRICORN
 	sjump .GaveKurtApricorns
 
-.GaveKurtApricorns:
+.GaveKurtApricorns: ; Make this an instant exchange
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	setflag ENGINE_KURT_MAKING_BALLS
 .WaitForApricorns:
