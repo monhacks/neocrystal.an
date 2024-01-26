@@ -1223,10 +1223,17 @@ String_MoveType_Top:
 	db "┌─────┐@"
 String_MoveType_Bottom:
 	db "│TYPE/└@"
+;	db "│"
+;	db moveTYPE
+;	db "/└@"
 String_MoveAtk:
 	db "ATK/@"
+;	db movePWR
+;	db "/@"
 String_MoveNoPower:
 	db "---@"
+;	db moveACC
+;	db "@"
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
