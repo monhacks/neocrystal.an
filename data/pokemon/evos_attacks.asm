@@ -2763,28 +2763,44 @@ YanmaEvosAttacks:
 
 WooperEvosAttacks:
 	db EVOLVE_LEVEL, 20, QUAGSIRE
-	db 0 ; no more evolutions
-	db 1, WATER_GUN
-	db 1, TAIL_WHIP
-	db 11, SLAM
-	db 21, AMNESIA
-	db 31, EARTHQUAKE
-	db 41, RAIN_DANCE
-	db 51, MIST
-	db 51, HAZE
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, TAIL_WHIP
+	db  6, WATER_GUN
+	db  9, MUD_SLAP
+	db 12, MIST
+	db 12, HAZE
+	db 15, SLAM
+	db 18, DEFENSE_CURL
+	db 22, BUBBLEBEAM
+	db 26, LOVELY_KISS
+	db 30, BULLDOZE
+	db 34, RAIN_DANCE
+	db 38, AMNESIA
+	db 42, HYDRO_PUMP
+	db 46, OCTAZOOKA
+	db 50, EARTHQUAKE
+	db  0; no more level-up moves
 
 QuagsireEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, WATER_GUN
-	db 1, TAIL_WHIP
-	db 11, SLAM
-	db 23, AMNESIA
-	db 35, EARTHQUAKE
-	db 47, RAIN_DANCE
-	db 59, MIST
-	db 59, HAZE
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, TAIL_WHIP
+	db  6, WATER_GUN
+	db  9, MUD_SLAP
+	db 12, MIST
+	db 12, HAZE
+	db 15, SLAM
+	db 18, DEFENSE_CURL
+	db 22, BUBBLEBEAM
+	db 26, LOVELY_KISS
+	db 30, BULLDOZE
+	db 34, RAIN_DANCE
+	db 38, AMNESIA
+	db 42, HYDRO_PUMP
+	db 46, OCTAZOOKA
+	db 50, EARTHQUAKE
+	db  0; no more level-up moves
 
 EspeonEvosAttacks:
 	db 0 ; no more evolutions

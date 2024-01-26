@@ -1,6 +1,6 @@
 	db QUAGSIRE ; 195
 
-	db  95,  85,  85,  35,  65,  65
+	db  95,  85,  85,  35,  65,  85 ; Increase BST from 430 to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, GROUND ; type
