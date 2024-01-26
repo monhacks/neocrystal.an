@@ -1,6 +1,8 @@
 	db MISDREAVUS ; 200
 
-	db  60,  60,  60,  85,  85,  85
+	db  60,  60,  70,  95,  95,  85 ; Increase BST from 435 to 465
+;	db  60,  60,  60, 105, 105, 105 Mismagius
+;	db  60,  60,  60,  85,  85,  85 Misdreavus
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, GHOST ; type

@@ -2831,14 +2831,21 @@ UmbreonEvosAttacks:
 	db 0 ; no more level-up moves
 
 MurkrowEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, PECK
-	db 11, PURSUIT
-	db 16, HAZE
-	db 26, NIGHT_SHADE
-	db 31, FAINT_ATTACK
-	db 41, MEAN_LOOK
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, PECK
+	db  5, GUST
+	db  9, HAZE
+	db 13, WING_ATTACK
+	db 17, NIGHT_SHADE
+	db 21, AIR_CUTTER
+	db 25, FAINT_ATTACK
+	db 29, MEAN_LOOK
+	db 33, AGILITY
+	db 37, THIEF
+	db 41, RAZOR_WIND
+	db 45, SWORDS_DANCE
+	db 49, EXTREMESPEED
+	db  0; no more level-up moves
 
 SlowkingEvosAttacks:
 	db 0 ; no more evolutions
@@ -2854,16 +2861,20 @@ SlowkingEvosAttacks:
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, GROWL
-	db 1, PSYWAVE
-	db 6, SPITE
-	db 12, CONFUSE_RAY
-	db 19, MEAN_LOOK
-	db 27, PSYBEAM
-	db 36, PAIN_SPLIT
-	db 46, PERISH_SONG
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, GROWL
+	db  1, CONFUSION
+	db 10, LICK
+	db 14, CONFUSE_RAY
+	db 18, MEAN_LOOK
+	db 26, NIGHT_SHADE
+	db 30, PSYBEAM
+	db 34, ICE_WIND
+	db 38, FAINT_ATTACK
+	db 42, PAIN_SPLIT
+	db 46, SHADOW_BALL
+	db 50, PERISH_SONG
+	db  0; no more level-up moves
 
 UnownEvosAttacks:
 	db 0 ; no more evolutions
