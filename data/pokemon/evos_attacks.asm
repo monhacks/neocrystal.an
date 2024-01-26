@@ -2877,9 +2877,14 @@ MisdreavusEvosAttacks:
 	db  0; no more level-up moves
 
 UnownEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, HIDDEN_POWER
-	db 0 ; no more level-up moves
+	db  0; no more evolutions
+	db  1, HIDDEN_POWER
+	db 15, CONFUSION
+	db 25, ANCIENTPOWER
+	db 35, TRI_ATTACK
+	db 45, PSYCHIC_M
+	db 55, HYPER_BEAM
+	db  0; no more level-up moves
 
 WobbuffetEvosAttacks:
 	db 0 ; no more evolutions
@@ -2890,17 +2895,21 @@ WobbuffetEvosAttacks:
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, TACKLE
-	db 1, GROWL
-	db 1, CONFUSION
-	db 1, STOMP
-	db 7, CONFUSION
-	db 13, STOMP
-	db 20, AGILITY
-	db 30, BATON_PASS
-	db 41, PSYBEAM
-	db 54, CRUNCH
+	db  0; no more evolutions
+	db  1, TACKLE
+	db  1, GROWL
+	db  7, CONFUSION
+	db 11, STOMP
+	db 15, MEDITATE
+	db 19, PSYBEAM
+	db 23, AGILITY
+	db 27, DOUBLE_KICK
+	db 31, FAINT_ATTACK
+	db 35, CRUNCH
+	db 39, BATON_PASS
+	db 43, DRAGONBREATH
+	db 47, DETECT
+	db 51, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 PinecoEvosAttacks:
