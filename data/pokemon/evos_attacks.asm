@@ -3035,7 +3035,7 @@ ShuckleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONSTRICT
 	db 1, WITHDRAW
-	db 9, WRAP
+	db 9, BIND
 	db 14, ENCORE
 	db 23, SAFEGUARD
 	db 28, BIDE
