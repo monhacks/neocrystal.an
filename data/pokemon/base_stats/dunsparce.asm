@@ -1,6 +1,8 @@
 	db DUNSPARCE ; 206
 
-	db 100,  70,  70,  45,  65,  65
+	db 113,  85,  72,  55,  70,  70 ;465 Average Stats up from 415
+;	db 125, 100,  80,  55,  85,  75 ;520 Dudunsparce
+;	db 100,  70,  70,  45,  65,  65 ;415 Dunsparce
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
