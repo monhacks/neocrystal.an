@@ -1967,50 +1967,8 @@ MewEvosAttacks:
 
 ChikoritaEvosAttacks:
 	db EVOLVE_LEVEL, 16, BAYLEEF
-	db  0; no more evolutions
-	db  1, TACKLE
-	db  1, GROWL
-	db  6, VINE_WHIP
-	db  9, SWEET_SCENT
-	db 12, LEECH_SEED
-	db 15, BIND
-	db 19, RAZOR_LEAF
-	db 23, REFLECT
-	db 23, LIGHT_SCREEN
-	db 27, CONSTRICT
-	db 31, BODY_SLAM
-	db 35, SYNTHESIS
-	db 40, GROWTH
-	db 45, ANCIENTPOWER
-	db 50, SAFEGUARD
-	db 55, PETAL_DANCE
-	db 60, SOLARBEAM
-	db 65, PRIMAL_PLANT
-	db  0; no more level-up moves
-
 BayleefEvosAttacks:
 	db EVOLVE_LEVEL, 32, MEGANIUM
-	db  0; no more evolutions
-	db  1, TACKLE
-	db  1, GROWL
-	db  6, VINE_WHIP
-	db  9, SWEET_SCENT
-	db 12, LEECH_SEED
-	db 15, BIND
-	db 19, RAZOR_LEAF
-	db 23, REFLECT
-	db 23, LIGHT_SCREEN
-	db 27, CONSTRICT
-	db 31, BODY_SLAM
-	db 35, SYNTHESIS
-	db 40, GROWTH
-	db 45, ANCIENTPOWER
-	db 50, SAFEGUARD
-	db 55, PETAL_DANCE
-	db 60, SOLARBEAM
-	db 65, PRIMAL_PLANT
-	db  0; no more level-up moves
-
 MeganiumEvosAttacks:
 	db  0; no more evolutions
 	db  1, TACKLE
@@ -2035,50 +1993,8 @@ MeganiumEvosAttacks:
 
 CyndaquilEvosAttacks:
 	db EVOLVE_LEVEL, 14, QUILAVA
-	db  0; no more evolutions
-	db  1, TACKLE
-	db  1, LEER
-	db  6, EMBER
-	db  9, SMOKESCREEN
-	db 12, QUICK_ATTACK
-	db 16, FIRE_SPIN
-	db 20, FLAME_WHEEL
-	db 24, DEFENSE_CURL
-	db 24, ROLLOUT
-	db 28, HAZE
-	db 32, SWIFT
-	db 34, FLAMETHROWER
-	db 39, SUNNY_DAY
-	db 44, FIRE_PUNCH
-	db 49, THUNDERPUNCH
-	db 54, BULLDOZE
-	db 59, FIRE_BLAST
-	db 64, ERUPTION
-	db  0; no more level-up moves
-
 QuilavaEvosAttacks:
 	db EVOLVE_LEVEL, 36, TYPHLOSION
-	db  0; no more evolutions
-	db  1, TACKLE
-	db  1, LEER
-	db  6, EMBER
-	db  9, SMOKESCREEN
-	db 12, QUICK_ATTACK
-	db 16, FIRE_SPIN
-	db 20, FLAME_WHEEL
-	db 24, DEFENSE_CURL
-	db 24, ROLLOUT
-	db 28, HAZE
-	db 32, SWIFT
-	db 34, FLAMETHROWER
-	db 39, SUNNY_DAY
-	db 44, FIRE_PUNCH
-	db 49, THUNDERPUNCH
-	db 54, BULLDOZE
-	db 59, FIRE_BLAST
-	db 64, ERUPTION
-	db  0; no more level-up moves
-
 TyphlosionEvosAttacks:
 	db  0; no more evolutions
 	db  1, TACKLE
@@ -2103,50 +2019,8 @@ TyphlosionEvosAttacks:
 
 TotodileEvosAttacks:
 	db EVOLVE_LEVEL, 18, CROCONAW
-	db  0; no more evolutions
-	db  1, SCRATCH
-	db  1, LEER
-	db  6, WATER_GUN
-	db  9, RAGE
-	db 12, BITE
-	db 16, CLAMP
-	db 19, FLAIL
-	db 23, MEDITATE
-	db 27, SCARY_FACE
-	db 30, SLASH
-	db 35, SCREECH
-	db 35, SWORDS_DANCE
-	db 40, CRUNCH
-	db 45, ICE_PUNCH
-	db 50, DRAGON_DANCE
-	db 55, THRASH
-	db 60, HYDRO_PUMP
-	db 65, CROC_CHOMP
-	db  0; no more level-up moves
-	
 CroconawEvosAttacks:
 	db EVOLVE_LEVEL, 30, FERALIGATR
-	db  0; no more evolutions
-	db  1, SCRATCH
-	db  1, LEER
-	db  6, WATER_GUN
-	db  9, RAGE
-	db 12, BITE
-	db 16, CLAMP
-	db 19, FLAIL
-	db 23, MEDITATE
-	db 27, SCARY_FACE
-	db 30, SLASH
-	db 35, SCREECH
-	db 35, SWORDS_DANCE
-	db 40, CRUNCH
-	db 45, ICE_PUNCH
-	db 50, DRAGON_DANCE
-	db 55, THRASH
-	db 60, HYDRO_PUMP
-	db 65, CROC_CHOMP
-	db  0; no more level-up moves
-
 FeraligatrEvosAttacks:
 	db  0; no more evolutions
 	db  1, SCRATCH
@@ -2171,22 +2045,6 @@ FeraligatrEvosAttacks:
 
 SentretEvosAttacks:
 	db EVOLVE_LEVEL, 15, FURRET
-	db  0; no more evolutions
-	db  1, TACKLE
-	db  4, DEFENSE_CURL
-	db  7, QUICK_ATTACK
-	db 10, FURY_SWIPES
-	db 13, FLAIL
-	db 17, MEDITATE
-	db 21, SLAM
-	db 25, REST
-	db 29, TAKE_DOWN
-	db 33, AMNESIA
-	db 37, BATON_PASS
-	db 41, DOUBLE_EDGE
-	db 45, PLAY_ROUGH
-	db  0; no more level-up moves
-
 FurretEvosAttacks:
 	db  0; no more evolutions
 	db  1, TACKLE
@@ -2206,25 +2064,6 @@ FurretEvosAttacks:
 
 HoothootEvosAttacks:
 	db EVOLVE_LEVEL, 20, NOCTOWL
-	db  0 ; no more evolutions
-	db  1, TACKLE
-	db  1, GROWL
-	db  3, PECK
-	db  6, FORESIGHT
-	db  9, GUST
-	db 12, CONFUSION
-	db 15, REFLECT
-	db 18, AIR_CUTTER
-	db 22, HYPNOSIS
-	db 26, PSYBEAM
-	db 30, DREAM_EATER
-	db 34, LIGHT_SCREEN
-	db 38, CONFUSE_RAY
-	db 42, PSYCHIC_M
-	db 46, RAZOR_WIND
-	db 50, MOONBLAST
-	db  0; no more level-up moves
-
 NoctowlEvosAttacks:
 	db  0 ; no more evolutions
 	db  1, TACKLE
