@@ -1,6 +1,8 @@
 	db PUPITAR ; 247
 
-	db  70,  84,  70,  51,  65,  70
+	db  80,  94,  80,  51,  65,  80; 450 Increased stats
+;	db 100, 134, 110,  61,  95, 100; 600 Tyranitar
+;   db  70,  84,  70,  51,  65,  70; 410 Pupitar
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, GROUND ; type
