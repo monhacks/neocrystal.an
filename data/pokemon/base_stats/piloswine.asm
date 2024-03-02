@@ -1,6 +1,8 @@
 	db PILOSWINE ; 221
 
-	db 100, 100,  80,  50,  60,  60
+	db 110, 110,  80,  60,  70,  60; 490 Average
+;	db 110, 130,  80,  80,  70,  60; 530 Mammoswine
+;	db 100, 100,  80,  50,  60,  60; 450 Piloswine
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, GROUND ; type

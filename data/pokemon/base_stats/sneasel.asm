@@ -1,6 +1,8 @@
 	db SNEASEL ; 215
 
-	db  55,  95,  55, 115,  35,  75
+	db  60, 110,  60, 120,  40,  80; 470 Average
+;	db  70, 120,  65, 125,  45,  85; 510 Weavile
+;	db  55,  95,  55, 115,  35,  75; 430 Sneasel
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, ICE ; type
