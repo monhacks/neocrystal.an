@@ -1,6 +1,6 @@
 	db DUGTRIO ; 051
 
-	db  35,  80,  50, 120,  50,  70
+	db  60,  80,  50, 120,  50,  70 ; Increase BST from 425 to 250
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, GROUND ; type

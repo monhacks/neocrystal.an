@@ -1,6 +1,6 @@
 	db PARASECT ; 047
 
-	db  60,  95,  80,  30,  60,  80
+	db  60,  95,  80,  60,  75,  80; Increase from 405 to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, GHOST ; type
