@@ -1,6 +1,8 @@
 	db STEELIX ; 208
 
-	db  75,  85, 200,  30,  55,  65
+	db  75,  85, 175,  30,  55,  90 ; New Stats, even out Def and SpDef a little
+;	db  75,  85, 200,  30,  55,  65 ; Base
+;	db  35,  65, 110,  70,  30,  75 ; Onix new BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, GROUND ; type

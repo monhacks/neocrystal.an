@@ -1,6 +1,6 @@
 	db MAROWAK ; 105
 
-	db  60,  80, 110,  45,  50,  80
+	db  70,  80, 110,  60,  50,  80 ; Increase BST from 425 to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, GROUND ; type

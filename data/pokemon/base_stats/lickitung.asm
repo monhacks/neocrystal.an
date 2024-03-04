@@ -1,6 +1,8 @@
 	db LICKITUNG ; 108
 
-	db  90,  55,  75,  30,  60,  75
+	db 100,  70,  85,  40,  70,  85; Average 450
+;	db 110,  85,  95,  50,  80,  95; 515 Lickylicky
+;	db  90,  55,  75,  30,  60,  75; 385 Lickitung
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type

@@ -1,7 +1,7 @@
 	db ONIX ; 095
 
-	db  35,  45, 160,  70,  30,  45
-	;   hp  atk  def  spd  sat  sdf
+	db  35,  65, 110,  70,  30,  75 ; Distribute base stats
+	;   hp  atk  def  spd  sat  sdf ; Base
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate
