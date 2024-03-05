@@ -157,7 +157,7 @@ Moves:
 	move BULLET_SEED,  EFFECT_MULTI_HIT,          20, GRASS,        100, 15,   0, PHYSICAL ; ok
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          55, BUG,          100, 10,   0, PHYSICAL ; ok
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        75, 10,   0, STATUS   ; ok
-	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        90,  5,   0, PHYSICAL ; replace
+	move SKY_ATTACK,   EFFECT_RECOIL_HIT,        120, FLYING,       100, 15,   0, PHYSICAL ; ok
 	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,       100, 10,   0, STATUS   ; ok
 	move BUBBLE,       EFFECT_SPEED_DOWN_HIT,     40, WATER,        100, 30,  10, SPECIAL  ; ok
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        70, NORMAL,       100, 10,  20, PHYSICAL ; ok
@@ -292,3 +292,5 @@ Moves:
 ;	move ENERGY_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GRASS,        100, 10,  10, SPECIAL  ;
 ;	move FOCUS_BLAST,  EFFECT_NORMAL_HIT,        110, FIGHTING,      80,  5,   0, SPECIAL  ;
 ;	move SEED_BOMB,    EFFECT_NORMAL_HIT,         80, GRASS,        100, 10,   0, PHYSICAL ;
+;	move PSYSTRIKE,    EFFECT_NORMAL_HIT,        100, PSYCHIC_TYPE, 100, 10,   0, STATUS   ;
+;	move COSMIC_POWER, EFFECT_DEF_SP_DEF_UP,       0, PSYCHIC_TYPE, 100, 10,   0, STATUS   ;
