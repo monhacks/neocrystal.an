@@ -1,6 +1,8 @@
 	db MAGNETON ; 082
 
-	db  50,  60,  95,  70, 120,  70
+	db  60,  65, 100,  70, 125,  80; 500 Average
+;	db  70,  70, 115,  60, 130,  90; 535 Magnezone
+;	db  50,  60,  95,  70, 120,  70; 465 Magneton
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, STEEL ; type
@@ -9,7 +11,7 @@
 	db NO_ITEM, METAL_COAT ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/magneton/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

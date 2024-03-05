@@ -1,7 +1,7 @@
 	db AZUMARILL ; 184
 
-	db 100,  50,  80,  50,  60,  80
-	;   hp  atk  def  spd  sat  sdf
+	db 100, 100,  80,  50,  40,  80 ; Increased BST from 420 to 450
+	;   hp  atk  def  spd  sat  sdf ; specifically to mimic HUGE POWER
 
 	db WATER, FAIRY ; type
 	db 75 ; catch rate
@@ -9,7 +9,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/azumarill/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

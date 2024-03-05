@@ -4,15 +4,15 @@ MoveDescriptions::
 	dw PoundDescription
 	dw KarateChopDescription
 	dw DoubleslapDescription
-	dw CometPunchDescription
-	dw MegaPunchDescription
+	dw DragonDanceDescription
+	dw EruptionDescription
 	dw PayDayDescription
 	dw FirePunchDescription
 	dw IcePunchDescription
 	dw ThunderpunchDescription
 	dw ScratchDescription
-	dw VicegripDescription
-	dw GuillotineDescription
+	dw AirCutterDescription
+	dw XScissorDescription
 	dw RazorWindDescription
 	dw SwordsDanceDescription
 	dw CutDescription
@@ -25,14 +25,14 @@ MoveDescriptions::
 	dw VineWhipDescription
 	dw StompDescription
 	dw DoubleKickDescription
-	dw MegaKickDescription
+	dw PrimalPlantDescription
 	dw JumpKickDescription
-	dw RollingKickDescription
+	dw BugBuzzDescription
 	dw SandAttackDescription
 	dw HeadbuttDescription
 	dw HornAttackDescription
 	dw FuryAttackDescription
-	dw HornDrillDescription
+	dw GigaImpactDescription
 	dw TackleDescription
 	dw BodySlamDescription
 	dw WrapDescription
@@ -140,7 +140,7 @@ MoveDescriptions::
 	dw GlareDescription
 	dw DreamEaterDescription
 	dw PoisonGasDescription
-	dw BarrageDescription
+	dw BulletSeedDescription
 	dw LeechLifeDescription
 	dw LovelyKissDescription
 	dw SkyAttackDescription
@@ -198,7 +198,7 @@ MoveDescriptions::
 	dw PerishSongDescription
 	dw IcyWindDescription
 	dw DetectDescription
-	dw BoneRushDescription
+	dw BulldozeDescription
 	dw LockOnDescription
 	dw OutrageDescription
 	dw SandstormDescription
@@ -251,7 +251,7 @@ MoveDescriptions::
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw BeatUpDescription
+	dw CrocChompDescription
 	dw MoonBlastDescription
 	dw PlayRoughDescription
 	dw FairyWindDescription
@@ -279,13 +279,13 @@ DoubleslapDescription:
 	db   "Repeatedly slaps"
 	next "2-5 times.@"
 
-CometPunchDescription:
-	db   "Repeatedly punches"
-	next "2-5 times.@"
+DragonDanceDescription:
+	db   "A dance to raise"
+	next "ATTACK and SPEED.@"
 
-MegaPunchDescription:
-	db   "A powerful punch"
-	next "thrown very hard.@"
+EruptionDescription:
+	db   "Releases an erup-"
+	next "tion of flame.@"
 
 PayDayDescription:
 	db   "Throws coins. Gets"
@@ -307,17 +307,17 @@ ScratchDescription:
 	db   "Scratches with"
 	next "sharp claws.@"
 
-VicegripDescription:
-	db   "Grips with power-"
-	next "ful pincers.@"
+AirCutterDescription:
+	db   "Whips up a sharp,"
+	next "cutting wind.@"
 
-GuillotineDescription:
-	db   "A one-hit KO,"
-	next "pincer attack.@"
+XScissorDescription:
+	db   "A chop attack"
+	next "with pincers.@"
 
 RazorWindDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "Create a powerful"
+	next "slashing wind.@"
 
 SwordsDanceDescription:
 	db   "A dance that in-"
@@ -363,17 +363,17 @@ DoubleKickDescription:
 	db   "A double kicking"
 	next "attack.@"
 
-MegaKickDescription:
-	db   "A powerful kicking"
-	next "attack.@"
+PrimalPlantDescription:
+	db   "A powerful attack"
+	next "that raises stats.@"
 
 JumpKickDescription:
 	db   "May miss, damaging"
 	next "the user.@"
 
-RollingKickDescription:
-	db   "A fast, spinning"
-	next "kick.@"
+BugBuzzDescription:
+	db   "Makes a loud,"
+	next "buzzing noise.@"
 
 SandAttackDescription:
 	db   "Reduces accuracy"
@@ -391,9 +391,9 @@ FuryAttackDescription:
 	db   "Jabs the target"
 	next "2-5 times.@"
 
-HornDrillDescription:
-	db   "A one-hit KO,"
-	next "drill attack.@"
+GigaImpactDescription:
+	db   "1st turn: Attack"
+	next "2nd turn: Rest@"
 
 TackleDescription:
 	db   "A full-body charge"
@@ -592,8 +592,8 @@ StringShotDescription:
 	next "the foe's SPEED.@"
 
 DragonRageDescription:
-	db   "Always inflicts"
-	next "40HP damage.@"
+	db   "A powerful slam"
+	next "with dragonfire.@"
 
 FireSpinDescription:
 	db   "Traps foe in fire"
@@ -649,7 +649,7 @@ HypnosisDescription:
 
 MeditateDescription:
 	db   "Raises the user's"
-	next "ATTACK.@"
+	next "PHYSICAL stats.@"
 
 AgilityDescription:
 	db   "Sharply increases"
@@ -823,9 +823,9 @@ PoisonGasDescription:
 	db   "A move that may"
 	next "poison the foe.@"
 
-BarrageDescription:
-	db   "Throws orbs to hit"
-	next "2-5 times.@"
+BulletSeedDescription:
+	db   "Launches seeds to "
+	next "hit 2-5 times.@"
 
 LeechLifeDescription:
 	db   "Steals 1/2 of the"
@@ -1055,9 +1055,9 @@ DetectDescription:
 	db   "Evades attack that"
 	next "turn. It may fail.@"
 
-BoneRushDescription:
-	db   "An attack that"
-	next "hits 2-5 times.@"
+BulldozeDescription:
+	db   "Shakes ground"
+	next "to lower speed.@"
 
 LockOnDescription:
 	db   "Ensures the next"
@@ -1267,9 +1267,9 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
+CrocChompDescription:
+	db   "Chomps enemy and"
+	next "thrashes about.@"
 
 MoonBlastDescription:
 	db   "Attacks with at"

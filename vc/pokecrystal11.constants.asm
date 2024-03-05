@@ -32,7 +32,7 @@ ENDM
 ; [FPA 005 Begin]
 	vc_const EXPLOSION
 ; [FPA 006 Begin]
-	vc_const HORN_DRILL
+	vc_const GIGA_IMPACT
 ; [FPA 007 Begin]
 	vc_const HYPER_BEAM
 

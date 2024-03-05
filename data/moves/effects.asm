@@ -1760,10 +1760,11 @@ RapidSpin:
 	criticaltext
 	supereffectivetext
 	clearhazards
-	speedup
 	checkfaint
 	buildopponentrage
 	kingsrock
+	speedup
+	statupmessage
 	endmove
 
 MorningSun:
@@ -2075,4 +2076,79 @@ DefenseCurl:
 	raisesub
 	statupmessage
 	statupfailtext
+	endmove
+
+AttackUpSpeedUp:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	speedup
+	lowersub
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+AttackUpDefenseUp:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	defenseup
+	lowersub
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+DefenseUp2SpeedDown:
+	checkobedience
+	usedmovetext
+	doturn
+	defenseup2
+	lowersub
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
+	speeddown
+	lowersub
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+PrimalPlant:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	attackup
+	statupmessage
+	specialattackup
+	statupmessage
 	endmove

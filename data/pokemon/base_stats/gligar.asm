@@ -1,6 +1,8 @@
 	db GLIGAR ; 207
 
-	db  65,  75, 105,  85,  35,  65
+	db  70,  85, 115,  90,  40,  70; 470 Average
+;	db  75,  95, 125,  95,  45,  75; 510 Gliscor
+;	db  65,  75, 105,  85,  35,  65; 430 Gligar
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, FLYING ; type
@@ -9,7 +11,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/gligar/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

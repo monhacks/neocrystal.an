@@ -1,6 +1,6 @@
 	db FEAROW ; 022
 
-	db  65,  90,  65, 100,  61,  61
+	db  65,  90,  65, 100,  65,  65; Increase from 442 to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type
@@ -9,7 +9,7 @@
 	db NO_ITEM, SHARP_BEAK ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 15 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/fearow/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

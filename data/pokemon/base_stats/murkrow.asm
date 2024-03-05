@@ -1,6 +1,8 @@
 	db MURKROW ; 198
 
-	db  60,  85,  42,  91,  85,  42
+	db  65,  95,  52,  91,  95,  52 ; Increase BST from 405 to 450
+;	db 100, 125,  52,  71, 105,  52 Honchkrow
+;	db  60,  85,  42,  91,  85,  42 Murkrow
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, FLYING ; type
@@ -9,7 +11,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/murkrow/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

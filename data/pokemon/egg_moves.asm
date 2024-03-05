@@ -17,7 +17,6 @@ BulbasaurEggMoves:
 	db LIGHT_SCREEN
 	db SKULL_BASH
 	db SAFEGUARD
-	db RAZOR_WIND
 	db PETAL_DANCE
 	db -1 ; end
 
@@ -27,7 +26,6 @@ CharmanderEggMoves:
 	db ROCK_SLIDE
 	db BITE
 	db OUTRAGE
-	db BEAT_UP
 	db -1 ; end
 
 SquirtleEggMoves:
@@ -66,7 +64,6 @@ EkansEggMoves:
 	db PURSUIT
 	db SLAM
 	db SPITE
-	db BEAT_UP
 	db CRUNCH
 	db -1 ; end
 
@@ -85,7 +82,6 @@ NidoranFEggMoves:
 	db FOCUS_ENERGY
 	db CHARM
 	db COUNTER
-	db BEAT_UP
 	db -1 ; end
 
 NidoranMEggMoves:
@@ -95,7 +91,6 @@ NidoranMEggMoves:
 	db CONFUSION
 	db AMNESIA
 	db COUNTER
-	db BEAT_UP
 	db -1 ; end
 
 VulpixEggMoves:
@@ -142,7 +137,6 @@ DiglettEggMoves:
 	db SCREECH
 	db ANCIENTPOWER
 	db PURSUIT
-	db BEAT_UP
 	db -1 ; end
 
 MeowthEggMoves:
@@ -169,7 +163,6 @@ MankeyEggMoves:
 	db MEDITATE
 	db COUNTER
 	db REVERSAL
-	db BEAT_UP
 	db -1 ; end
 
 GrowlitheEggMoves:
@@ -197,7 +190,6 @@ AbraEggMoves:
 MachopEggMoves:
 	db LIGHT_SCREEN
 	db MEDITATE
-	db ROLLING_KICK
 	db ENCORE
 	db -1 ; end
 
@@ -218,7 +210,7 @@ TentacoolEggMoves:
 	db -1 ; end
 
 GeodudeEggMoves:
-	db MEGA_PUNCH
+	db SLAM
 	db ROCK_SLIDE
 	db -1 ; end
 
@@ -266,6 +258,7 @@ SeelEggMoves:
 GrimerEggMoves:
 	db HAZE
 	db MEAN_LOOK
+	db KARATE_CHOP
 	db LICK
 	db -1 ; end
 
@@ -291,6 +284,7 @@ OnixEggMoves:
 DrowzeeEggMoves:
 	db LIGHT_SCREEN
 	db BARRIER
+	db KARATE_CHOP
 	db -1 ; end
 
 KrabbyEggMoves:
@@ -466,7 +460,6 @@ TotodileEggMoves:
 	db SUBMISSION
 	db HYDRO_PUMP
 	db ANCIENTPOWER
-	db RAZOR_WIND
 	db ROCK_SLIDE
 	db -1 ; end
 
@@ -588,7 +581,6 @@ AipomEggMoves:
 	db SPITE
 	db SLAM
 	db DOUBLESLAP
-	db BEAT_UP
 	db -1 ; end
 
 YanmaEggMoves:
@@ -622,7 +614,6 @@ GirafarigEggMoves:
 	db AMNESIA
 	db FORESIGHT
 	db FUTURE_SIGHT
-	db BEAT_UP
 	db -1 ; end
 
 PinecoEggMoves:
@@ -749,7 +740,6 @@ HoundourEggMoves:
 	db COUNTER
 	db SPITE
 	db REVERSAL
-	db BEAT_UP
 	db -1 ; end
 
 PhanpyEggMoves:
@@ -781,14 +771,13 @@ SmoochumEggMoves:
 ElekidEggMoves:
 	db KARATE_CHOP
 	db BARRIER
-	db ROLLING_KICK
 	db MEDITATE
 	db CROSS_CHOP
 	db -1 ; end
 
 MagbyEggMoves:
 	db KARATE_CHOP
-	db MEGA_PUNCH
+	db SLAM
 	db BARRIER
 	db SCREECH
 	db CROSS_CHOP

@@ -1,6 +1,6 @@
 	db TOGETIC ; 176
 
-	db  55,  40,  85,  40,  80, 105
+	db  70,  45,  90,  60,  98, 112 ; Increase BST from 405 to 475
 	;   hp  atk  def  spd  sat  sdf
 
 	db FAIRY, FLYING ; type
@@ -9,7 +9,7 @@
 	db NO_ITEM, MAGIC_WAND ; items
 	db GENDER_F12_5 ; gender ratio
 	db 100 ; unknown 1
-	db 10 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/togetic/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

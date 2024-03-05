@@ -32,6 +32,8 @@ VioletPokecenter1F_ElmsAideScript:
 	clearevent EVENT_TOGEPI_HATCHED
 	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	writetext VioletPokecenterElmsAideGiveEggText
+	verbosegiveitem EXP_SHARE
+	iffalse .full
 	waitbutton
 	closetext
 	readvar VAR_FACING
@@ -50,6 +52,10 @@ VioletPokecenter1F_ElmsAideScript:
 	playsound SFX_EXIT_BUILDING
 	disappear VIOLETPOKECENTER1F_ELMS_AIDE
 	waitsfx
+	end
+
+.full
+	closetext
 	end
 
 .eggname

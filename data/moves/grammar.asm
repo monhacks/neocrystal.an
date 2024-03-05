@@ -49,7 +49,7 @@ MoveGrammar:
 	db AGILITY
 	db MIMIC
 	db DOUBLE_TEAM
-	db BARRAGE
+	db BULLET_SEED
 	db TRANSFORM
 	db STRUGGLE
 	db SCARY_FACE
@@ -58,7 +58,6 @@ MoveGrammar:
 ; 3: originally "[mon]の¯[move]　こうげき!" ("[mon]'s¯[move] attack!")
 	db POUND
 	db SCRATCH
-	db VICEGRIP
 	db WING_ATTACK
 	db FLY
 	db BIND

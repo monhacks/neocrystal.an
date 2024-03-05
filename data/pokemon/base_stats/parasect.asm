@@ -1,15 +1,15 @@
 	db PARASECT ; 047
 
-	db  60,  95,  80,  30,  60,  80
+	db  60,  95,  80,  60,  75,  80; Increase from 405 to 450
 	;   hp  atk  def  spd  sat  sdf
 
-	db BUG, GRASS ; type
+	db BUG, GHOST ; type
 	db 75 ; catch rate
 	db 128 ; base exp
 	db TINYMUSHROOM, BIG_MUSHROOM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/parasect/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

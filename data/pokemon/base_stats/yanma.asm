@@ -1,6 +1,8 @@
 	db YANMA ; 193
 
-	db  65,  65,  45,  95,  75,  45
+	db  75,  75,  55,  95,  95,  55 ; Increase BST from 390 to 450
+;	db  86,  76,  86,  95, 116,  56 Yanmega 515
+;	db  65,  65,  45,  95,  75,  45 Yanma
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type
@@ -9,7 +11,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/yanma/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

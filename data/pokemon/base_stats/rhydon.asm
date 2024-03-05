@@ -1,6 +1,8 @@
 	db RHYDON ; 112
 
-	db 105, 130, 120,  40,  45,  45
+	db 110, 135, 125,  40,  50,  50; 510 Average
+;	db 115, 140, 130,  40,  55,  55; 535 Rhyperior
+;	db 105, 130, 120,  40,  45,  45; 485 Rhydon
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, ROCK ; type
@@ -9,7 +11,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/rhydon/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

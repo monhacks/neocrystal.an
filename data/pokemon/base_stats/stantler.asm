@@ -1,6 +1,8 @@
 	db STANTLER ; 234
 
-	db  73,  95,  62,  85,  85,  65
+	db  80,  95,  70,  85,  95,  70; 495 Average
+;	db 103, 105,  72,  65, 105,  75; 525 Wyrdeer
+;	db  73,  95,  62,  85,  85,  65; 465 Stantler
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
@@ -9,7 +11,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1
-	db 20 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/stantler/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

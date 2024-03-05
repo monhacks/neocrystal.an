@@ -30,6 +30,7 @@ NUM_TYPES EQU const_value
 	const PHYSICAL
 	const SPECIAL
 	const STATUS
+    const MAX_STAT
 NUM_MOVE_CATEGORIES EQU const_value
 
 POKEDEX_TYPE_STRING_LENGTH EQU 9

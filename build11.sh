@@ -6,7 +6,7 @@ echo "#            RUNNING CLEAN             #"
 echo "########################################"
 make clean
 echo "########################################"
-echo "#         BUILDING CRYSTAL 1.0         #"
+echo "#         BUILDING CRYSTAL 1.1         #"
 echo "########################################"
-make crystal
-mv pokecrystal.gbc Crystal_$timestamp.gbc
+make crystal11
+mv pokecrystal11.gbc Crystal11_$timestamp.gbc

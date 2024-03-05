@@ -1,6 +1,6 @@
 	db MOLTRES ; 146
 
-	db  90, 100,  90,  90, 125,  85
+	db  90, 110,  90,  90, 115,  85; Even out Attack and Sp. Atk
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FLYING ; type
@@ -9,7 +9,7 @@
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 100 ; unknown 1
-	db 80 ; step cycles to hatch
+	db 1; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/moltres/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)

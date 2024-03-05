@@ -81,7 +81,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 15 ; DVs
 	db 30, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -108,7 +108,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 30, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -134,7 +134,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 30, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -160,7 +160,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 30, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -186,7 +186,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 30, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -213,7 +213,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 30, 20, 10, 15 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -242,7 +242,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 15 ; DVs
 	db 35, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -269,7 +269,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 35, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -295,7 +295,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 35, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -321,7 +321,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 35, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -347,7 +347,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 35, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -374,7 +374,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 35, 20, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -403,7 +403,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 15 ; DVs
 	db 15, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -430,7 +430,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 15, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -456,7 +456,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 15, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -482,7 +482,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 15, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -508,7 +508,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 15, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -535,7 +535,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 15, 20, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -564,7 +564,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 15 ; DVs
 	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -591,7 +591,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -617,7 +617,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -643,7 +643,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -669,7 +669,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -696,7 +696,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 35, 30, 10, 10 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -726,7 +726,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 20 ; DVs
 	db 25, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -753,7 +753,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 25, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -779,7 +779,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 25, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -805,7 +805,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 25, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -831,7 +831,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 25, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -858,7 +858,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 25, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -888,7 +888,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 15 ; DVs
 	db 30, 30, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -915,7 +915,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 30, 30, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -941,7 +941,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 30, 30, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -967,7 +967,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 30, 30, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -993,7 +993,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 30, 30, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1020,7 +1020,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 30, 30, 10, 20 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1050,7 +1050,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 15, 15, 15 ; DVs
 	db 35, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1077,7 +1077,7 @@ OddEggs:
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
 	db 35, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1103,7 +1103,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 15, 10, 10 ; DVs
 	db 35, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1129,7 +1129,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 15, 10 ; DVs
 	db 35, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1155,7 +1155,7 @@ OddEggs:
 	bigdw 0
 	dn 10, 10, 10, 15 ; DVs
 	db 35, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
@@ -1182,7 +1182,7 @@ OddEggs:
 	bigdw 0
 	dn 12, 12, 12, 12 ; DVs
 	db 35, 10, 20, 0 ; PP
-	db 20 ; Step cycles to hatch
+	db 1; step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 1 ; Level
 	db 0, 0 ; Status
