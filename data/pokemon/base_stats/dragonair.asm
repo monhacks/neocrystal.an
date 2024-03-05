@@ -1,6 +1,6 @@
 	db DRAGONAIR ; 148
 
-	db  61,  84,  65,  70,  70,  70
+	db  65,  95,  65,  75,  75,  75; Increase BST to 450
 	;   hp  atk  def  spd  sat  sdf
 
 	db DRAGON, DRAGON ; type

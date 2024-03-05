@@ -1,6 +1,6 @@
 	db PORYGON2 ; 233
 
-	db  85,  80,  90,  60, 105,  95
+	db  85,  80,  90,  70, 105,  95; Increase BST by 10 for Average with Z
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
