@@ -1181,29 +1181,30 @@ JohtoGrassWildMons:
 	def_grass_wildmons DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 3, GEODUDE
-	db 2, ZUBAT
 	db 2, GEODUDE
-	db 4, GEODUDE
-	db 2, TEDDIURSA
-	db 4, ZUBAT
-	db 4, DUNSPARCE
+	db 2, ZUBAT
+	db 2, SANDSHREW
+	db 2, SPINARAK
+	db 2, CUBONE
+	db 2, DUNSPARCE
+	db 2, TEDDIRUSA
 	; day
-	db 3, GEODUDE
-	db 2, ZUBAT
 	db 2, GEODUDE
-	db 4, GEODUDE
 	db 2, ZUBAT
-	db 4, ZUBAT
-	db 4, DUNSPARCE
+	db 2, SANDSHREW
+	db 2, SPINARAK
+	db 2, CUBONE
+	db 2, DUNSPARCE
+	db 2, TEDDIRUSA
 	; nite
-	db 3, GEODUDE
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 4, GEODUDE
-	db 2, ZUBAT
-	db 4, ZUBAT
-	db 4, DUNSPARCE
+	db 2, SPINARAK
+	db 2, SANDSHREW
+	db 2, TEDDIRUSA
+	db 2, DUNSPARCE
+	db 2, CUBONE
+    ; Max Level 5
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
@@ -1260,6 +1261,7 @@ JohtoGrassWildMons:
 	db 2, ODDISH
 	db 2, IGGLYBUFF
 	db 2, CLEFFA
+    ; Max Level 5
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_30
@@ -1288,6 +1290,7 @@ JohtoGrassWildMons:
 	db 2, POLIWAG
 	db 2, ODDISH
 	db 2, ODDISH
+    ; Max Level 5
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_31
@@ -1316,6 +1319,7 @@ JohtoGrassWildMons:
 	db 2, CATERPIE
 	db 2, ODDISH
 	db 2, GASTLY
+    ; Max Level 5
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_32
