@@ -296,16 +296,13 @@ ChooseWildEncounter:
 	ld b, a
 ; Check if we buff the wild mon, and by how much.
 	call Random
-	cp 35 percent
+	cp 40 percent ; 40% no increase
 	jr c, .ok
 	inc b
-	cp 65 percent
+	cp 80 percent ; 20% +1 level
 	jr c, .ok
 	inc b
-	cp 85 percent
-	jr c, .ok
-	inc b
-	cp 95 percent
+	cp 95 percent ; 10% +2 levels, 5% +3 levels
 	jr c, .ok
 	inc b
 ; Store the level
