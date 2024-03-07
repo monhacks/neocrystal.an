@@ -46,9 +46,13 @@ Route36NationalParkGate_MapScripts:
 	checkevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
 	iftrue .Return
 	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .SetContestOfficer
-	ifequal THURSDAY, .SetContestOfficer
-	ifequal SATURDAY, .SetContestOfficer
+	ifequal SUNDAY,    .SetContestOfficer
+	ifequal MONDAY,    .SetContestOfficer
+	ifequal TUESDAY,   .SetContestOfficer
+	ifequal WEDNESDAY, .SetContestOfficer
+	ifequal THURSDAY,  .SetContestOfficer
+	ifequal FRIDAY,    .SetContestOfficer
+	ifequal SATURDAY,  .SetContestOfficer
 	checkflag ENGINE_BUG_CONTEST_TIMER
 	iftrue .SetContestOfficer
 	disappear ROUTE36NATIONALPARKGATE_OFFICER1
