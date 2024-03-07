@@ -343,29 +343,30 @@ JohtoGrassWildMons:
 	def_grass_wildmons NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 12, NIDORAN_M
-	db 12, NIDORAN_F
-	db 14, LEDYBA
-	db 13, PIDGEY
-	db 10, PICHU
-	db 10, PICHU
-	db 10, PICHU
+	db 12, YANMA
+	db 12, LEDYBA
+	db 12, LEDYBA
+	db 12, PARAS
+	db 12, PINECO
+	db 12, LEDIAN
+	db 12, HERACROSS
 	; day
-	db 12, NIDORAN_F
-	db 12, NIDORAN_M
-	db 14, SUNKERN
-	db 13, PIDGEY
-	db 10, PICHU
-	db 10, PICHU
-	db 10, PICHU
+	db 12, YANMA
+	db 12, WEEDLE
+	db 12, WEEDLE
+	db 12, KAKUNA
+	db 12, PINECO
+	db 12, BEEDRILL
+	db 12, SCYTHER
 	; nite
-	db 12, PSYDUCK
-	db 13, HOOTHOOT
-	db 14, SPINARAK
-	db 15, MURKROW
-	db 10, VENONAT
-	db 12, CLEFFA
-	db 12, CLEFFA
+	db 12, VENONAT
+	db 12, CATERPIE
+	db 12, CATERPIE
+	db 12, METAPOD
+	db 12, PINECO
+	db 12, BUTTERFREE
+	db 12, PINSIR
+	; Max Level 15
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
@@ -571,29 +572,30 @@ JohtoGrassWildMons:
 	def_grass_wildmons ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, CATERPIE
-	db 5, WEEDLE
-	db 7, METAPOD
-	db 7, KAKUNA
-	db 7, PICHU
+	db 6, LEDYBA
+	db 6, WEEDLE
+	db 6, CATERPIE
 	db 6, PARAS
-	db 6, PARAS
+	db 6, PICHU
+	db 6, METAPOD
+	db 6, KAKUNA
 	; day
-	db 5, CATERPIE
-	db 5, WEEDLE
-	db 7, METAPOD
-	db 7, KAKUNA
-	db 7, PICHU
+	db 6, LEDYBA
+	db 6, PSYDUCK
 	db 6, PARAS
-	db 6, PARAS
+	db 6, WEEDLE
+	db 6, PIDGEY
+	db 6, KAKUNA
+	db 6, PINECO
 	; nite
-	db 5, ODDISH
-	db 5, VENONAT
-	db 7, ODDISH
-	db 7, PSYDUCK
-	db 7, HOOTHOOT
+	db 6, VENONAT
+	db 6, HOOTHOOT
+	db 6, ODDISH
+	db 6, CATERIE
 	db 6, PARAS
-	db 6, PARAS
+	db 6, METAPOD
+	db 6, PINECO
+	; Max Level 9
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
@@ -1389,57 +1391,59 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 10, SNUBBULL
-	db 11, RATTATA
-	db 12, PIDGEY
-	db 10, ABRA
-	db 12, IGGLYBUFF
-	db 10, DITTO
-	db 10, DITTO
+	db 9, PIDGEY
+	db 9, RATTATA
+	db 9, ABRA
+	db 9, SNUBBULL
+	db 9, IGGLYBUFF
+	db 9, DITTO
+	db 9, DITTO
 	; day
-	db 10, SNUBBULL
-	db 11, RATTATA
-	db 12, PIDGEY
-	db 10, ABRA
-	db 12, IGGLYBUFF
-	db 10, MARILL
-	db 10, DITTO
+	db 9, PIDGEY
+	db 9, RATTATA
+	db 9, ABRA
+	db 9, SNUBBULL
+	db 9, MARRILL
+	db 9, IGGLYBUFF
+	db 9, DITTO
 	; nite
-	db 12, DROWZEE
-	db 11, RATTATA
-	db 12, HOOTHOOT
-	db 10, HOUNDOUR
-	db 12, HOUNDOUR
-	db 10, DITTO
-	db 10, DITTO
+	db 9, HOOTHOOT
+	db 9, RATTATA
+	db 9, DROWZEE
+	db 9, SNUBBULL
+	db 9, MARRILL
+	db 9, PINECO
+	db 9, CLEFFA
+	; Max Level 12
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 12, SNUBBULL
-	db 14, PIDGEY
-	db 13, GROWLITHE
-	db 10, ABRA
-	db 12, JIGGLYPUFF
-	db 10, DITTO
-	db 12, YANMA
+	db 11, GROWLITHE
+	db 11, NIDORAN_M
+	db 11, NIDORAN_F
+	db 11, ABRA
+	db 11, SNUBBULL
+	db 11, PSYDUCK
+	db 11, DITTO
 	; day
-	db 12, SNUBBULL
-	db 14, PIDGEY
-	db 13, GROWLITHE
-	db 10, ABRA
-	db 12, JIGGLYPUFF
-	db 10, DITTO
-	db 12, YANMA
+	db 11, GROWLITHE
+	db 11, NIDORAN_M
+	db 11, NIDORAN_F
+	db 11, ABRA
+	db 11, SNUBBULL
+	db 11, MARRILL
+	db 11, DITTO
 	; nite
-	db 12, DROWZEE
-	db 14, HOOTHOOT
-	db 13, PSYDUCK
-	db 10, HOUNDOUR
-	db 12, HOUNDOUR
-	db 10, DITTO
-	db 12, YANMA
+	db 11, VULPIX
+	db 11, NIDORAN_M
+	db 11, NIDORAN_F
+	db 11, DROWZEE
+	db 11, SNUBBULL
+	db 11, PSYDUCK
+	db 11, DITTO
+	; Max Level 14
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_36
@@ -1693,6 +1697,7 @@ JohtoGrassWildMons:
 	db 2, ODDISH
 	db 2, IGGLYBUFF
 	db 2, CLEFFA
+	; Max Level 5
 	end_grass_wildmons
 
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
