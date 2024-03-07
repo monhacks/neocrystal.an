@@ -13,8 +13,8 @@ Trainers:
 FalknerGroup:
 	; FALKNER (1)
 	db "FALKNER@", TRAINERTYPE_MOVES
-	db 13, HOOTHOOT,   CONFUSION, MUD_SLAP, GUST, GROWL
-	db 15, NATU,       CONFUSION, MUD_SLAP, GUST, LEER
+	db 10, HOOTHOOT,   CONFUSION, MUD_SLAP, GUST, GROWL
+	db 12, NATU,       CONFUSION, MUD_SLAP, GUST, LEER
 	db -1 ; end
 
 WhitneyGroup:
@@ -580,12 +580,12 @@ SchoolboyGroup:
 BirdKeeperGroup:
 	; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
-	db 10, PIDGEY
+	db 8, PIDGEY
 	db -1 ; end
 
 	; BIRD_KEEPER (2)
 	db "ABE@", TRAINERTYPE_NORMAL
-	db 10, SPEAROW
+	db 8, SPEAROW
 	db -1 ; end
 
 	; BIRD_KEEPER (3)
@@ -3086,27 +3086,27 @@ ExecutiveFGroup:
 SageGroup:
 	; SAGE (1)
 	db "CHOW@", TRAINERTYPE_NORMAL
-	db  7, BELLSPROUT
-	db  7, BELLSPROUT
-	db  7, BELLSPROUT
+	db  6, BELLSPROUT
+	db  6, BELLSPROUT
+	db  6, BELLSPROUT
 	db -1 ; end
 
 	; SAGE (2)
 	db "NICO@", TRAINERTYPE_NORMAL
-	db  7, BELLSPROUT
-	db  7, BELLSPROUT
-	db  7, BELLSPROUT
+	db  6, BELLSPROUT
+	db  6, BELLSPROUT
+	db  6, BELLSPROUT
 	db -1 ; end
 
 	; SAGE (3)
 	db "JIN@", TRAINERTYPE_NORMAL
-	db  9, BELLSPROUT
+	db  8, BELLSPROUT
 	db -1 ; end
 
 	; SAGE (4)
 	db "TROY@", TRAINERTYPE_NORMAL
-	db  8, BELLSPROUT
-	db  8, RATTATA
+	db  7, BELLSPROUT
+	db  7, RATTATA
 	db -1 ; end
 
 	; SAGE (5)
@@ -3125,22 +3125,22 @@ SageGroup:
 
 	; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_NORMAL
-	db  7, BELLSPROUT
-	db  7, BELLSPROUT
-	db  7, BELLSPROUT
+	db  6, BELLSPROUT
+	db  6, BELLSPROUT
+	db  6, BELLSPROUT
 	db -1 ; end
 
 	; SAGE (8)
 	db "NEAL@", TRAINERTYPE_NORMAL
-	db  8, BELLSPROUT
-	db  8, GASTLY
+	db  7, BELLSPROUT
+	db  7, GASTLY
 	db -1 ; end
 
 	; SAGE (9)
 	db "LI@", TRAINERTYPE_NORMAL
-	db  9, RATTATA
-	db  9, GASTLY
-	db 12, BELLSPROUT
+	db  8, RATTATA
+	db  8, GASTLY
+	db 10, BELLSPROUT
 	db -1 ; end
 
 	; SAGE (10)
