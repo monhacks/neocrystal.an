@@ -1191,7 +1191,7 @@ JohtoGrassWildMons:
 	db 2, SPINARAK
 	db 2, CUBONE
 	db 2, DUNSPARCE
-	db 2, TEDDIRUSA
+	db 2, TEDDIURSA
 	; day
 	db 2, GEODUDE
 	db 2, ZUBAT
@@ -1199,13 +1199,13 @@ JohtoGrassWildMons:
 	db 2, SPINARAK
 	db 2, CUBONE
 	db 2, DUNSPARCE
-	db 2, TEDDIRUSA
+	db 2, TEDDIURSA
 	; nite
 	db 2, ZUBAT
 	db 2, GEODUDE
 	db 2, SPINARAK
 	db 2, SANDSHREW
-	db 2, TEDDIRUSA
+	db 2, TEDDIURSA
 	db 2, DUNSPARCE
 	db 2, CUBONE
     ; Max Level 5
