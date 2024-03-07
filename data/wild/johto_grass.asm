@@ -6,56 +6,58 @@ JohtoGrassWildMons:
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
 	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
 	; day
 	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
 	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
 	; nite
 	db 3, GASTLY
-	db 4, GASTLY
-	db 5, GASTLY
+	db 3, GASTLY
 	db 3, RATTATA
-	db 6, GASTLY
-	db 5, RATTATA
-	db 5, RATTATA
+	db 3, RATTATA
+	db 3, GASTLY
+	db 3, GASTLY
+	db 3, GASTLY
+	; Max Level 6
 	end_grass_wildmons
 
 	def_grass_wildmons SPROUT_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
 	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
 	; day
 	db 3, RATTATA
-	db 4, RATTATA
-	db 5, RATTATA
 	db 3, RATTATA
-	db 6, RATTATA
-	db 5, RATTATA
-	db 5, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
+	db 3, RATTATA
 	; nite
 	db 3, GASTLY
-	db 4, GASTLY
-	db 5, GASTLY
+	db 3, GASTLY
 	db 3, RATTATA
-	db 6, GASTLY
-	db 5, RATTATA
-	db 5, RATTATA
+	db 3, RATTATA
+	db 3, GASTLY
+	db 3, GASTLY
+	db 3, GASTLY
+	; Max Level 6
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_2F
@@ -1443,29 +1445,30 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 4, LEDYBA
+	db 4, BELLSPROUT
 	db 4, PIDGEY
-	db 5, BELLSPROUT
-	db 5, GROWLITHE
-	db 5, PIDGEY
-	db 6, PIDGEY
-	db 6, PIDGEY
+	db 4, GROWLITHE
+	db 4, NIDORAN_F
+	db 4, NIDORAN_M
+	db 4, PINECO
+	db 4, STANTLER
 	; day
+	db 4, BELLSPROUT
 	db 4, PIDGEY
-	db 4, PIDGEY
-	db 5, BELLSPROUT
-	db 5, GROWLITHE
-	db 5, PIDGEY
-	db 6, PIDGEY
-	db 6, PIDGEY
+	db 4, GROWLITHE
+	db 4, NIDORAN_F
+	db 4, NIDORAN_M
+	db 4, PINECO
+	db 4, STANTLER
 	; nite
 	db 4, SPINARAK
 	db 4, HOOTHOOT
-	db 5, BELLSPROUT
-	db 5, VULPIX
-	db 5, VULPIX
-	db 5, GASTLY
-	db 5, GASTLY
+	db 4, VULPIX
+	db 4, NIDORAN_F
+	db 4, NIDORAN_M
+	db 4, PINECO
+	db 4, STANTLER
+	; Max Level 7
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_37
