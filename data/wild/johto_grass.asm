@@ -420,6 +420,7 @@ JohtoGrassWildMons:
 	db 5, UNOWN
 	db 5, UNOWN
 	db 5, UNOWN
+	; Max Level 8
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_1F
@@ -512,28 +513,29 @@ JohtoGrassWildMons:
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	db 5, ZUBAT
-	db 6, ZUBAT
-	db 7, ZUBAT
-	db 6, SLOWPOKE
-	db 8, ZUBAT
-	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, ZUBAT
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
 	; day
 	db 5, ZUBAT
-	db 6, ZUBAT
-	db 7, ZUBAT
-	db 6, SLOWPOKE
-	db 8, ZUBAT
-	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, ZUBAT
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
 	; nite
 	db 5, ZUBAT
-	db 6, ZUBAT
-	db 7, ZUBAT
-	db 6, SLOWPOKE
-	db 8, ZUBAT
-	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, ZUBAT
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	db 5, SLOWPOKE
+	; Max Level 8
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B2F
@@ -1331,24 +1333,24 @@ JohtoGrassWildMons:
 	db 4, BELLSPROUT
 	db 4, PIDGEY
 	db 4, EKANS
-	db 4, RATTATA
 	db 4, MAREEP
+	db 4, NATU
 	db 4, WOOPER
 	; day
 	db 4, HOPPIP
 	db 4, BELLSPROUT
 	db 4, PIDGEY
 	db 4, EKANS
-	db 4, RATTATA
 	db 4, MAREEP
+	db 4, NATU
 	db 4, WOOPER
 	; nite
 	db 4, ODDISH
 	db 4, BELLSPROUT
 	db 4, HOOTHOOT
 	db 4, EKANS
-	db 4, RATTATA
 	db 4, GASTLY
+	db 4, NATU
 	db 4, WOOPER
 	; Max Level 7
 	end_grass_wildmons
@@ -1356,29 +1358,30 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 6, RATTATA
-	db 6, SPEAROW
-	db 6, GEODUDE
-	db 6, HOPPIP
-	db 7, EKANS
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 4, HOPPIP
+	db 4, SPEAROW
+	db 4, GEODUDE
+	db 4, RATTATA
+	db 4, RATTATA
+	db 4, EKANS
+	db 4, EKANS
 	; day
-	db 6, RATTATA
-	db 6, SPEAROW
-	db 6, GEODUDE
-	db 6, HOPPIP
-	db 7, EKANS
-	db 7, HOPPIP
-	db 7, HOPPIP
+	db 4, HOPPIP
+	db 4, SPEAROW
+	db 4, GEODUDE
+	db 4, RATTATA
+	db 4, RATTATA
+	db 4, EKANS
+	db 4, EKANS
 	; nite
-	db 6, RATTATA
-	db 6, ZUBAT
-	db 6, GEODUDE
-	db 6, ZUBAT
-	db 7, RATTATA
-	db 7, RATTATA
-	db 7, RATTATA
+	db 4, ODDISH
+	db 4, HOOTHOOT
+	db 4, GEODUDE
+	db 4, RATTATA
+	db 4, RATTATA
+	db 4, EKANS
+	db 4, EKANS
+	; Max Level 7
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_34
