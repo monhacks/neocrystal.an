@@ -591,7 +591,7 @@ JohtoGrassWildMons:
 	db 6, VENONAT
 	db 6, HOOTHOOT
 	db 6, ODDISH
-	db 6, CATERIE
+	db 6, CATERPIE
 	db 6, PARAS
 	db 6, METAPOD
 	db 6, PINECO
@@ -1403,7 +1403,7 @@ JohtoGrassWildMons:
 	db 9, RATTATA
 	db 9, ABRA
 	db 9, SNUBBULL
-	db 9, MARRILL
+	db 9, MARILL
 	db 9, IGGLYBUFF
 	db 9, DITTO
 	; nite
@@ -1411,7 +1411,7 @@ JohtoGrassWildMons:
 	db 9, RATTATA
 	db 9, DROWZEE
 	db 9, SNUBBULL
-	db 9, MARRILL
+	db 9, MARILL
 	db 9, PINECO
 	db 9, CLEFFA
 	; Max Level 12
@@ -1433,7 +1433,7 @@ JohtoGrassWildMons:
 	db 11, NIDORAN_F
 	db 11, ABRA
 	db 11, SNUBBULL
-	db 11, MARRILL
+	db 11, MARILL
 	db 11, DITTO
 	; nite
 	db 11, VULPIX
