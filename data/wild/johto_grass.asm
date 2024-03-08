@@ -1426,7 +1426,7 @@ JohtoGrassWildMons:
 	db 11, ABRA
 	db 11, SNUBBULL
 	db 11, PSYDUCK
-	db 11, DITTO
+	db 11, YANMA
 	; day
 	db 11, GROWLITHE
 	db 11, NIDORAN_M
@@ -1434,7 +1434,7 @@ JohtoGrassWildMons:
 	db 11, ABRA
 	db 11, SNUBBULL
 	db 11, MARILL
-	db 11, DITTO
+	db 11, YANMA
 	; nite
 	db 11, VULPIX
 	db 11, NIDORAN_M
@@ -1442,7 +1442,7 @@ JohtoGrassWildMons:
 	db 11, DROWZEE
 	db 11, SNUBBULL
 	db 11, PSYDUCK
-	db 11, DITTO
+	db 11, YANMA
 	; Max Level 14
 	end_grass_wildmons
 
