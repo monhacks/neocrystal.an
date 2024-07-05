@@ -1533,7 +1533,7 @@ JohtoGrassWildMons:
 	db 15, BEEDRILL
 	db 15, GROWLITHE
 	db 15, SKIPLOOM
-	db 15, FLAAFY
+	db 15, FLAAFFY
 	db 15, YANMA
 	db 15, AIPOM
 	; nite
@@ -1560,7 +1560,7 @@ JohtoGrassWildMons:
 	; day
 	db 19, MEOWTH
 	db 19, MAGNEMITE
-	db 19, FLAAFY
+	db 19, FLAAFFY
 	db 19, FARFETCH_D
 	db 19, SNUBBULL
 	db 19, MILTANK
@@ -1589,7 +1589,7 @@ JohtoGrassWildMons:
 	; day
 	db 20, MEOWTH
 	db 20, MAGNEMITE
-	db 20, FLAAFY
+	db 20, FLAAFFY
 	db 20, FARFETCH_D
 	db 20, SNUBBULL
 	db 20, MILTANK
