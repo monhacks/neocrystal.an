@@ -18,7 +18,7 @@ TypeNames:
 	dw Ice
 	dw Dragon
 	dw Dark
-  dw Fairy
+	dw Fairy
 	dw UnknownType
 	assert_table_length NUM_TYPES
 
