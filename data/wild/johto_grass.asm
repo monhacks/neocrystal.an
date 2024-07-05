@@ -76,7 +76,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -84,7 +84,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -92,7 +92,7 @@ JohtoGrassWildMons:
 	db 30, HAUNTER
 	db 30, STANTLER
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -105,7 +105,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, MAGCARGO
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -113,7 +113,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, MAGCARGO
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -121,7 +121,7 @@ JohtoGrassWildMons:
 	db 30, HAUNTER
 	db 30, STANTLER
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -134,7 +134,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, MAGMAR
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -142,7 +142,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, MAGMAR
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -150,7 +150,7 @@ JohtoGrassWildMons:
 	db 30, HAUNTER
 	db 30, STANTLER
 	db 30, FEAROW
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -163,7 +163,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, DUNSPARCE
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -171,7 +171,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, ELECTABUZZ
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -179,7 +179,7 @@ JohtoGrassWildMons:
 	db 30, HOUNDOOM
 	db 30, STANTLER
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -192,7 +192,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -200,7 +200,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -208,7 +208,7 @@ JohtoGrassWildMons:
 	db 30, HOUNDOOM
 	db 30, STANTLER
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -221,7 +221,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -229,7 +229,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -237,7 +237,7 @@ JohtoGrassWildMons:
 	db 30, HOUNDOOM
 	db 30, STANTLER
 	db 30, CLEFABLE
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -250,7 +250,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -258,7 +258,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -266,7 +266,7 @@ JohtoGrassWildMons:
 	db 30, HAUNTER
 	db 30, STANTLER
 	db 30, CLEFABLE
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -279,7 +279,7 @@ JohtoGrassWildMons:
 	db 30, PERSIAN
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, TYROGUE
 	; day
 	db 30, ARIADOS
@@ -287,7 +287,7 @@ JohtoGrassWildMons:
 	db 30, FURRET
 	db 30, KADABRA
 	db 30, PARASECT
-	db 30, PORYGON
+	db 30, JIGGLYPUFF
 	db 30, EEVEE
 	; nite
 	db 30, ARIADOS
@@ -295,7 +295,7 @@ JohtoGrassWildMons:
 	db 30, HAUNTER
 	db 30, STANTLER
 	db 30, CLEFABLE
-	db 30, PORYGON
+	db 30, CLEFAIRY
 	db 30, EEVEE
 	; Max Level 33
 	end_grass_wildmons
@@ -362,7 +362,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, YANMA
-	db 12, LEDYBA
+	db 12, SUNKERN
 	db 12, LEDYBA
 	db 12, PARAS
 	db 12, PINECO
@@ -370,7 +370,7 @@ JohtoGrassWildMons:
 	db 12, HERACROSS
 	; day
 	db 12, YANMA
-	db 12, WEEDLE
+	db 12, SUNKERN
 	db 12, WEEDLE
 	db 12, KAKUNA
 	db 12, PINECO
@@ -378,7 +378,7 @@ JohtoGrassWildMons:
 	db 12, SCYTHER
 	; nite
 	db 12, VENONAT
-	db 12, CATERPIE
+	db 12, SUNKERN
 	db 12, CATERPIE
 	db 12, METAPOD
 	db 12, PINECO
@@ -1222,7 +1222,7 @@ JohtoGrassWildMons:
 	db 57, STARMIE
 	db 57, CLEFABLE
 	db 57, SNORLAX
-	db 57, LAPRAS
+	db 57, PORYGON2
 	db 57, DRAGONITE
 	db 57, TYRANITAR
 	; Max Level 60
@@ -1521,11 +1521,11 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, SPEAROW
+	db 15, SENTRET
 	db 15, VENONAT
 	db 15, GROWLITHE
 	db 15, VENONAT
-	db 15, FURRET
+	db 15, FLAAFFY
 	db 15, STANTLER
 	db 15, LEDIAN
 	; day
@@ -1533,7 +1533,7 @@ JohtoGrassWildMons:
 	db 15, BEEDRILL
 	db 15, GROWLITHE
 	db 15, SKIPLOOM
-	db 15, FLAAFFY
+	db 15, PARAS
 	db 15, YANMA
 	db 15, AIPOM
 	; nite
@@ -1551,7 +1551,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 19, MEOWTH
-	db 19, MAGNEMITE
+	db 19, PIKACHU
 	db 19, PHANPY
 	db 19, NIDORINA
 	db 19, NIDORINO
@@ -1572,7 +1572,7 @@ JohtoGrassWildMons:
 	db 19, NIDORINA
 	db 19, NIDORINO
 	db 19, NOCTOWL
-	db 19, ARIADOS
+	db 19, KANGASKHAN
 	; Max Level 22
 	end_grass_wildmons
 
@@ -1608,59 +1608,59 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 21, MANKEY
-	db 21, SPEAROW
-	db 21, MARILL
-	db 21, GRIMER
-	db 21, ELEKID
-	db 21, FEAROW
-	db 21, RATICATE
+	db 25, MANKEY
+	db 25, SPEAROW
+	db 25, MARILL
+	db 25, GRIMER
+	db 25, ELEKID
+	db 25, FEAROW
+	db 25, RATICATE
 	; day
-	db 21, MANKEY
-	db 21, SPEAROW
-	db 21, MARILL
-	db 21, EKANS
-	db 21, ELEKID
-	db 21, GRIMER
-	db 21, AIPOM
+	db 25, MANKEY
+	db 25, SPEAROW
+	db 25, MARILL
+	db 25, EKANS
+	db 25, ELEKID
+	db 25, GRIMER
+	db 25, AIPOM
 	; nite
-	db 21, MANKEY
-	db 21, SPEAROW
-	db 21, MARILL
-	db 21, GRIMER
-	db 21, ELEKID
-	db 21, MISDREAVUS
-	db 21, HOUNDOUR
-	; Max Level 24
+	db 25, MANKEY
+	db 25, SPEAROW
+	db 25, MARILL
+	db 25, GRIMER
+	db 25, ELEKID
+	db 25, MISDREAVUS
+	db 25, HOUNDOUR
+	; Max Level 28
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, MANKEY
-	db 22, VENONAT
-	db 22, FURRET
-	db 22, GIRAFARIG
-	db 22, EKANS
-	db 22, FEAROW
-	db 22, RATICATE
+	db 26, MANKEY
+	db 26, VENONAT
+	db 26, FURRET
+	db 26, GIRAFARIG
+	db 26, EKANS
+	db 26, FEAROW
+	db 26, RATICATE
 	; day
-	db 22, MANKEY
-	db 22, VENONAT
-	db 22, FURRET
-	db 22, GIRAFARIG
-	db 22, GRIMER
-	db 22, FEAROW
-	db 22, HERACROSS
+	db 26, MANKEY
+	db 26, VENONAT
+	db 26, FURRET
+	db 26, GIRAFARIG
+	db 26, GRIMER
+	db 26, FEAROW
+	db 26, HERACROSS
 	; nite
-	db 22, MANKEY
-	db 22, VENONAT
-	db 22, NOCTOWL
-	db 22, GIRAFARIG
-	db 22, GRIMER
-	db 22, HOUNDOOM
-	db 22, PINSIR
-	; Max Level 25
+	db 26, MANKEY
+	db 26, VENONAT
+	db 26, NOCTOWL
+	db 26, GIRAFARIG
+	db 26, GRIMER
+	db 26, HOUNDOOM
+	db 26, PINSIR
+	; Max Level 29
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_44
@@ -1725,7 +1725,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, RATTATA
-	db 2, SPEAROW
+	db 2, SUNKERN
 	db 2, GEODUDE
 	db 2, HOPPIP
 	db 2, LEDYBA
@@ -1775,7 +1775,7 @@ JohtoGrassWildMons:
 	db 57, NINETALES
 	db 57, STANTLER
 	db 57, URSARING
-	db 57, CROBAT
+	db 57, HOUNDOOM
 	; Max Level 60
 	end_grass_wildmons
 

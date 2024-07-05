@@ -117,57 +117,59 @@ KantoGrassWildMons:
 	def_grass_wildmons VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 34, GRAVELER
-	db 32, RHYHORN
-	db 33, ONIX
-	db 34, GOLBAT
-	db 35, SANDSLASH
-	db 35, RHYDON
-	db 35, RHYDON
+	db 44, GRAVELER
+	db 44, RHYHORN
+	db 44, ONIX
+	db 44, DUGTRIO
+	db 44, SANDSLASH
+	db 44, MACHOKE
+	db 44, RHYDON
 	; day
-	db 34, GRAVELER
-	db 32, RHYHORN
-	db 33, ONIX
-	db 34, GOLBAT
-	db 35, SANDSLASH
-	db 35, RHYDON
-	db 35, RHYDON
+	db 44, GRAVELER
+	db 44, RHYHORN
+	db 44, ONIX
+	db 44, DUGTRIO
+	db 44, SANDSLASH
+	db 44, MACHOKE
+	db 44, RHYDON
 	; nite
-	db 34, GOLBAT
-	db 34, GRAVELER
-	db 32, ONIX
-	db 36, GRAVELER
-	db 38, GRAVELER
-	db 40, GRAVELER
-	db 40, GRAVELER
+	db 44, GRAVELER
+	db 44, RHYHORN
+	db 44, ONIX
+	db 44, GOLBAT
+	db 44, SANDSLASH
+	db 44, MACHOKE
+	db 44, RHYDON
+	; Max Level 47
 	end_grass_wildmons
 
 	def_grass_wildmons TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, ZUBAT
-	db 22, RATICATE
-	db 24, GOLBAT
-	db 21, SLOWPOKE
-	db 20, KADABRA
-	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 32, GOLBAT
+	db 32, RATICATE
+	db 32, GOLDUCK
+	db 32, SLOWPOKE
+	db 32, KADABRA
+	db 32, MACHOKE
+	db 32, AZUMARILL
 	; day
-	db 22, ZUBAT
-	db 22, RATICATE
-	db 24, GOLBAT
-	db 21, SLOWPOKE
-	db 20, AZUMARILL
-	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 32, GOLBAT
+	db 32, RATICATE
+	db 32, GOLDUCK
+	db 32, SLOWPOKE
+	db 32, KADABRA
+	db 32, MACHOKE
+	db 32, DEWGONG
 	; nite
-	db 22, ZUBAT
-	db 22, RATICATE
-	db 24, GOLBAT
-	db 21, SLOWPOKE
-	db 20, MISDREAVUS
-	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 32, GOLBAT
+	db 32, RATICATE
+	db 32, GOLDUCK
+	db 32, ONIX
+	db 32, HAUNTER
+	db 32, GRAVELER
+	db 32, MISDREAVUS
+	; Max Level 35
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_1
@@ -761,57 +763,59 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_26
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 28, DODUO
-	db 28, SANDSLASH
-	db 32, PONYTA
-	db 30, RATICATE
-	db 30, DODUO
-	db 30, AZUMARILL
-	db 30, ARBOK
+	db 33, DODRIO
+	db 33, PRIMEAPE
+	db 33, ELECTABUZZ
+	db 33, NIDORINA
+	db 33, NIDORINO
+	db 33, TAUROS
+	db 33, RHYHORN
 	; day
-	db 28, DODUO
-	db 28, SANDSLASH
-	db 32, PONYTA
-	db 30, RATICATE
-	db 30, DODUO
-	db 30, ARBOK
-	db 30, AZUMARILL
+	db 33, WEEPINBELL
+	db 33, SCYTHER
+	db 33, PINSIR
+	db 33, MR_MIME
+	db 33, MAGMAR
+	db 33, RAICHU
+	db 33, WIGGLYTUFF
 	; nite
-	db 28, NOCTOWL
-	db 28, RATICATE
-	db 32, NOCTOWL
-	db 30, RATICATE
-	db 30, QUAGSIRE
-	db 30, QUAGSIRE
-	db 30, QUAGSIRE
+	db 33, GLOOM
+	db 33, VENOMOTH
+	db 33, MUK
+	db 33, PARASECT
+	db 33, HAUNTER
+	db 33, NINETALES
+	db 33, CLEFABLE
+	; Max Level 36
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_27
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 28, DODUO
-	db 28, ARBOK
-	db 30, RATICATE
-	db 30, DODUO
-	db 32, PONYTA
-	db 30, DODRIO
-	db 30, DODRIO
+	db 33, LEDIAN
+	db 33, SUDOWOODO
+	db 33, MILTANK
+	db 33, XATU
+	db 33, FORRETRESS
+	db 33, DONPHAN
+	db 33, SKARMORY
 	; day
-	db 28, DODUO
-	db 28, ARBOK
-	db 30, RATICATE
-	db 30, DODUO
-	db 32, PONYTA
-	db 30, DODRIO
-	db 30, DODRIO
+	db 33, FURRET
+	db 33, SUNFLORA
+	db 33, JUMPLUFF
+	db 33, GIRAFARIG
+	db 33, MAGCARGO
+	db 33, AMPHAROS
+	db 33, GRANBULL
 	; nite
-	db 28, QUAGSIRE
-	db 28, NOCTOWL
-	db 30, RATICATE
-	db 30, QUAGSIRE
-	db 32, NOCTOWL
-	db 32, NOCTOWL
-	db 32, NOCTOWL
+	db 33, STANTLER
+	db 33, MURKROW
+	db 33, SNEASEL
+	db 33, URSARING
+	db 33, MISDREAVUS
+	db 33, NOCTOWL
+	db 33, HOUNDOOM
+	; Max Level 36
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_28

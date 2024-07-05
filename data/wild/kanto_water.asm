@@ -4,9 +4,10 @@ KantoWaterWildMons:
 
 	def_water_wildmons TOHJO_FALLS
 	db 4 percent ; encounter rate
-	db 20, GOLDEEN
-	db 20, SLOWPOKE
-	db 20, SEAKING
+	db 32, SEAKING
+	db 32, QWILFISH
+	db 32, LANTURN
+	; Max Level 35
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT
@@ -102,23 +103,26 @@ KantoWaterWildMons:
 
 	def_water_wildmons ROUTE_26
 	db 6 percent ; encounter rate
-	db 30, TENTACOOL
-	db 25, TENTACOOL
-	db 30, TENTACRUEL
+	db 33, TENTACRUEL
+	db 33, DEWGONG
+	db 33, SEADRA
+	; Max Level 36
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_27
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
-	db 20, TENTACRUEL
+	db 33, OCTILLERY
+	db 33, LANTURN
+	db 33, MANTINE
+	; Max Level 36
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_28
 	db 2 percent ; encounter rate
-	db 40, POLIWAG
-	db 35, POLIWAG
-	db 40, POLIWHIRL
+	db 57, POLIWRATH
+	db 57, POLITOED
+	db 57, DEWGONG
+	; Max Level 60
 	end_water_wildmons
 
 	def_water_wildmons PALLET_TOWN
