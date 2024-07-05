@@ -221,7 +221,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_44
 	db 2 percent ; encounter rate
 	db 27, SEAKING
-	db 27, POLIHWIRL
+	db 27, POLIWHIRL
 	db 27, AZUMARILL
 	; Max Level 30
 	end_water_wildmons

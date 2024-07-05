@@ -774,7 +774,7 @@ KantoGrassWildMons:
 	db 33, WEEPINBELL
 	db 33, SCYTHER
 	db 33, PINSIR
-	db 33, MR_MIME
+	db 33, MR__MIME
 	db 33, MAGMAR
 	db 33, RAICHU
 	db 33, WIGGLYTUFF
