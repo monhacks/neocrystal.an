@@ -1611,7 +1611,7 @@ JohtoGrassWildMons:
 	db 25, MANKEY
 	db 25, SPEAROW
 	db 25, MARILL
-	db 25, GRIMER
+	db 25, VOLTORB
 	db 25, ELEKID
 	db 25, FEAROW
 	db 25, RATICATE
@@ -1649,7 +1649,7 @@ JohtoGrassWildMons:
 	db 26, VENONAT
 	db 26, FURRET
 	db 26, GIRAFARIG
-	db 26, GRIMER
+	db 26, VOLTORB
 	db 26, FEAROW
 	db 26, HERACROSS
 	; nite
@@ -1668,7 +1668,7 @@ JohtoGrassWildMons:
 	; morn
 	db 27, TANGELA
 	db 27, POLIWHIRL
-	db 27, LICKITUNG
+	db 27, CHANSEY
 	db 27, JUMPLUFF
 	db 27, AIPOM
 	db 27, PORYGON
@@ -1700,7 +1700,7 @@ JohtoGrassWildMons:
 	db 31, DONPHAN
 	db 31, SKARMORY
 	db 31, MACHOKE
-	db 31, URSARING
+	db 31, SNORLAX
 	db 31, PUPITAR
 	; day
 	db 31, GRAVELER
@@ -1754,7 +1754,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 57, TANGELA
-	db 57, RAPIDASH
+	db 57, ARCANINE
 	db 57, ARBOK
 	db 57, XATU
 	db 57, DODRIO
