@@ -225,9 +225,9 @@ PKMNTrainerGroup:
 
 	; CAL (3)
 	db "CAL@", TRAINERTYPE_NORMAL
-	db 50, MEGANIUM
-	db 50, TYPHLOSION
-	db 50, FERALIGATR
+	db 65, MEGANIUM
+	db 65, TYPHLOSION
+	db 65, FERALIGATR
 	db -1 ; end
 
 BrunoGroup:
@@ -302,34 +302,39 @@ LtSurgeGroup:
 	db -1 ; end
 
 ScientistGroup:
-	; SCIENTIST (1)
+	; SCIENTIST (1) ROSS used to work for Silph
 	db "ROSS@", TRAINERTYPE_NORMAL
-	db 22, KOFFING
-	db 22, KOFFING
+	db 32, HAUNTER
+	db 30, KOFFING
+	db 32, PORYGON2
 	db -1 ; end
 
-	; SCIENTIST (2)
+	; SCIENTIST (2) MITCH doesn't care that pokemon are hurt in experiments
 	db "MITCH@", TRAINERTYPE_NORMAL
-	db 24, DITTO
+	db 30, ARBOK
+	db 30, WEEZING
+	db 30, MUK
 	db -1 ; end
 
-	; SCIENTIST (3)
+	; SCIENTIST (3) JED says it was a ninja hideout
 	db "JED@", TRAINERTYPE_NORMAL
-	db 20, MAGNEMITE
-	db 20, MAGNEMITE
-	db 20, MAGNEMITE
+	db 30, QWILFISH
+	db 30, VENOMOTH
+	db 30, ARIADOS
 	db -1 ; end
 
-	; SCIENTIST (4)
+	; SCIENTIST (4) MARC is caught unawares
 	db "MARC@", TRAINERTYPE_NORMAL
-	db 27, MAGNEMITE
-	db 27, MAGNEMITE
-	db 27, MAGNEMITE
+	db 31, ELECTRODE
+	db 33, HOUNDOOM
+	db 32, MAGNETON
 	db -1 ; end
 
-	; SCIENTIST (5)
+	; SCIENTIST (5) RICH likes Grand Designs by Rush
 	db "RICH@", TRAINERTYPE_MOVES
-	db 30, PORYGON,    CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
+	db 33, PORYGON,   PSYBEAM, RAIN_DANCE, RECOVER, THUNDER
+	db 33, PORYGON,   PSYBEAM, THUNDERBOLT, RECOVER, SWIFT
+	db 35, PORYGON2,  PSYBEAM, HIDDEN_POWER, RECOVER, TRI_ATTACK
 	db -1 ; end
 
 ErikaGroup:
@@ -345,19 +350,19 @@ ErikaGroup:
 YoungsterGroup:
 	; YOUNGSTER JOEY (1) ROUTE 30
 	db "JOEY@", TRAINERTYPE_NORMAL
-	db  6, RATTATA
+	db  7, RATTATA
 	db -1 ; end
 
 	; YOUNGSTER MIKEY (2) ROUTE 30
 	db "MIKEY@", TRAINERTYPE_NORMAL
-	db  4, PIDGEY
-	db  5, RATTATA
+	db  5, PIDGEY
+	db  6, RATTATA
 	db -1 ; end
 
 	; YOUNGSTER ALBERT (3) ROUTE 32
 	db "ALBERT@", TRAINERTYPE_NORMAL
 	db  7, RATTATA
-	db  9, ZUBAT
+	db 10, ZUBAT
 	db -1 ; end
 
 	; YOUNGSTER GORDON (4) ROUTE 32
@@ -365,12 +370,12 @@ YoungsterGroup:
 	db 10, WOOPER
 	db -1 ; end
 
-	; YOUNGSTER (5)
+	; YOUNGSTER (5) ROUTE 34
 	db "SAMUEL@", TRAINERTYPE_NORMAL
-	db  7, RATTATA
-	db 10, SANDSHREW
-	db  8, SPEAROW
-	db  8, SPEAROW
+	db 12, RATTATA
+	db 12, SANDSHREW
+	db 12, SPEAROW
+	db 15, FURRET
 	db -1 ; end
 
 	; YOUNGSTER (6)
