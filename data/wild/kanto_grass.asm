@@ -373,7 +373,7 @@ KantoGrassWildMons:
 	db 47, MURKROW
 	db 47, PERSIAN
 	db 47, CLEFABLE
-	db 47, VUPLIX
+	db 47, VULPIX
 	db 47, TYROGUE
 	db 47, HOUNDOOM
 	; Max Level 50
@@ -402,7 +402,7 @@ KantoGrassWildMons:
 	db 47, MURKROW
 	db 47, PERSIAN
 	db 47, CLEFABLE
-	db 47, VUPLIX
+	db 47, VULPIX
 	db 47, TYROGUE
 	db 47, HAUNTER
 	; Max Level 50
