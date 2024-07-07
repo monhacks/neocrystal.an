@@ -32,6 +32,7 @@ VioletPokecenter1F_ElmsAideScript:
 	clearevent EVENT_TOGEPI_HATCHED
 	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	writetext VioletPokecenterElmsAideGiveEggText
+	waitbutton
 	verbosegiveitem EXP_SHARE
 	iffalse .full
 	waitbutton
